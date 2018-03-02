@@ -26,11 +26,19 @@ class DatabaseTest extends TestCase
     public function testOferta(){
         $this->assertDatabaseHas('Oferta', ['precio' => '499']);
         $this->assertDatabaseHas('Oferta', ['Nombre' => 'Vida alegre']);
+        $this->assertDatabaseHas('Oferta', ['id' => '003']);
+
+
 
     }
 
     public function testUsuario(){
         $this->assertDatabaseHas('Usuario', ['Nombre' => 'Laura Martinez Soler']);
+        $this->assertDatabaseHas('Usuario', ['DNI' => '6235568Z']);
+        $this->assertDatabaseHas('Usuario', ['Telefono' => '66890762']);
+
+
+        
 
     }
 }
