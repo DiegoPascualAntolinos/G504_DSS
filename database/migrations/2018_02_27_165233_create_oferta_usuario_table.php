@@ -16,7 +16,7 @@ class CreateOfertaUsuarioTable extends Migration
         Schema::create('ofertaUsuario', function (Blueprint $table) {
             $table->string('DNI');
             $table->integer('id');
-            $table->primary(['DNI','id']);
+           $table->primary(['DNI','id']);
             $table->timestamps();
         });
     }
