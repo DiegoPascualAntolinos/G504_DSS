@@ -18,8 +18,10 @@ class CreateReservationsTable extends Migration
             $table->date('fechaLlegada');
             $table->date('fechaSalida');
             $table->string('cantidad');
+            /*
             $table->unsignedInteger('id_clients')->unsigned();
             $table->foreign('id_clients')->references('id')->on('clients');
+            */
             $table->timestamps();
         });
     }
