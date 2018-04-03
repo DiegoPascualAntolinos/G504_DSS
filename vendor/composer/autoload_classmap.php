@@ -33,6 +33,7 @@ return array(
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CitysTableSeeder' => $baseDir . '/database/seeds/CitysTableSeeder.php',
     'ClientsOffersTableSeeder' => $baseDir . '/database/seeds/ClientsOffersTableSeeder.php',
     'ClientsTableSeeder' => $baseDir . '/database/seeds/ClientsTableSeeder.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',

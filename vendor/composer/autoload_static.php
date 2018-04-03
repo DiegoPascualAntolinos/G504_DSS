@@ -338,6 +338,7 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'CitysTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CitysTableSeeder.php',
         'ClientsOffersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientsOffersTableSeeder.php',
         'ClientsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientsTableSeeder.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
