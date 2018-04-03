@@ -12,18 +12,18 @@ class ClientsOffersTableSeeder extends Seeder
     public function run()
     {
         DB::table('clientsOffers')->insert([
-            'id' => '01',
-            'id' => '001'
+            'id_client' => '01',
+            'id_offer' => '001'
         ]);
 
         DB::table('clientsOffers')->insert([
-            'id' => '02',
-            'id' => '002'
+            'id_client' => '02',
+            'id_offer' => '002'
             ]);
 
         DB::table('clientsOffers')->insert([
-            'id' => '03',
-            'id' => '003'
+            'id_client' => '03',
+            'id_offer' => '003'
             ]);
     }
 }
