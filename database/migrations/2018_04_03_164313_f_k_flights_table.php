@@ -14,13 +14,13 @@ class FKFlightsTable extends Migration
     public function up()
     {
         Schema::table('flights', function (Blueprint $table) {
+
             $table->string('origen')->default('default_value');
-            
-            $table->foreign('origen')->references('id')->on('clients');
+            $table->foreign('origen')->references('id')->on('cities');
             
 
             $table->string('destino')->default('default_value');
-            $table->foreign('destino')->references('id')->on('clients');
+            $table->foreign('destino')->references('codidoPostal')->on('cities');
             
            
         });
