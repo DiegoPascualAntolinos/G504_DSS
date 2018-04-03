@@ -11,4 +11,8 @@ class Offer extends Model
     public function Client(){
         return $this->belongsToMany('App\Client');
     }
+
+    public function City(){
+        return $this->belongsToMany('App\City');
+    }
 }

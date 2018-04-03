@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class CitiesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('cities')->insert([
+            'codigoPostal' => '48686',
+            'pais' => 'España',
+            'provincia' => 'Alicante',
+            'ciudad' => 'Alicante'
+
+        ]);
+
+        DB::table('cities')->insert([
+            'codigoPostal' => '48696',
+            'pais' => 'España',
+            'provincia' => 'Andalucia',
+            'ciudad' => 'Sevilla'
+        ]);
+
+        DB::table('cities')->insert([
+            'codigoPostal' => '48675',
+            'pais' => 'España',
+            'provincia' => 'Andalucia',
+            'ciudad' => 'Granada'
+        ]);
+    }
+}
