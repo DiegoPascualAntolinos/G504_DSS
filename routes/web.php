@@ -14,3 +14,26 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', 'holaMundo@mostrarContenido');
+
+Route::get('/home', function(){
+    return view('home', array('nombre' => 'Dieguchi'));
+});
+/*
+/hello es el nombre de la entrada para acceder al controlador
+holaMundo nombre del controlador
+mostrarContenido nombre de la funcion a ser llamados
+*/
+
+Route::get('/demo', function () {
+
+    return view('demo');
+ 
+ });
+ 
+
+ Route::get('/bootstrap', function () {
+    return view('bootstrap');
+});
+ 
