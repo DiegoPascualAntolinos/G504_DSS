@@ -10,10 +10,23 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-    
+    .navbar-default {
+        background-color: #ef6c00;
+        border-color: #ef6c00;
+    }
+
+    .navbar-default .navbar-brand {
+        color: #1de9b6;
+    }
+    /*https://mdbootstrap.com/css/colors/*/
+    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+        color: #000000;
+    }
+
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2;
+      background-color: #fb8c00;
       padding: 25px;
     }
+    
   </style>

@@ -32,8 +32,3 @@ Route::get('/demo', function () {
  
  });
  
-
- Route::get('/bootstrap', function () {
-    return view('bootstrap');
-});
- 
