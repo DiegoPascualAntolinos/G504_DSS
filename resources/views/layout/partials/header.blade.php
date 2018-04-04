@@ -1,20 +1,13 @@
-<section class="jumbotron text-center">
-
-     <div class="container">
-
-       <h1 class="jumbotron-heading">Album example</h1>
-
-       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sIet, but not too short so folks don't simply skip over it entirely.</p>
-
-       <p>
-
-         <a href="#" class="btn btn-primary">Main call to action</a>
-
-         <a href="#" class="btn btn-secondary">Secondary action</a>
-
-       </p>
-
-     </div>
-
-</section>
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
