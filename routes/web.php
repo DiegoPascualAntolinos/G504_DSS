@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('faltaPorHacer');
 });
 
 Route::get('/hello', 'holaMundo@mostrarContenido');
@@ -26,9 +26,12 @@ holaMundo nombre del controlador
 mostrarContenido nombre de la funcion a ser llamados
 */
 
-Route::get('/demo', function () {
+Route::get('/main', function () {
 
-    return view('demo');
+    return view('mainPage');
  
  });
  
+ROute::get('/prueba', function(){
+    return view('prueba');
+});

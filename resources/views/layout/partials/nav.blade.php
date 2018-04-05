@@ -1,53 +1,15 @@
-<div class="collapse bg-inverse" id="navbarHeader">
-
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-sm-8 py-4">
-
-      <h4 class="text-white">About</h4>
-
-      <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Dsstinos</a>
     </div>
-
-    <div class="col-sm-4 py-4">
-
-      <h4 class="text-white">Contact</h4>
-
-      <ul class="list-unstyled">
-
-        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-
-        <li><a href="#" class="text-white">Like on Facebook</a></li>
-
-        <li><a href="#" class="text-white">Email me</a></li>
-
-      </ul>
-
+    <div class="col-sm-8">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
     </div>
-
   </div>
-
-</div>
-
-</div>
-
-<div class="navbar navbar-inverse bg-inverse">
-
-<div class="container d-flex justify-content-betIen">
-
-  <a href="#" class="navbar-brand">Album</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-
-    <span class="navbar-toggler-icon"></span>
-
-  </button>
-
-</div>
-
-</div>
-
-
+</nav>
