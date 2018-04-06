@@ -15,8 +15,12 @@
         background-color: #ef6c00;
         border-color: #ef6c00;
     }
+    body { /*Cambiamos los margenes del navbar y el footer. SI no se solapan*/
+        padding-top: 65px;
+        padding-bottom: 120px; 
+    }
 
-.navbar-default .navbar-brand {
+    .navbar-default .navbar-brand {
         color: #1de9b6;
     }
     /*https://mdbootstrap.com/css/colors/*/
@@ -25,11 +29,21 @@
     }
 
     /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #fb8c00;
+    .footer {
+      background-color: #ef6c00;
       padding: 25px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 114px;
     }
     
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+        width:640px;
+        height:360px;
+    }
+
   </style>
 
 
