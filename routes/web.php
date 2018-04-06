@@ -31,7 +31,13 @@ Route::get('/main', function () {
     return view('mainPage');
  
  });
- 
-ROute::get('/prueba', function(){
-    return view('prueba');
+
+//Route::get('/main', [as => 'main', 'uses' => '']);
+
+Route::get('/register', function(){
+    return view('register');
+});
+
+Route::get('/login', function(){
+    return view('login');
 });

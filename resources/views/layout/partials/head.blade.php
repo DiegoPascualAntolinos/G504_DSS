@@ -31,6 +31,7 @@
     /* Add a gray background color and some padding to the footer */
     .footer {
       background-color: #ef6c00;
+      position: relative;
       padding: 25px;
       left: 0;
       bottom: 0;
