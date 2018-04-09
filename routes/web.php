@@ -27,12 +27,8 @@ mostrarContenido nombre de la funcion a ser llamados
 */
 
 Route::get('/main', function () {
-
     return view('mainPage');
- 
  });
-
-//Route::get('/main', [as => 'main', 'uses' => '']);
 
 Route::get('/register', function(){
     return view('register');
@@ -40,4 +36,11 @@ Route::get('/register', function(){
 
 Route::get('/login', function(){
     return view('login');
+});
+
+Route::get('/faltaPorHacer', function(){
+    return view('faltaPorHacer');
+});
+Route::get('/profile', function(){
+    return view('profile');
 });
