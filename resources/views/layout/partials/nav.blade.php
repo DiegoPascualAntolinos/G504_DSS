@@ -5,8 +5,9 @@
       <a class="navbar-brand" href="/main">Dsstinos</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Elige tu destino!</a></li>
+      <li class="active"><a href="/destino">Elige tu destino!</a></li>
       <li><a href="/faltaPorHacer">Falta por hacer</a></li>
+      <li><a href="/oferta">Oferta</a></li>
       
       </ul>
       <ul class= "nav navbar-nav navbar-right">

@@ -44,3 +44,13 @@ Route::get('/faltaPorHacer', function(){
 Route::get('/profile', function(){
     return view('profile');
 });
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/destino', function(){
+    return view('destino');
+});
+
+Route::get('/oferta', function(){
+    return view('oferta');
+});

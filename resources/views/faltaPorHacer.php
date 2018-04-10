@@ -8,7 +8,7 @@
         - Cambiar los colores del header <br>
 		- Poner los apartados que se deseen en el header <br>
 		- Hacer que el footer funcione <br>
-
+		- Pagina de publicacion de viajes
 		<a href = "https://mdbootstrap.com/css/colors/"> - Colores para el header </a> <br>
 		<a href = "https://www.jquery-az.com/wwh/demo.php?ex=28.0_1"> - Estructura de las partes del header </a> <br>
 		<a href = "https://mobirise.com/bootstrap-4-theme/footer-template.html"> - Un posible footer </a> <br>
