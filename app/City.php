@@ -11,4 +11,8 @@ class City extends Model
     public function Offer(){
         return $this->belongsToMany('App\Offer');
     }
+
+    public function flights(){
+        return $this->hasMany('App\Flight');
+    }
 }

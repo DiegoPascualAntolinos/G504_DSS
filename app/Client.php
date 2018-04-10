@@ -11,4 +11,8 @@ class Client extends Model
     public function offer(){
         return $this->belongsToMany('App\Offer');
     }
+
+    public function reservations(){
+        return $this->hasMany('App\Reservation');
+    }
 }
