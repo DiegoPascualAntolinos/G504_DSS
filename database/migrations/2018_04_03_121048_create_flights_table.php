@@ -14,10 +14,16 @@ class CreateFlightsTable extends Migration
     public function up()
     {
         Schema::create('flights', function (Blueprint $table) {
-            $table->string('cod');
+            $table->increments('id');
             $table->double('precio');
             $table->date('fechaVuelo');
             $table->string('plazasDisponibles');
+            
+            $table->integer('id_ciudad_origen')->unsigned()->default(0);
+            $table->foreign('id_ciudad_origen')->references('id')->on('cities');
+            
+            $table->integer('id_ciudad_destino')->unsigned()->default(0);
+            $table->foreign('id_ciudad_destino')->references('id')->on('cities');
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@ class OffersTableSeeder extends Seeder
     public function run()
     {
         DB::table('offers')->insert([
-            'id' => '001',
+            //'id' => '001',
             'precio' => '499',
             'nombre' => 'La fuente de felicidad',
             'fechaViaje' => '10/03/2018',
@@ -22,7 +22,7 @@ class OffersTableSeeder extends Seeder
         ]);
 
         DB::table('offers')->insert([
-            'id' => '002',
+            //'id' => '002',
             'precio' => '328',
             'nombre' => 'Vida alegre',
             'fechaViaje' => '01/05/2018',
@@ -32,7 +32,7 @@ class OffersTableSeeder extends Seeder
         ]);
 
         DB::table('offers')->insert([
-            'id' => '003',
+            //'id' => '003',
             'precio' => '500',
             'nombre' => 'Escapada romántica',
             'fechaViaje' => '11/10/2018',

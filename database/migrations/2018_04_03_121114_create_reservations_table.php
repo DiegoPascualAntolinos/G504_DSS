@@ -14,14 +14,16 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->increments('id3');
+            $table->increments('id');
             $table->date('fechaLlegada');
             $table->date('fechaSalida');
             $table->string('cantidad');
-            /*
-            $table->unsignedInteger('id_clients')->unsigned();
+
+            $table->integer('id_clients')->unsigned()->default(0);
             $table->foreign('id_clients')->references('id')->on('clients');
-            */
+            
+            $table->integer('id_flight')->unsigned()->default(0);
+            $table->foreign('id_flight')->references('id')->on('flights');
             $table->timestamps();
         });
     }

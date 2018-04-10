@@ -12,7 +12,7 @@ class FlightsTableSeeder extends Seeder
     public function run()
     {
         DB::table('flights')->insert([
-            'cod' => '90',
+            //'cod' => '90',
             'precio' => '60',
             'fechaVuelo' => '10/03/2018',
             'plazasDisponibles' => '20'
@@ -20,15 +20,15 @@ class FlightsTableSeeder extends Seeder
         ]);
 
         DB::table('flights')->insert([
-            'cod' => '123',
+            //'cod' => '123',
             'precio' => '120',
-            'fechaViaje' => '01/05/2018',
+            'fechaVuelo' => '01/05/2018',
             'plazasDisponibles' => '15'
            
         ]);
 
-        DB::table('fligths')->insert([
-            'cod' => '298',
+        DB::table('flights')->insert([
+            //'cod' => '298',
             'precio' => '500',
             'fechaVuelo' => '11/10/2018',
             'plazasDisponibles' => '34'

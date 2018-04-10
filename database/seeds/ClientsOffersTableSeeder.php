@@ -11,19 +11,21 @@ class ClientsOffersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('clientsOffers')->insert([
-            'id_client' => '01',
-            'id_offer' => '001'
+        DB::table('clients_offers')->insert([
+            'id_clients' => '1',
+            'id_offers' => '3'
         ]);
 
-        DB::table('clientsOffers')->insert([
-            'id_client' => '02',
-            'id_offer' => '002'
-            ]);
+        DB::table('clients_offers')->insert([
+            'id_clients' => '2',
+            'id_offers' => '2'
+        ]);
 
-        DB::table('clientsOffers')->insert([
-            'id_client' => '03',
-            'id_offer' => '003'
-            ]);
+        DB::table('clients_offers')->insert([
+            'id_clients' => '3',
+            'id_offers' => '1'
+        ]);
+
+        
     }
 }

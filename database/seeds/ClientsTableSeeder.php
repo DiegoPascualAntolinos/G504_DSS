@@ -12,7 +12,7 @@ class ClientsTableSeeder extends Seeder
     public function run()
     {
         DB::table('clients')->insert([
-            'id' => '01',
+            //'id' => '01',
             'dni' => '1234568X',
             'nombre' => 'Laura Martinez Soler',
             'direccion' => 'C/Jornet Perales 2',
@@ -22,7 +22,7 @@ class ClientsTableSeeder extends Seeder
         ]);
 
         DB::table('clients')->insert([
-            'id' => '02',
+            //'id' => '02',
             'dni' => '6235568Z',
             'nombre' => 'Pedro Ferrero Calabuig',
             'direccion' => 'C/Mayor 4',
@@ -32,7 +32,7 @@ class ClientsTableSeeder extends Seeder
         ]);
 
         DB::table('clients')->insert([
-            'id' => '03',
+            //'id' => '03',
             'dni' => '8976535P',
             'nombre' => 'Pepica Calatayud Pla',
             'direccion' => 'C/Albacete 5',
