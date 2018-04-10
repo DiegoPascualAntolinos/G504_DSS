@@ -54,6 +54,8 @@ Route::get('/destino', function(){
 Route::get('/oferta', function(){
     return view('oferta');
 });
+
 Route::get('/contacto', function(){
     return view('contacto');
 });
+
