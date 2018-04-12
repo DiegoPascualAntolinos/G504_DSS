@@ -5,9 +5,24 @@
 
 <?php $__env->startSection('content'); ?>
 
+<div class="sidebar-widget">
+            <!-- Sidebar Contact info -->
+            <div class="styled-box gray">
+              <h3 class="text-upper">Contacta con nosotros</h3>
+              <p>Somos especialistas en hacerte feliz.</p>
+              <ul class="contact-info list-unstyled">
+                <li class="ct-phone">+34 93 409 50 03</li>
+                <li class="ct-email">viajerosUA@DSStinos.com</li>
+                <li class="ct-facebook"><a href="https://www.facebook.com/" target="_blank">www.facebook.com</a></li>
+               
+              </ul>
+            </div>
+          </div>
+
+          
 <div class= "container">
     <div class="container container-centered">
-<h1>Contacta con nosotros</h1>
+<h1>Explícanos qué necesitas</h1>
 </div> 
 <div class="column size-1of4">
 
@@ -68,7 +83,7 @@
 </form>
 </div>
 <div class="column size-1of4">
-    <iframe src="https://goo.gl/maps/ThcCBMcVBNL2" width="200" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="" width="200" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 </div>
 

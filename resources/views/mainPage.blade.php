@@ -49,11 +49,11 @@
     [POner a que nos dedicamos]
     <br>
     <br>
-    Más abajo tienes algunas opiniones de gente que ha viaajajajjajajajajjajado con nostros.
+    ¿Cuándo fue la última vez que hiciste algo por primera vez?
     <br>
     <br>
     <br>
-    Difruta de tu viaje. Equipo Dsstinos</p>
+    Suénalo, vívelo y recuérdalo. Equipo Dsstinos</p>
   </div>
 </div>
 <div class="container">

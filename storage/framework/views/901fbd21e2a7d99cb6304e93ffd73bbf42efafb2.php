@@ -40,8 +40,19 @@
 </div>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <h1 class="display-4">¡BIENVENIDO!</h1>
+    <p class="lead">¡Estás en Dsstinos! Felicidades :) Este es el inicio de tu próximo viaje.
+    Navega, busca, lee e imagina tu siguiente escapada al lugar que quieras y con el precio que te apetezca. 
+    <br>
+    <br>
+    [POner a que nos dedicamos]
+    <br>
+    <br>
+    ¿Cuándo fue la última vez que hiciste algo por primera vez?
+    <br>
+    <br>
+    <br>
+    Suénalo, vívelo y recuérdalo. Equipo Dsstinos</p>
   </div>
 </div>
 <div class="container">
