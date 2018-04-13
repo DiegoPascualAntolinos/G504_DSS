@@ -17,7 +17,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Jornet Perales 2',
             'email' => 'laureta91@gmail.com',
             'telefono' => '962901167',
-            'tipo' => 'Particular'
+            'contraseña' => '123abc'
+            
         ]);
 
         DB::table('clients')->insert([
@@ -26,7 +27,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Mayor 4',
             'email' => 'pfc21@gmail.com',
             'telefono' => '672901167',
-            'tipo' => 'Particular'
+            'contraseña' => '654abc'
+            
         ]);
 
         DB::table('clients')->insert([
@@ -35,7 +37,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Albacete 5',
             'email' => 'calatayud125@gmail.com',
             'telefono' => '66890762',
-            'tipo' => 'Particular'
+            'contraseña' => 'hola123'
+            
         ]);
     }
 }
