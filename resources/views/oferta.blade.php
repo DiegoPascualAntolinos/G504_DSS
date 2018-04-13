@@ -5,6 +5,9 @@
 
 
 @section('content')
+<<<<<<< HEAD
+
+=======
     <div class="container">
             $table->increments('id');
             $table->double('precio');
@@ -16,6 +19,7 @@
     </div>
 
   
+>>>>>>> 2ab8cb913e6385b951443d565472add0e03df988
 
 
 @endsection

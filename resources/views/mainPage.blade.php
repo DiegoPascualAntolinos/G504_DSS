@@ -41,6 +41,10 @@
 </div>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
+<<<<<<< HEAD
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+=======
     <h1 class="display-4">¡BIENVENIDO!</h1>
     <p class="lead">
     <br>
@@ -49,6 +53,7 @@
     <br>
     <br>
     Feliz Viaje. Equipo Dsstinos</p>
+>>>>>>> 2ab8cb913e6385b951443d565472add0e03df988
   </div>
 </div>
 <div class="container">
