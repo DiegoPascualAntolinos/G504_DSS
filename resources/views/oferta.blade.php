@@ -5,13 +5,7 @@
 
 
 @section('content')
-    <div class="container">
-            $table->increments('id');
-            $table->double('precio');
-            $table->string('nombre');
-            $table->date('fechaViaje');
-            $table->string('origen');
-            $table->string('destino');
-            $table->date('fechaFinOferta');
-    </div>
+
+
+
 @endsection
