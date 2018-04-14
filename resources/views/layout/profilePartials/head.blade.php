@@ -131,7 +131,7 @@
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #fff;
+  background: #ef6c00;
   min-height: 460px;
 }
     #myFooter {
