@@ -29,9 +29,10 @@
               <tr>
                <td> <?php echo e($i = $elegido->id); ?> </td>
               <td> <?php echo e($elegido->nombre); ?> </td>
-              <td> <?php echo e($elegido->monitor_id); ?> </td>
-              <td> <?php echo e($elegido->fecha); ?> </td>
-              <td> <?php echo e($elegido->horario); ?> </td>
+              <td> <?php echo e($elegido->fechaViaje); ?> </td>
+              <td> <?php echo e($elegido->fechaFinOferta); ?> </td>
+              <td> <?php echo e($elegido->origen); ?> </td>
+              <td> <?php echo e($elegido->destino); ?> </td>
               <td> <?php echo e($elegido->descripcion); ?> </td>
               <td> <?php echo e($elegido->precio); ?> </td>
               </tr>
