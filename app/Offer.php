@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Offer extends Model
 {
+
+    protected $table = 'offers';
+    protected $primaryKey = 'id';
     public $timestamps = false;
 
     public function Client(){

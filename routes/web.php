@@ -47,9 +47,10 @@ Route::get('/profile', function(){
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/destino', function(){
-    return view('destino');
-});
+
+Route::name('create_offer')->get('/destino', 'offerController@create');
+
+Route::name('store_offer')->post('/main', 'offerController@store');
 
 Route::get('/oferta', function(){
     return view('oferta');

@@ -13,12 +13,12 @@ class CreateClientsOffersTable extends Migration
      */
     public function up()
     {
-        Schema::create('clients_offers', function (Blueprint $table) {
+        Schema::create('client_offer', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_clients')->unsigned();
-            $table->integer('id_offers')->unsigned();
-            $table->foreign('id_clients')->references('id')->on('clients');
-            $table->foreign('id_offers')->references('id')->on('offers');
+            $table->integer('client_id')->unsigned();
+            $table->integer('offer_id')->unsigned();
+            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('offer_id')->references('id')->on('offers');
             $table->timestamps();
             
            
