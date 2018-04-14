@@ -19,6 +19,7 @@ return array(
     'App\\Http\\Controllers\\LoginController' => $baseDir . '/app/Http/Controllers/LoginController.php',
     'App\\Http\\Controllers\\controladorAndrea' => $baseDir . '/app/Http/Controllers/controladorAndrea.php',
     'App\\Http\\Controllers\\holaMundo' => $baseDir . '/app/Http/Controllers/holaMundo.php',
+    'App\\Http\\Controllers\\offerController' => $baseDir . '/app/Http/Controllers/offerController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',

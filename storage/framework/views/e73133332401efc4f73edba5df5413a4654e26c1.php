@@ -12,120 +12,135 @@
 <h1> 
 </div> 
 
+<?php if(count($errors) > 0): ?>
 
-<form>
+<div class="alert alert-danger">
 
-    <div class="form-group"> <!-- Full Name -->
-          <label for="full_name_id" class="control-label">Nombre</label>
-         <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Alejandro">
-     </div>   
+    <ul>
 
-     <div class="form-group"> <!-- Full Name -->
-        <label for="full_name_id" class="control-label">Email</label>
-        <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="dsstino@gmail.com">
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+        <li><?php echo e($error); ?></li>
+
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+    </ul>
+
+</div>
+
+<?php endif; ?>
+
+<form action="<?php echo e(route('store_offer')); ?>" method="POST">
+
+<?php echo e(csrf_field()); ?>
+
+
+     <div class="form-group"> <!-- email -->
+        <label for="email" class="control-label">Email</label>
+        <input type="string" class="form-control" id="full_name_id" name="email" placeholder="dsstino@gmail.com">
     </div>   
 
 
-    <div class="form-group"> <!-- Full Name -->
-        <label for="full_name_id" class="control-label">Titulo Viaje</label>
-        <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Una experiencia inolvidable">
+    <div class="form-group"> <!-- titulo -->
+        <label for="titulo" class="control-label">Titulo Viaje</label>
+        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
     </div>    
 
-    <div class="form-group"> <!-- Full Name -->
-        <label for="full_name_inicio" class="control-label">Fecha inicio</label>
-        <input class"form-control" id="full_name_inicio" name="FechaInicioOferta"  placeholder="DD/MM/AAAA"  type="text">
+    <div class="form-group"> <!-- fecha inicio -->
+        <label for="fechaViaje" class="control-label">Fecha inicio</label>
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
     </div>  
 
-    <div class="form-group"> <!-- Full Name -->
-        <label for="full_name_fin" class="control-label">Fecha inicio</label>
-        <input class"form-control" id="full_name_fin" name="FechaFinOferta"  placeholder="DD/MM/AAAA" type="text">
+    <div class="form-group"> <!-- fecha vuelta -->
+        <label for="fechaFinOferta" class="control-label">Fecha vuelta</label>
+        <input type = "date" class"form-control" id="full_name_fin" name="fechaFinOferta"  placeholder="DD/MM/AAAA" type="text">
     </div>  
                             
-    <div class="form-group"> <!-- State Button -->
-        <label for="state_id" class="control-label">¿De dónde sales?</label>
-        <select class="form-control" id="state_id">
-        <option value="AT">Albania, Tirania</option>
-            <option value="AB">Alemania, Berlín</option>
-            <option value="AA">Andorra, Andorra la bella</option>
-            <option value="AV">Austria, Viena</option>
-            <option value="BM">Bielorrusia, Minsk</option>
-            <option value="BB">Bélgica, Bruselas</option>
-            <option value="BS">Bosnia-Herzegovina, Sarajevo</option>
-            <option value="BS">Bulgaria, Sofía</option>
-            <option value="CZ">Croacia, Zangreb</option>
-            <option value="DC">Dinamarca, Copenhague</option>
-            <option value="EB">Eslovaquia, Bratislava</option>
-            <option value="EL">Eslovenia, Liubliana</option>
-            <option value="EM">España, Madrid</option>
-            <option value="EB">España, Barcelona</option>
-            <option value="ES">España, Sevilla</option>
-            <option value="EG">España, Granada</option>
-            <option value="EA">España, Alicante</option>
-            <option value="FH">Finlandia, Helsinki</option>
-            <option value="FP">Francia, París</option>
-            <option value="GA">Grecia, Atenas</option>
-            <option value="HB">Hungría, Budapest</option>
-            <option value="ID">Irlanda, Dublín</option>
-            <option value="IR">Islandia, Reikiavik</option>
-            <option value="IR">Italia, Roma</option>
-            <option value="LR">Letonia, Riga</option>
-            <option value="LV">Lituania, Vilna</option>
-            <option value="LL">Luxemburgo, Luxemburgo</option>
-            <option value="MS">Macedonia, Skopje</option>
-            <option value="ML">Malta, La Valetta</option>
-            <option value="MC">Moldova, Chisinau</option>
-            <option value="MM">Mónaco, Mónaco-Vile</option>
-            <option value="NO">Noruega, Oslo</option>
-            <option value="PA">Países Bajos, Amsterdam</option>
-            <option value="PV">Polonia, Varsovia</option>
+    <div class="form-group"> <!-- origen Button -->
+        <label for="origen" class="control-label">¿De dónde sales?</label>
+        <select class="form-control" id="origen" name="origen">
+        <option value="Tirania">Albania, Tirania</option>
+            <option value="Berlín">Alemania, Berlín</option>
+            <option value="Andorra La Bella">Andorra, Andorra la bella</option>
+            <option value="Viena">Austria, Viena</option>
+            <option value="Minsk">Bielorrusia, Minsk</option>
+            <option value="Bruselas">Bélgica, Bruselas</option>
+            <option value="Sarajevo">Bosnia-Herzegovina, Sarajevo</option>
+            <option value="Sofía">Bulgaria, Sofía</option>
+            <option value="Zangreb">Croacia, Zangreb</option>
+            <option value="Copenhague">Dinamarca, Copenhague</option>
+            <option value="Bratislava">Eslovaquia, Bratislava</option>
+            <option value="Liubliana">Eslovenia, Liubliana</option>
+            <option value="Madrid">España, Madrid</option>
+            <option value="Barcelona">España, Barcelona</option>
+            <option value="Sevilla">España, Sevilla</option>
+            <option value="Granada">España, Granada</option>
+            <option value="Alicante">España, Alicante</option>
+            <option value="Helsinki">Finlandia, Helsinki</option>
+            <option value="París">Francia, París</option>
+            <option value="Atenas">Grecia, Atenas</option>
+            <option value="Budapest">Hungría, Budapest</option>
+            <option value="Dublín">Irlanda, Dublín</option>
+            <option value="Reikiavik">Islandia, Reikiavik</option>
+            <option value="Roma">Italia, Roma</option>
+            <option value="Riga">Letonia, Riga</option>
+            <option value="Vilna">Lituania, Vilna</option>
+            <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
+            <option value="Skopje">Macedonia, Skopje</option>
+            <option value="La Valetta">Malta, La Valetta</option>
+            <option value="Chisinau">Moldova, Chisinau</option>
+            <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
+            <option value="Oslo">Noruega, Oslo</option>
+            <option value="Amsterdam">Países Bajos, Amsterdam</option>
+            <option value="Varsovia">Polonia, Varsovia</option>
           
         </select>                    
     </div>
     
              
-    <div class="form-group"> <!-- State Button -->
-        <label for="state_id" class="control-label">¿A dónde vas?</label>
-        <select class="form-control" id="state_id">
-            <option value="AT">Albania, Tirania</option>
-            <option value="AB">Alemania, Berlín</option>
-            <option value="AA">Andorra, Andorra la bella</option>
-            <option value="AV">Austria, Viena</option>
-            <option value="BM">Bielorrusia, Minsk</option>
-            <option value="BB">Bélgica, Bruselas</option>
-            <option value="BS">Bosnia-Herzegovina, Sarajevo</option>
-            <option value="BS">Bulgaria, Sofía</option>
-            <option value="CZ">Croacia, Zangreb</option>
-            <option value="DC">Dinamarca, Copenhague</option>
-            <option value="EB">Eslovaquia, Bratislava</option>
-            <option value="EL">Eslovenia, Liubliana</option>
-            <option value="EM">España, Madrid</option>
-            <option value="EB">España, Barcelona</option>
-            <option value="ES">España, Sevilla</option>
-            <option value="EG">España, Granada</option>
-            <option value="EA">España, Alicante</option>
-            <option value="FH">Finlandia, Helsinki</option>
-            <option value="FP">Francia, París</option>
-            <option value="GA">Grecia, Atenas</option>
-            <option value="HB">Hungría, Budapest</option>
-            <option value="ID">Irlanda, Dublín</option>
-            <option value="IR">Islandia, Reikiavik</option>
-            <option value="IR">Italia, Roma</option>
-            <option value="LR">Letonia, Riga</option>
-            <option value="LV">Lituania, Vilna</option>
-            <option value="LL">Luxemburgo, Luxemburgo</option>
-            <option value="MS">Macedonia, Skopje</option>
-            <option value="ML">Malta, La Valetta</option>
-            <option value="MC">Moldova, Chisinau</option>
-            <option value="MM">Mónaco, Mónaco-Vile</option>
-            <option value="NO">Noruega, Oslo</option>
-            <option value="PA">Países Bajos, Amsterdam</option>
-            <option value="PV">Polonia, Varsovia</option>
+    <div class="form-group"> <!-- destino Button -->
+        <label for="destino" class="control-label">¿A dónde vas?</label>
+        <select class="form-control" id="destino" name="destino">
+            <option value="Tirania">Albania, Tirania</option>
+            <option value="Berlín">Alemania, Berlín</option>
+            <option value="Andorra La Bella">Andorra, Andorra la bella</option>
+            <option value="Viena">Austria, Viena</option>
+            <option value="Minsk">Bielorrusia, Minsk</option>
+            <option value="Bruselas">Bélgica, Bruselas</option>
+            <option value="Sarajevo">Bosnia-Herzegovina, Sarajevo</option>
+            <option value="Sofía">Bulgaria, Sofía</option>
+            <option value="Zagreb">Croacia, Zangreb</option>
+            <option value="Copenhague">Dinamarca, Copenhague</option>
+            <option value="Bratislava">Eslovaquia, Bratislava</option>
+            <option value="Liubliana">Eslovenia, Liubliana</option>
+            <option value="Madrid">España, Madrid</option>
+            <option value="Barcelona">España, Barcelona</option>
+            <option value="Sevilla">España, Sevilla</option>
+            <option value="Granada">España, Granada</option>
+            <option value="Alicante">España, Alicante</option>
+            <option value="Helsinki">Finlandia, Helsinki</option>
+            <option value="París">Francia, París</option>
+            <option value="Atenas">Grecia, Atenas</option>
+            <option value="Budapest">Hungría, Budapest</option>
+            <option value="Dublín">Irlanda, Dublín</option>
+            <option value="Reikiavik">Islandia, Reikiavik</option>
+            <option value="Roma">Italia, Roma</option>
+            <option value="Riga">Letonia, Riga</option>
+            <option value="Vilna">Lituania, Vilna</option>
+            <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
+            <option value="Skopje">Macedonia, Skopje</option>
+            <option value="La Valetta">Malta, La Valetta</option>
+            <option value="Chisinau">Moldova, Chisinau</option>
+            <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
+            <option value="Oslo">Noruega, Oslo</option>
+            <option value="Amsterdam">Países Bajos, Amsterdam</option>
+            <option value="Varsovia">Polonia, Varsovia</option>
         </select>                    
     </div>
 
-    <div class="form-group"> <!-- Zip Code-->
-        <label for="zip_id" class="control-label">Precio total (todo incluido)</label>
-        <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+    <div class="form-group"> <!-- precio -->
+        <label for="precio" class="control-label">Precio total (todo incluido)</label>
+        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
     </div>        
     
     <div class="form-group"> <!-- Submit Button -->
@@ -136,7 +151,8 @@
 
 
 <div class="item">
-      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York">
+      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
+      HSPACE = "61" VSPACE="50">
     </div>
 
         <div
@@ -146,8 +162,7 @@
             data-longitude="-3.669434"
             data-avoid-highway="20"
             style="width:350px;height:400px;">
-        </div>
-    </div>
+        </div>  
 
             <div class="insurance wrapper alert alert-info no-icon clearfix">
     <i class="bbc-icon2-info u-darkBlue size30 pull-left no-margin-left" aria-hidden="true"></i>
@@ -157,7 +172,10 @@
         <li class="line20">Profesionales con perfiles certificados.</li>
         <li class="line20">Seguro adicional sin coste en colaboración con DSS</li>
     </ul>
+    </div>
 </div>
+
+
 
 
 

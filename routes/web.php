@@ -38,8 +38,8 @@ Route::get('/login', function(){
     return view('login');
 });
 
-Route::get('/faltaPorHacer', function(){
-    return view('faltaPorHacer');
+Route::get('/vuelos', function(){
+    return view('vuelos');
 });
 Route::get('/profile', function(){
     return view('profile');
@@ -53,7 +53,6 @@ Route::get('/profile/ajustesUsuario', function(){
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
 
 Route::name('create_offer')->get('/destino', 'offerController@create');
 

@@ -151,7 +151,8 @@
 
 
 <div class="item">
-      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York">
+      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
+      HSPACE = "61" VSPACE="50">
     </div>
 
         <div
@@ -161,8 +162,7 @@
             data-longitude="-3.669434"
             data-avoid-highway="20"
             style="width:350px;height:400px;">
-        </div>
-    </div>
+        </div>  
 
             <div class="insurance wrapper alert alert-info no-icon clearfix">
     <i class="bbc-icon2-info u-darkBlue size30 pull-left no-margin-left" aria-hidden="true"></i>
@@ -172,7 +172,10 @@
         <li class="line20">Profesionales con perfiles certificados.</li>
         <li class="line20">Seguro adicional sin coste en colaboración con DSS</li>
     </ul>
+    </div>
 </div>
+
+
 
 
 
