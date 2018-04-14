@@ -5,21 +5,41 @@
 
 
 @section('content')
-<<<<<<< HEAD
 
-=======
-    <div class="container">
-            $table->increments('id');
-            $table->double('precio');
-            $table->string('nombre');
-            $table->date('fechaViaje');
-            $table->string('origen');
-            $table->string('destino');
-            $table->date('fechaFinOferta');
-    </div>
+@section('content')
+<div class = "container">
+    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
 
-  
->>>>>>> 2ab8cb913e6385b951443d565472add0e03df988
-
-
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+              <tbody>
+            @foreach($clase as $elegido)
+              <tr>
+               <td> {{$i = $elegido->id}} </td>
+              <td> {{$elegido->nombre}} </td>
+              <td> {{$elegido->fechaViaje}} </td>
+              <td> {{$elegido->fechaFinOferta}} </td>
+              <td> {{$elegido->origen}} </td>
+              <td> {{$elegido->destino}} </td>
+              <td> {{$elegido->descripcion}} </td>
+              <td> {{$elegido->precio}} </td>
+              </tr>
+            @endforeach
+            </tbody>
+            {{$clase->links()}}
+            </table>
+</div>
 @endsection

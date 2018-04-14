@@ -20,6 +20,7 @@ class CreateOffersTable extends Migration
             $table->date('fechaViaje');
             $table->string('origen');
             $table->string('destino');
+            $table->string('descripcion');
             $table->date('fechaFinOferta');
             $table->timestamps();
         });
