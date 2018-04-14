@@ -127,7 +127,7 @@
 
             <div class="col-xs-6 col-lg-4">
             <h2>Ángela y Javi</h2>
-              <p>¡Una experiencia única y romántica! Sin una luna de miel indescriptible. </p>
+              <p>¡Una experiencia única y romántica! Sin duda una luna de miel indescriptible. </p>
 
               <div class="item">
       <img class="img-responsive" src="https://img.culturacolectiva.com/featured/2017/12/20/1513824874527/viajes-portada-medium.png" alt="New York" HSPACE = "0" VSPACE="15">
