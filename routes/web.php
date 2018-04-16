@@ -53,7 +53,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::name('create_offer')->get('/oferta', 'offerController@create');
 
-Route::name('store_offer')->post('/main', 'offerController@store');
+Route::name('store_offer')->post('/oferta', 'offerController@store');
 
 Route::get('/oferta', 'offerController@index');
 
@@ -72,7 +72,7 @@ Route::get('/reservas', function(){
 
 Route::name('create_reservation')->get('/reservas', 'reservationController@create');
 
-Route::name('store_reservation')->post('/main', 'reservationController@store');
+Route::name('store_reservation')->post('/reservas', 'reservationController@store');
 
 Route::get('/reservas', 'reservationController@index');
 
