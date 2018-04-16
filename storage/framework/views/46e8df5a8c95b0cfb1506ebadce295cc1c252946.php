@@ -31,27 +31,42 @@
 
 <?php endif; ?>
 
-<form action="<?php echo e(route('store_offer')); ?>" method="POST">
+<form action="<?php echo e(route('store_flight')); ?>" method="POST">
 
 <?php echo e(csrf_field()); ?>
 
 
   
-    <div class="form-group"> <!-- titulo -->
+    <div class="form-group"> <!-- precio -->
         <label for="precio" class="control-label">Precio</label>
-        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
+        <input type="string" class="form-control" id="precio" name="precio" placeholder="Introduce el precioi">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->
         <label for="fechaVuelo" class="control-label">Fecha vuelo</label>
-        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaVuelo"  placeholder="DD/MM/AAAA"  type="text">
     </div>  
 
 
 
-    <div class="form-group"> <!-- precio -->
+    <div class="form-group"> <!-- plazas -->
         <label for="plazasDisponibles" class="control-label">Plazas disponibles</label>
-        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
+        <input type="double" class="form-control" id="plazasDisponibles" name="plazasDisponibles" placeholder="Introduce las plazas disponibles">
+    </div>
+
+    <div class="form-group"> <!-- pais -->
+        <label for="pais" class="control-label"> País origen</label>
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="Introduce el país de origen">
+    </div>
+
+    <div class="form-group"> <!-- provincia -->
+        <label for="provincia" class="control-label">Provincia origen</label>
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="Introduce la provincia de origen">
+    </div>
+
+    <div class="form-group"> <!-- ciudad -->
+        <label for="ciudad" class="control-label">Ciudad origen</label>
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad de origen">
     </div>
 
     <div class="form-group"> <!-- Submit Button -->
@@ -59,6 +74,39 @@
     </div>     
     
 </form>
+
+
+<div class = "container">
+    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Precio</th>
+                <th>Fecha inicio</th>
+                <th>Fecha vuelo</th>
+                <th>Plazas Disponibles</th>
+              </tr>
+            </thead>
+              <tbody>
+            <?php $__currentLoopData = $flights; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $flight): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+              <tr>
+              <td> <?php echo e($flight->id); ?> </td>
+              <td> <?php echo e($flight->precio); ?> </td>
+              <td> <?php echo e($flight->fechaVuelo); ?> </td>
+              <td> <?php echo e($flight->plazasDisponibles); ?> </td>
+              </tr>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($flights->links()); ?>
+
+            </tbody>
+            </table>
+</div>
+
+
+
+
+
 
 
 <div class="item">

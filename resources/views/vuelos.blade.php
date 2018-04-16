@@ -39,7 +39,7 @@
   
     <div class="form-group"> <!-- precio -->
         <label for="precio" class="control-label">Precio</label>
-        <input type="string" class="form-control" id="precio" name="precio" placeholder="">
+        <input type="string" class="form-control" id="precio" name="precio" placeholder="Introduce el precio">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->
@@ -51,22 +51,22 @@
 
     <div class="form-group"> <!-- plazas -->
         <label for="plazasDisponibles" class="control-label">Plazas disponibles</label>
-        <input type="double" class="form-control" id="plazasDisponibles" name="plazasDisponibles" placeholder="#####">
+        <input type="double" class="form-control" id="plazasDisponibles" name="plazasDisponibles" placeholder="Introduce las plazas disponibles">
     </div>
 
     <div class="form-group"> <!-- pais -->
         <label for="pais" class="control-label"> País origen</label>
-        <input type="string" class="form-control" id="pais" name="pais" placeholder="#####">
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="Introduce el país de origen">
     </div>
 
     <div class="form-group"> <!-- provincia -->
         <label for="provincia" class="control-label">Provincia origen</label>
-        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="#####">
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="Introduce la provincia de origen">
     </div>
 
     <div class="form-group"> <!-- ciudad -->
         <label for="ciudad" class="control-label">Ciudad origen</label>
-        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="#####">
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad de origen">
     </div>
 
     <div class="form-group"> <!-- Submit Button -->
