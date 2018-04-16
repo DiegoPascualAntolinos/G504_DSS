@@ -69,6 +69,11 @@ Route::get('/reservas', function(){
     return view('reservas');
 });
 
+Route::name('create_reservation')->get('/reservas', 'reservationController@create');
+
+Route::name('store_reservation')->post('/main', 'reservationController@store');
+
+
 Route::get('/usuarios', function(){
     return view('usuarios');
 });

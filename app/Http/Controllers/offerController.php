@@ -20,7 +20,7 @@ class offerController extends Controller
 
 
     public function create(){
-        return view('destino');
+        return view('oferta');
     }
 
     public function store(Request $request){
@@ -42,7 +42,7 @@ class offerController extends Controller
 
         $oferta->Client()->attach($cliente->id);
 
-        return view('mainPage');
+        return view('oferta');
 
     }
 }

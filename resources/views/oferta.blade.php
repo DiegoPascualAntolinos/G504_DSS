@@ -9,6 +9,7 @@
 <div class= "container">
     <div class="container container-centered">
 <h1> Si no es ahora, ¿cuándo? </h1>
+<hr>
 
 <h1> 
 </div> 

@@ -1,22 +1,3 @@
-<html>
-	<head>
-	    <title>Mi proyecto de Web</title>
-	</head>
-	<body>
-		<h1>¡Hola! Esto es lo que falta por hacer:</h1>
-        <br>
-        - Cambiar los colores del header <br>
-		- Poner los apartados que se deseen en el header <br>
-		- Hacer que el footer funcione <br>
-		- Pagina de publicacion de viajes
-		<a href = "https://mdbootstrap.com/css/colors/"> - Colores para el header </a> <br>
-		<a href = "https://www.jquery-az.com/wwh/demo.php?ex=28.0_1"> - Estructura de las partes del header </a> <br>
-		<a href = "https://mobirise.com/bootstrap-4-theme/footer-template.html"> - Un posible footer </a> <br>
-		<a href = "https://mdbootstrap.com/components/bootstrap-footer/ "> - Otro posible footer </a> <br>
-		<a href = "https://maxoffsky.com/code-blog/integrating-bootstrap-htmlcss-framework-web-applications/"> - Link útil para formularios de registro </a> <br>
-	</body>
-</html>
-
 @extends('layout.mainlayout')
 <!-- El [arroba]extends sirve para que automaticamente ponga la cabecera --> 
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
@@ -25,153 +6,136 @@
 
 @section('content')
 
-<div class="container container-galeria">
-    <div id="main_area">
-        <!-- Slider -->
-        <div class="row">
-            <div class="col-sm-6" id="slider-thumbs">
-                <!-- Bottom switcher of slider -->
-                <ul class="hide-bullets">
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-0">
-                            <img class="galery" src="/images/galeriazero.jpeg">
-                        </a>
-                    </li>
+<div class= "container">
+    <div class="container container-centered">
+<h1> Si no es ahora, ¿cuándo? </h1>
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-1"><img class="galery" src="/images/galeria1.jpeg"></a>
-                    </li>
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-2"><img class="galery" src="/images/galeria2.jpg"></a>
-                    </li>
 
-                    <li class="col-sm-3">
-                        <a  id="carousel-selector-3"><img class="galery" src="/images/galeria3.jpg"></a>
-                    </li>
+     <div class="form-group"> <!-- email -->
+        <label for="email" class="control-label">Email</label>
+        <input type="string" class="form-control" id="full_name_id" name="email" placeholder="dsstino@gmail.com">
+    </div>   
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-4"><img class="galery" src="/images/galeria4.jpeg"></a>
-                    </li>
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-5"><img class="galery" src="/images/galeria5.jpg"></a>
-                    </li>
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-6"><img class="galery" src="/images/galeria6.jpeg"></a>
-                    </li>
+    <div class="form-group"> <!-- titulo -->
+        <label for="titulo" class="control-label">Titulo Viaje</label>
+        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
+    </div>    
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-7"><img class="galery" src="/images/galeria7.jpeg"></a>
-                    </li>
+    <div class="form-group"> <!-- fecha inicio -->
+        <label for="fechaViaje" class="control-label">Fecha inicio</label>
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
+    </div>  
 
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-8"><img class="galery" src="/images/galeria8.jpg"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-9"><img class="galery" src="/images/galeria9.jpeg"></a>
-                    </li>
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-10"><img class="galery" src="/images/galeria10.jpeg"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a id="carousel-selector-11"><img class="galery" src="/images/galeria11.jpg"></a>
-                    </li>
-
-        
-                </ul>
-            </div>
-            <div class="col-sm-6">
-                <div class="col-xs-12" id="slider">
-                    <!-- Top part of the slider -->
-                    <div class="row">
-                        <div class="col-sm-12" id="carousel-bounding-box">
-                            <div class="carousel slide" id="myCarousel">
-                                <!-- Carousel items -->
-                                <div class="carousel-inner">
-                                    <div class="active item" data-slide-number="0">
-                                        <img src="/images/galeriazero.jpeg"></div>
-
-                                    <div class="item" data-slide-number="1">
-                                        <img src="/images/galeria1.jpeg"></div>
-
-                                    <div class="item" data-slide-number="2">
-                                        <img  src="/images/galeria2.jpg"></div>
-
-                                    <div class="item" data-slide-number="3">
-                                        <img  src="/images/galeria3.jpg"></div>
-
-                                    <div class="item" data-slide-number="4">
-                                        <img  src="/images/galeria4.jpeg"></div>
-
-                                    <div class="item" data-slide-number="5">
-                                        <img  src="/images/galeria5.jpg"></div>
-                                    
-                                    <div class="item" data-slide-number="6">
-                                        <img  src="/images/galeria6.jpeg"></div>
-                                    
-                                    <div class="item" data-slide-number="7">
-                                        <img src="/images/galeria7.jpeg"></div>
-                                    
-                                    <div class="item" data-slide-number="8">
-                                        <img  src="/images/galeria8.jpg"></div>
-                                    
-                                    <div class="item" data-slide-number="9">
-                                        <img  src="/images/galeria9.jpeg"></div>
-                                    
-                                    <div class="item" data-slide-number="10">
-                                        <img  src="/images/galeria10.jpeg"></div>
-                                    
-                                    <div class="item" data-slide-number="11">
-                                        <img  src="/images/galeria11.jpg"></div>
-                                    
-               
-                                </div>
-                                <!-- Carousel nav -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/Slider-->
-        </div>
-
+    <div class="form-group"> <!-- fecha vuelta -->
+        <label for="fechaFinOferta" class="control-label">Fecha vuelta</label>
+        <input type = "date" class"form-control" id="full_name_fin" name="fechaFinOferta"  placeholder="DD/MM/AAAA" type="text">
+    </div>  
+                            
+    <div class="form-group"> <!-- origen Button -->
+        <label for="origen" class="control-label">¿De dónde sales?</label>
+        <select class="form-control" id="origen" name="origen">
+        <option value="Tirania">Albania, Tirania</option>
+            <option value="Berlín">Alemania, Berlín</option>
+            <option value="Andorra La Bella">Andorra, Andorra la bella</option>
+            <option value="Viena">Austria, Viena</option>
+            <option value="Minsk">Bielorrusia, Minsk</option>
+            <option value="Bruselas">Bélgica, Bruselas</option>
+            <option value="Sarajevo">Bosnia-Herzegovina, Sarajevo</option>
+            <option value="Sofía">Bulgaria, Sofía</option>
+            <option value="Zangreb">Croacia, Zangreb</option>
+            <option value="Copenhague">Dinamarca, Copenhague</option>
+            <option value="Bratislava">Eslovaquia, Bratislava</option>
+            <option value="Liubliana">Eslovenia, Liubliana</option>
+            <option value="Madrid">España, Madrid</option>
+            <option value="Barcelona">España, Barcelona</option>
+            <option value="Sevilla">España, Sevilla</option>
+            <option value="Granada">España, Granada</option>
+            <option value="Alicante">España, Alicante</option>
+            <option value="Helsinki">Finlandia, Helsinki</option>
+            <option value="París">Francia, París</option>
+            <option value="Atenas">Grecia, Atenas</option>
+            <option value="Budapest">Hungría, Budapest</option>
+            <option value="Dublín">Irlanda, Dublín</option>
+            <option value="Reikiavik">Islandia, Reikiavik</option>
+            <option value="Roma">Italia, Roma</option>
+            <option value="Riga">Letonia, Riga</option>
+            <option value="Vilna">Lituania, Vilna</option>
+            <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
+            <option value="Skopje">Macedonia, Skopje</option>
+            <option value="La Valetta">Malta, La Valetta</option>
+            <option value="Chisinau">Moldova, Chisinau</option>
+            <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
+            <option value="Oslo">Noruega, Oslo</option>
+            <option value="Amsterdam">Países Bajos, Amsterdam</option>
+            <option value="Varsovia">Polonia, Varsovia</option>
+          
+        </select>                    
     </div>
-</div>
+    
+             
+    <div class="form-group"> <!-- destino Button -->
+        <label for="destino" class="control-label">¿A dónde vas?</label>
+        <select class="form-control" id="destino" name="destino">
+            <option value="Tirania">Albania, Tirania</option>
+            <option value="Berlín">Alemania, Berlín</option>
+            <option value="Andorra La Bella">Andorra, Andorra la bella</option>
+            <option value="Viena">Austria, Viena</option>
+            <option value="Minsk">Bielorrusia, Minsk</option>
+            <option value="Bruselas">Bélgica, Bruselas</option>
+            <option value="Sarajevo">Bosnia-Herzegovina, Sarajevo</option>
+            <option value="Sofía">Bulgaria, Sofía</option>
+            <option value="Zagreb">Croacia, Zangreb</option>
+            <option value="Copenhague">Dinamarca, Copenhague</option>
+            <option value="Bratislava">Eslovaquia, Bratislava</option>
+            <option value="Liubliana">Eslovenia, Liubliana</option>
+            <option value="Madrid">España, Madrid</option>
+            <option value="Barcelona">España, Barcelona</option>
+            <option value="Sevilla">España, Sevilla</option>
+            <option value="Granada">España, Granada</option>
+            <option value="Alicante">España, Alicante</option>
+            <option value="Helsinki">Finlandia, Helsinki</option>
+            <option value="París">Francia, París</option>
+            <option value="Atenas">Grecia, Atenas</option>
+            <option value="Budapest">Hungría, Budapest</option>
+            <option value="Dublín">Irlanda, Dublín</option>
+            <option value="Reikiavik">Islandia, Reikiavik</option>
+            <option value="Roma">Italia, Roma</option>
+            <option value="Riga">Letonia, Riga</option>
+            <option value="Vilna">Lituania, Vilna</option>
+            <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
+            <option value="Skopje">Macedonia, Skopje</option>
+            <option value="La Valetta">Malta, La Valeta</option>
+            <option value="Chisinau">Moldova, Chisinau</option>
+            <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
+            <option value="Oslo">Noruega, Oslo</option>
+            <option value="Amsterdam">Países Bajos, Amsterdam</option>
+            <option value="Varsovia">Polonia, Varsovia</option>
+        </select>                    
+    </div>
 
-<script>
-jQuery(document).ready(function($) {
+    <div class="form-group"> <!-- precio -->
+        <label for="precio" class="control-label">Precio total (todo incluido)</label>
+        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
+    </div>
 
-    $('#myCarousel').carousel({
-            interval: 5000
-    });
+    <div class="form-group"> <!-- precio -->
+        <label for="descripcion" class="control-label">Descripción</label>
+        <input type="string" class="form-control" id="descripcion" name="descripcion" style="WIDTH: 632px; HEIGHT: 150px" placeholder="Cuéntanos">
+    </div>         
+    
+    <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>     
+    
+</form>
 
-    //Handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click(function () {
-    var id_selector = $(this).attr("id");
-    try {
-        var id = /-(\d+)$/.exec(id_selector)[1];
-        console.log(id_selector, id);
-        jQuery('#myCarousel').carousel(parseInt(id));
-    } catch (e) {
-        console.log('Regex failed!', e);
-    }
-});
-    // When the carousel slides, auto update the text
-    $('#myCarousel').on('slid.bs.carousel', function (e) {
-                var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-    });
-});
-</script>
+
+<div class="item">
+      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
+      HSPACE = "61" VSPACE="50">
+    </div>
 
 
 @endsection
