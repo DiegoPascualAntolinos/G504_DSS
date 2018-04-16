@@ -36,6 +36,8 @@
 
 {{ csrf_field() }}
 
+
+
      <div class="form-group"> <!-- email -->
         <label for="email" class="control-label">Email</label>
         <input type="string" class="form-control" id="full_name_id" name="email" placeholder="dsstino@gmail.com">
@@ -157,7 +159,7 @@
 
 
 <div class = "container">
-    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
             <thead>
               <tr>
@@ -182,7 +184,19 @@
               <td> {{ $offer->destino }} </td>
               <td> {{ $offer->descripcion }} </td>
               <td> {{ $offer->precio }} </td>
+
+              <td>
+
+              
+              <form action="{{url('oferta')}}/{{ $oferta->id}}"method = "POST">
+                {{method_field('DELETE')}}
+
+              <a href="" class="btn btn-warning">Modificar</a>
+              <a href="" class="btn btn-danger">Delete</a
+               </td>
+               </tr>
               </tr>
+
             @endforeach
             {{ $offers->links() }}
             </tbody>

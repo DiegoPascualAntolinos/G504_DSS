@@ -53,6 +53,8 @@ Route::name('create_flight')->get('/vuelos', 'flightController@create');
 
 Route::name('store_flight')->post('/vuelos', 'flightController@store');
 
+
+
 Route::get('/vuelos', 'flightController@index');
 
 
@@ -72,6 +74,13 @@ Route::name('create_offer')->get('/oferta', 'offerController@create');
 Route::name('store_offer')->post('/oferta', 'offerController@store');
 
 Route::get('/oferta', 'offerController@index');
+
+Route::delete('/oferta/{id}', function($id){
+
+    Offer::findOrFail($id)->delete();
+    return redirect('/oferta');
+});
+
 
 
 Route::get('/contacto', function(){

@@ -36,6 +36,8 @@
 <?php echo e(csrf_field()); ?>
 
 
+
+
      <div class="form-group"> <!-- email -->
         <label for="email" class="control-label">Email</label>
         <input type="string" class="form-control" id="full_name_id" name="email" placeholder="dsstino@gmail.com">
@@ -157,7 +159,7 @@
 
 
 <div class = "container">
-    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
             <thead>
               <tr>
@@ -182,7 +184,20 @@
               <td> <?php echo e($offer->destino); ?> </td>
               <td> <?php echo e($offer->descripcion); ?> </td>
               <td> <?php echo e($offer->precio); ?> </td>
+
+              <td>
+
+              
+              <form action="<?php echo e(url('oferta')); ?>/<?php echo e($oferta->id); ?>"method = "POST">
+                <?php echo e(method_field('DELETE')); ?>
+
+
+              <a href="" class="btn btn-warning">Modificar</a>
+              <a href="" class="btn btn-danger">Delete</a
+               </td>
+               </tr>
               </tr>
+
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($offers->links()); ?>
 

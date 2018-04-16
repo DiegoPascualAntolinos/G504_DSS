@@ -39,7 +39,7 @@
   
     <div class="form-group"> <!-- precio -->
         <label for="precio" class="control-label">Precio</label>
-        <input type="string" class="form-control" id="precio" name="precio" placeholder="Introduce el precioi">
+        <input type="string" class="form-control" id="precio" name="precio" placeholder="Introduce el precio">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->
@@ -77,7 +77,7 @@
 
 
 <div class = "container">
-    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
             <thead>
               <tr>
@@ -87,6 +87,8 @@
                 <th>Fecha vuelo</th>
                 <th>Plazas Disponibles</th>
               </tr>
+
+
             </thead>
               <tbody>
             <?php $__currentLoopData = $flights; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $flight): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -95,7 +97,13 @@
               <td> <?php echo e($flight->precio); ?> </td>
               <td> <?php echo e($flight->fechaVuelo); ?> </td>
               <td> <?php echo e($flight->plazasDisponibles); ?> </td>
-              </tr>
+              </td>
+
+              <td>
+              <a href="" class="btn btn-warning">Modificar</a>
+              <a href="" class="btn btn-danger">Eliminar</a
+               </td>
+               </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($flights->links()); ?>
 

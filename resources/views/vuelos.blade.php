@@ -77,7 +77,7 @@
 
 
 <div class = "container">
-    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
             <thead>
               <tr>
@@ -87,6 +87,8 @@
                 <th>Fecha vuelo</th>
                 <th>Plazas Disponibles</th>
               </tr>
+
+
             </thead>
               <tbody>
             @foreach($flights as $flight)
@@ -95,7 +97,13 @@
               <td> {{ $flight->precio }} </td>
               <td> {{ $flight->fechaVuelo }} </td>
               <td> {{ $flight->plazasDisponibles }} </td>
-              </tr>
+              </td>
+
+              <td>
+              <a href="" class="btn btn-warning">Modificar</a>
+              <a href="" class="btn btn-danger">Eliminar</a
+               </td>
+               </tr>
             @endforeach
             {{ $flights->links() }}
             </tbody>
