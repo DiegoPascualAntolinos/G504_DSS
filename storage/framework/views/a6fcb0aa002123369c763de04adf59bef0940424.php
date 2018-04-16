@@ -64,13 +64,8 @@
     
 </form>
 
-
-<div class="item">
-      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
-      HSPACE = "61" VSPACE="50">
-    </div>
-
-    </div>
+<br/>
+<br/>
 
 <div class = "container">
     <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
@@ -92,16 +87,18 @@
               <td> <?php echo e($reservation->cantidad); ?> </td>
               </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
             <?php echo e($reservations->links()); ?>
 
             </tbody>
             </table>
 </div>
+
+
+<div class="item">
+      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
+      HSPACE = "61" VSPACE="50">
+    </div>
+
 <?php $__env->stopSection(); ?>
-
-
-
-
-<?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layout.mainlayout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

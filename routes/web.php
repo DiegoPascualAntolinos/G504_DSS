@@ -66,6 +66,14 @@ Route::get('/ciudades', function(){
     return view('ciudades');
 });
 
+Route::name('create_city')->get('/ciudades', 'cityController@create');
+
+Route::name('store_city')->post('/ciudades', 'cityController@store');
+
+Route::get('/ciudades', 'cityController@index');
+
+
+
 Route::get('/reservas', function(){
     return view('reservas');
 });
