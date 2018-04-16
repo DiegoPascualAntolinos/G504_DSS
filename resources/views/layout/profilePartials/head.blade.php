@@ -31,6 +31,16 @@
         color: #000000;
     }
 
+#contenido{
+    display: flex;
+    flex-direction: column;
+}
+#mySidebar{
+    position: absolute;
+    border-radius: 25px;
+    
+}
+
     /* Add a gray background color and some padding to the footer */
     .profile {
   margin: 20px 0;

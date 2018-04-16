@@ -14,7 +14,7 @@
  
 @include('layout.profilePartials.sidenav')
 
-<div class="main">
+<div class="main" id="contenido">
 @yield('content')
 </div>
 
