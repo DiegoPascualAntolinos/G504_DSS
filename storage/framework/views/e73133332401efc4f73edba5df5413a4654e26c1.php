@@ -129,7 +129,7 @@
             <option value="Vilna">Lituania, Vilna</option>
             <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
             <option value="Skopje">Macedonia, Skopje</option>
-            <option value="La Valetta">Malta, La Valetta</option>
+            <option value="La Valetta">Malta, La Valeta</option>
             <option value="Chisinau">Moldova, Chisinau</option>
             <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
             <option value="Oslo">Noruega, Oslo</option>
@@ -141,7 +141,12 @@
     <div class="form-group"> <!-- precio -->
         <label for="precio" class="control-label">Precio total (todo incluido)</label>
         <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
-    </div>        
+    </div>
+
+    <div class="form-group"> <!-- precio -->
+        <label for="descripcion" class="control-label">Descripción</label>
+        <input type="string" class="form-control" id="descripcion" name="descripcion" style="WIDTH: 632px; HEIGHT: 150px" placeholder="Cuéntanos">
+    </div>         
     
     <div class="form-group"> <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Enviar</button>

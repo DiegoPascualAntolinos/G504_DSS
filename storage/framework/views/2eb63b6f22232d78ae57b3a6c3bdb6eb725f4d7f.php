@@ -1,4 +1,4 @@
-<div class="sidenav">
+<div class="sidenav" id="mySidebar">
 
     <div class="row profile">
 		<div class="col-md-3">
@@ -20,7 +20,7 @@
 				<div class="profile-usermenu">
 					<ul class="nav">
 						<li>
-							<a href="profile/viajesUsuario" target="_blank">
+							<a href="profile" target="_blank">
 							<i class="glyphicon glyphicon-th-list"></i>
 							Viajes realizados 
 							</a>
@@ -35,11 +35,10 @@
 				<!-- END MENU -->
 			</div>
 		</div>
-		<div class="col-md-9">
+		<!-- <div class="col-md-9">
             <div class="profile-content">
-			   <!-- Más info por aquí si se quiere -->
+			    Más info por aquí si se quiere 
             </div>
-		</div>
+		</div>-->
 	</div>
 </div>
-
