@@ -41,7 +41,6 @@
             <!-- In order for this to work in your project you will need to generate a unique API key.  -->
             <br>
             
-
             <a href="https://twitter.com/?lang=en" class="twitter"><i class="fa fa-twitter"></i></a>
             <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
             <a href="https://plus.google.com" class="google"><i class="fa fa-google-plus"></i></a>

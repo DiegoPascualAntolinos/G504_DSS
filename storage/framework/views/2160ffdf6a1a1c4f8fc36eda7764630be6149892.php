@@ -19,27 +19,24 @@
                 <th>Destino</th>
                 <th>Descripción</th>
                 <th>Precio</th>
-                <th></th>
-                <th></th>
-                <th></th>
               </tr>
             </thead>
               <tbody>
-            <?php $__currentLoopData = $clase; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $elegido): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $offers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $offer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
-               <td> <?php echo e($i = $elegido->id); ?> </td>
-              <td> <?php echo e($elegido->nombre); ?> </td>
-              <td> <?php echo e($elegido->fechaViaje); ?> </td>
-              <td> <?php echo e($elegido->fechaFinOferta); ?> </td>
-              <td> <?php echo e($elegido->origen); ?> </td>
-              <td> <?php echo e($elegido->destino); ?> </td>
-              <td> <?php echo e($elegido->descripcion); ?> </td>
-              <td> <?php echo e($elegido->precio); ?> </td>
+              <td> <?php echo e($offer->id); ?> </td>
+              <td> <?php echo e($offer->nombre); ?> </td>
+              <td> <?php echo e($offer->fechaViaje); ?> </td>
+              <td> <?php echo e($offer->fechaFinOferta); ?> </td>
+              <td> <?php echo e($offer->origen); ?> </td>
+              <td> <?php echo e($offer->destino); ?> </td>
+              <td> <?php echo e($offer->descripcion); ?> </td>
+              <td> <?php echo e($offer->precio); ?> </td>
               </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </tbody>
-            <?php echo e($clase->links()); ?>
+            <?php echo e($offers->links()); ?>
 
+            </tbody>
             </table>
 </div>
 <?php $__env->stopSection(); ?>

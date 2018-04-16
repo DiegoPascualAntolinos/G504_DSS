@@ -129,7 +129,7 @@
             <option value="Vilna">Lituania, Vilna</option>
             <option value="Luxemburgo">Luxemburgo, Luxemburgo</option>
             <option value="Skopje">Macedonia, Skopje</option>
-            <option value="La Valetta">Malta, La Valetta</option>
+            <option value="La Valetta">Malta, La Valeta</option>
             <option value="Chisinau">Moldova, Chisinau</option>
             <option value="Mónaco-Vile">Mónaco, Mónaco-Vile</option>
             <option value="Oslo">Noruega, Oslo</option>
