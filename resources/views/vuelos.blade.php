@@ -9,8 +9,32 @@
 <div class= "container">
     <div class="container container-centered">
 <h1> Si no es ahora, ¿cuándo? </h1>
+<hr>
 
+<h1> 
+</div> 
 
+@if(count($errors) > 0)
+
+<div class="alert alert-danger">
+
+    <ul>
+
+        @foreach($errors->all() as $error)
+
+        <li>{{ $error }}</li>
+
+        @endforeach
+
+    </ul>
+
+</div>
+
+@endif
+
+<form action="{{ route('store_offer') }}" method="POST">
+
+{{ csrf_field() }}
 
      <div class="form-group"> <!-- email -->
         <label for="email" class="control-label">Email</label>
