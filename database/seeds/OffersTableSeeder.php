@@ -37,7 +37,7 @@ class OffersTableSeeder extends Seeder
             'fechaViaje' => '11/10/2018',
             'origen' => 'Alicante',
             'destino' => 'Tenerife',
-            ' descripcion' => 'Claramente influenciado por la cultura tribal de los guanches (sus habitantes originales). Aquí se encuentra el Teide, el pico más alto de España, y el conocido complejo turístico de Los Gigantes.',
+            'descripcion' => 'Claramente influenciado por la cultura tribal de los guanches (sus habitantes originales). Aquí se encuentra el Teide, el pico más alto de España, y el conocido complejo turístico de Los Gigantes.',
             'fechaFinOferta' => '18/10/2018'
         ]);
     }
