@@ -13,7 +13,7 @@ class reservationController extends Controller
 
     public function index(){
 
-        $reservations = Reservation::orderBy('id', 'desc')->paginate(3);
+        $reservations = Reservation::orderBy('id', 'desc')->paginate(5);
 
         return view('reservas')->with(['reservations' => $reservations]);
     }
@@ -36,9 +36,12 @@ class reservationController extends Controller
         $reserva->cantidad = $request->get('cantidad');
         $reserva->save();
 
-        $reserva->Client()->attach($cliente->id);
+        $reserva->Client()->associate($cliente);
 
-        return view('reservas');
+        $reservations = Reservation::orderBy('id', 'desc')->paginate(5);
+        $clients = Client::orderBy('id', 'desc')->get();
+
+        return view('reservas')->with(['reservations' => $reservations]);
 
     }
 }

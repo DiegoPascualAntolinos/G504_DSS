@@ -325,6 +325,7 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'App\\Http\\Controllers\\controladorAndrea' => __DIR__ . '/../..' . '/app/Http/Controllers/controladorAndrea.php',
         'App\\Http\\Controllers\\holaMundo' => __DIR__ . '/../..' . '/app/Http/Controllers/holaMundo.php',
         'App\\Http\\Controllers\\offerController' => __DIR__ . '/../..' . '/app/Http/Controllers/offerController.php',
+        'App\\Http\\Controllers\\reservationController' => __DIR__ . '/../..' . '/app/Http/Controllers/reservationController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

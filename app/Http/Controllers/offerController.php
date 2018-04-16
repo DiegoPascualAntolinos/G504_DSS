@@ -42,7 +42,9 @@ class offerController extends Controller
 
         $oferta->Client()->attach($cliente->id);
 
-        return view('oferta');
+        $offers = Offer::orderBy('id', 'desc')->paginate(5);
+
+        return view('oferta')->with(['offers' => $offers]);
 
     }
 }
