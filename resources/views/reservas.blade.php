@@ -32,7 +32,7 @@
 
 @endif
 
-<form action="{{ route('store_offer') }}" method="POST">
+<form action="{{ route('store_reservation') }}" method="POST">
 
 {{ csrf_field() }}
 
@@ -43,19 +43,19 @@
 
 
     <div class="form-group"> <!-- fecha inicio -->
-        <label for="fechaViaje" class="control-label">Fecha Salida  </label>
-        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
+        <label for="fechaSalida" class="control-label">Fecha Salida  </label>
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaSalida"  placeholder="DD/MM/AAAA"  type="text">
     </div>  
 
     <div class="form-group"> <!-- fecha vuelta -->
-        <label for="fechaFinOferta" class="control-label">Fecha Llegada</label>
-        <input type = "date" class"form-control" id="full_name_fin" name="fechaFinOferta"  placeholder="DD/MM/AAAA" type="text">
+        <label for="fechaLlegada" class="control-label">Fecha Llegada</label>
+        <input type = "date" class"form-control" id="full_name_fin" name="fechaLlegada"  placeholder="DD/MM/AAAA" type="text">
     </div>  
     
     
     <div class="form-group"> <!-- precio -->
-        <label for="precio" class="control-label">Cantidad de reservas</label>
-        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
+        <label for="cantidad" class="control-label">Cantidad de reservas</label>
+        <input type="double" class="form-control" id="precio" name="cantidad" placeholder="#####">
     </div>    
     
     <div class="form-group"> <!-- Submit Button -->
@@ -84,7 +84,7 @@
               </tr>
             </thead>
               <tbody>
-            @foreach($reservation as $reservation)
+            @foreach($reservations as $reservation)
               <tr>
               <td> {{ $reservation->id }} </td>
               <td> {{ $reservation->fechaSalida }} </td>

@@ -31,7 +31,7 @@
 
 <?php endif; ?>
 
-<form action="<?php echo e(route('store_offer')); ?>" method="POST">
+<form action="<?php echo e(route('store_reservation')); ?>" method="POST">
 
 <?php echo e(csrf_field()); ?>
 
@@ -43,19 +43,19 @@
 
 
     <div class="form-group"> <!-- fecha inicio -->
-        <label for="fechaViaje" class="control-label">Fecha Salida  </label>
-        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
+        <label for="fechaSalida" class="control-label">Fecha Salida  </label>
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaSalida"  placeholder="DD/MM/AAAA"  type="text">
     </div>  
 
     <div class="form-group"> <!-- fecha vuelta -->
-        <label for="fechaFinOferta" class="control-label">Fecha Llegada</label>
-        <input type = "date" class"form-control" id="full_name_fin" name="fechaFinOferta"  placeholder="DD/MM/AAAA" type="text">
+        <label for="fechaLlegada" class="control-label">Fecha Llegada</label>
+        <input type = "date" class"form-control" id="full_name_fin" name="fechaLlegada"  placeholder="DD/MM/AAAA" type="text">
     </div>  
     
     
     <div class="form-group"> <!-- precio -->
-        <label for="precio" class="control-label">Cantidad de reservas</label>
-        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
+        <label for="cantidad" class="control-label">Cantidad de reservas</label>
+        <input type="double" class="form-control" id="precio" name="cantidad" placeholder="#####">
     </div>    
     
     <div class="form-group"> <!-- Submit Button -->
@@ -84,7 +84,7 @@
               </tr>
             </thead>
               <tbody>
-            <?php $__currentLoopData = $reservation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $reservation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $reservations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $reservation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
               <td> <?php echo e($reservation->id); ?> </td>
               <td> <?php echo e($reservation->fechaSalida); ?> </td>

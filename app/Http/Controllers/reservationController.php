@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Offer;
+use App\Reservation;
 use App\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

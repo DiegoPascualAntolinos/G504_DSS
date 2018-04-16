@@ -57,6 +57,7 @@ Route::name('store_offer')->post('/main', 'offerController@store');
 
 Route::get('/oferta', 'offerController@index');
 
+
 Route::get('/contacto', function(){
     return view('contacto');
 });
@@ -73,6 +74,7 @@ Route::name('create_reservation')->get('/reservas', 'reservationController@creat
 
 Route::name('store_reservation')->post('/main', 'reservationController@store');
 
+Route::get('/reservas', 'reservationController@index');
 
 Route::get('/usuarios', function(){
     return view('usuarios');
