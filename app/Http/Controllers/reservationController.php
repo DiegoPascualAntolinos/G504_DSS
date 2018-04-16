@@ -15,7 +15,7 @@ class reservationController extends Controller
 
         $reservations = Reservation::orderBy('id', 'desc')->paginate(3);
 
-        return view('reservas')->with(['reservation' => $reservations]);
+        return view('reservas')->with(['reservations' => $reservations]);
     }
 
 
@@ -29,10 +29,11 @@ class reservationController extends Controller
             'email' => 'required|email'
         ]);
 
-        $cliente = DB::table('reservation')->where('email', '=', $request->get('email'))->first();
+        $cliente = DB::table('clients')->where('email', '=', $request->get('email'))->first();
         $reserva = new Reservation;
         $reserva->fechaLlegada = $request->get('fechaLlegada');
         $reserva->fechaSalida = $request->get('fechaSalida');
+        $reserva->cantidad = $request->get('cantidad');
         $reserva->save();
 
         $reserva->Client()->attach($cliente->id);
