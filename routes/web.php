@@ -41,6 +41,15 @@ Route::get('/login', function(){
 Route::get('/vuelos', function(){
     return view('vuelos');
 });
+
+oute::name('create_flight')->get('/vuelos', 'flightController@create');
+
+Route::name('store_flight')->post('/vuelos', 'flightController@store');
+
+Route::get('/vuelos', 'flightController@index');
+
+
+
 Route::get('/profile', function(){
     return view('profile');
 });

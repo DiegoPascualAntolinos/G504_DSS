@@ -32,7 +32,7 @@
 
 @endif
 
-<form action="{{ route('store_offer') }}" method="POST">
+<form action="{{ route('store_vuelos') }}" method="POST">
 
 {{ csrf_field() }}
 
@@ -59,6 +59,38 @@
     </div>     
     
 </form>
+
+
+<div class = "container">
+    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Precio</th>
+                <th>Fecha inicio</th>
+                <th>Fecha vuelo</th>
+                <th>Plazas Disponibles</th>
+              </tr>
+            </thead>
+              <tbody>
+            @foreach($flights as $flight)
+              <tr>
+              <td> {{ $flight->id }} </td>
+              <td> {{ $flight->precio }} </td>
+              <td> {{ $flight->fechaVuelo }} </td>
+              <td> {{ $flight->plazasDisponibles }} </td>
+              </tr>
+            @endforeach
+            {{ $flights->links() }}
+            </tbody>
+            </table>
+</div>
+
+
+
+
+
 
 
 <div class="item">
