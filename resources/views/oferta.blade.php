@@ -20,26 +20,23 @@
                 <th>Destino</th>
                 <th>Descripción</th>
                 <th>Precio</th>
-                <th></th>
-                <th></th>
-                <th></th>
               </tr>
             </thead>
               <tbody>
-            @foreach($clase as $elegido)
+            @foreach($offers as $offer)
               <tr>
-               <td> {{$i = $elegido->id}} </td>
-              <td> {{$elegido->nombre}} </td>
-              <td> {{$elegido->fechaViaje}} </td>
-              <td> {{$elegido->fechaFinOferta}} </td>
-              <td> {{$elegido->origen}} </td>
-              <td> {{$elegido->destino}} </td>
-              <td> {{$elegido->descripcion}} </td>
-              <td> {{$elegido->precio}} </td>
+              <td> {{ $offer->id }} </td>
+              <td> {{ $offer->nombre }} </td>
+              <td> {{ $offer->fechaViaje }} </td>
+              <td> {{ $offer->fechaFinOferta }} </td>
+              <td> {{ $offer->origen }} </td>
+              <td> {{ $offer->destino }} </td>
+              <td> {{ $offer->descripcion }} </td>
+              <td> {{ $offer->precio }} </td>
               </tr>
             @endforeach
+            {{ $offers->links() }}
             </tbody>
-            {{$clase->links()}}
             </table>
 </div>
 @endsection

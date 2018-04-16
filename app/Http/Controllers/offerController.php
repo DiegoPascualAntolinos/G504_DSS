@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\DB;
 class offerController extends Controller
 {
 
+    public function index(){
+
+        $offers = Offer::orderBy('id', 'desc')->paginate(5);
+
+        return view('oferta')->with(['offers' => $offers]);
+    }
+
 
     public function create(){
         return view('destino');
@@ -30,6 +37,7 @@ class offerController extends Controller
         $oferta->origen = $request->get('origen');
         $oferta->destino = $request->get('destino');
         $oferta->precio = $request->get('precio');
+        $oferta->descripcion = $request->get('descripcion');
         $oferta->save();
 
         $oferta->Client()->attach($cliente->id);

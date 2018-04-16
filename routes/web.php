@@ -58,9 +58,7 @@ Route::name('create_offer')->get('/destino', 'offerController@create');
 
 Route::name('store_offer')->post('/main', 'offerController@store');
 
-Route::get('/oferta', function(){
-    return view('oferta');
-});
+Route::get('/oferta', 'offerController@index');
 
 Route::get('/contacto', function(){
     return view('contacto');
