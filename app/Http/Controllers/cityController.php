@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Offer;
 use App\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -36,7 +35,7 @@ class cityController extends Controller
 
       
 
-        return view('ciudades')->with(['cities' => $cities]);
+        return view('ciudades')->with(['cities' => $ciudad]);
 
     }
 }

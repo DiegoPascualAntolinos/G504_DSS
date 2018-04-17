@@ -32,27 +32,27 @@
 
 @endif
 
-<form action="{{ route('store_offer') }}" method="POST">
+<form action="{{ route('store_city') }}" method="POST">
 
 {{ csrf_field() }}
   
     
 <div class="form-group"> <!-- pais -->
         <label for="pais" class="control-label">País</label>
-        <input type="double" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
     </div>
 
       
 
 <div class="form-group"> <!-- provincia -->
         <label for="provincia" class="control-label">Provincia</label>
-        <input type="double" class="form-control" id="provincia" name="Provincia" placeholder="Introduce la provincia">
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="Introduce la provincia">
     </div>
 
       
 <div class="form-group"> <!-- ciudad -->
         <label for="ciudad" class="control-label">Ciudad</label>
-        <input type="double" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
     </div>       
 
 
