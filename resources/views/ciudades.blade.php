@@ -43,8 +43,8 @@
               
     
 <div class="form-group"> <!-- codigoPostal -->
-        <label for="provincia" class="control-label">País</label>
-        <input type="double" class="form-control" id="provincia" name="Provincia" placeholder="Introduce el país">
+        <label for="pais" class="control-label">País</label>
+        <input type="double" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
     </div>
 
       
@@ -56,8 +56,8 @@
 
       
 <div class="form-group"> <!-- codigoPostal -->
-        <label for="codigoPostal" class="control-label">Ciudad</label>
-        <input type="double" class="form-control" id="codigoPostal" name="codigo Postal" placeholder="Introduce la ciudad">
+        <label for="ciudad" class="control-label">Ciudad</label>
+        <input type="double" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
     </div>       
 
 

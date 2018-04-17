@@ -83,7 +83,6 @@
               <tr>
                 <th>ID</th>
                 <th>Precio</th>
-                <th>Fecha inicio</th>
                 <th>Fecha vuelo</th>
                 <th>Plazas Disponibles</th>
               </tr>
