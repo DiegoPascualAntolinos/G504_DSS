@@ -75,6 +75,13 @@ Route::name('store_offer')->post('/oferta', 'offerController@store');
 
 Route::get('/oferta', 'offerController@index');
 
+Route::name('delete_offerta')->delete('/oferta/{id}', 'offerController@delete');
+
+
+
+
+
+
 Route::delete('/oferta/{id}', function($id){
 
     Offer::findOrFail($id)->delete();
