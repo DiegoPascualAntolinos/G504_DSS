@@ -26,13 +26,20 @@ holaMundo nombre del controlador
 mostrarContenido nombre de la funcion a ser llamados
 */
 
-Route::get('/main', function () {
+Route::name('mainPage')->get('/main', function () {
     return view('mainPage');
  });
 
 Route::get('/register', function(){
     return view('register');
 });
+
+Route::name('create_client')->get('/usuarios', 'clientController@create');
+
+Route::name('store_client')->post('/usuarios', 'clientController@store');
+
+Route::get('/usuarios', 'clientController@index');
+
 
 Route::get('/login', function(){
     return view('login');
@@ -42,7 +49,7 @@ Route::get('/vuelos', function(){
     return view('vuelos');
 });
 
-oute::name('create_flight')->get('/vuelos', 'flightController@create');
+Route::name('create_flight')->get('/vuelos', 'flightController@create');
 
 Route::name('store_flight')->post('/vuelos', 'flightController@store');
 
@@ -93,6 +100,6 @@ Route::name('store_reservation')->post('/reservas', 'reservationController@store
 
 Route::get('/reservas', 'reservationController@index');
 
-Route::get('/usuarios', function(){
-    return view('usuarios');
-});
+//Route::get('/usuarios', function(){
+//    return view('usuarios');
+//});

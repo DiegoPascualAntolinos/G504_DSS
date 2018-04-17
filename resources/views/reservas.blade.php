@@ -39,8 +39,12 @@
      <div class="form-group"> <!-- email -->
         <label for="email" class="control-label">Email</label>
         <input type="string" class="form-control" id="full_name_id" name="email" placeholder="dsstino@gmail.com">
-    </div>   
+    </div>  
 
+    <div class="form-group"> <!-- id_flight -->
+        <label for="id_flight" class="control-label">ID_Flight</label>
+        <input type="string" class="form-control" id="id_flight" name="id_flight" placeholder="">
+    </div>
 
     <div class="form-group"> <!-- fecha inicio -->
         <label for="fechaSalida" class="control-label">Fecha Salida  </label>

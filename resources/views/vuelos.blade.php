@@ -32,26 +32,41 @@
 
 @endif
 
-<form action="{{ route('store_vuelos') }}" method="POST">
+<form action="{{ route('store_flight') }}" method="POST">
 
 {{ csrf_field() }}
 
   
-    <div class="form-group"> <!-- titulo -->
+    <div class="form-group"> <!-- precio -->
         <label for="precio" class="control-label">Precio</label>
-        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
+        <input type="string" class="form-control" id="precio" name="precio" placeholder="">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->
         <label for="fechaVuelo" class="control-label">Fecha vuelo</label>
-        <input type="date" class"form-control" id="full_name_inicio" name="fechaViaje"  placeholder="DD/MM/AAAA"  type="text">
+        <input type="date" class"form-control" id="full_name_inicio" name="fechaVuelo"  placeholder="DD/MM/AAAA"  type="text">
     </div>  
 
 
 
-    <div class="form-group"> <!-- precio -->
+    <div class="form-group"> <!-- plazas -->
         <label for="plazasDisponibles" class="control-label">Plazas disponibles</label>
-        <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
+        <input type="double" class="form-control" id="plazasDisponibles" name="plazasDisponibles" placeholder="#####">
+    </div>
+
+    <div class="form-group"> <!-- pais -->
+        <label for="pais" class="control-label"> País origen</label>
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="#####">
+    </div>
+
+    <div class="form-group"> <!-- provincia -->
+        <label for="provincia" class="control-label">Provincia origen</label>
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="#####">
+    </div>
+
+    <div class="form-group"> <!-- ciudad -->
+        <label for="ciudad" class="control-label">Ciudad origen</label>
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="#####">
     </div>
 
     <div class="form-group"> <!-- Submit Button -->
