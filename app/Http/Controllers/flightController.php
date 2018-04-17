@@ -64,4 +64,32 @@ class flightController extends Controller
         return view('vuelos')->with(['flights' => $flights]);
 
     }
+
+
+    public function edit(Flight $vuelo){
+
+        return view('editarVuelo')->with(['vuelo' => $vuelo]);
+    }
+
+    public function update(Flight $vuelo, Request $request){
+
+        /*$vuelo->precio = $request->get('precio');
+        $vuelo->fechaVuelo = $request->get('fechaVuelo');
+        $vuelo->plazasDisponibles = $request->get('plazasDisponibles');
+        $vuelo->save();*/
+
+        $vuelo->update(
+            $request->only('precio', 'fechaVuelo', 'plazasDisponibles')
+        );
+
+        return redirect()->route('index_flight');
+
+
+    }
+
+    public function delete(Flight $flight){
+
+        $flight->delete();
+        return redirect()->route('index_flight');
+    }
 }

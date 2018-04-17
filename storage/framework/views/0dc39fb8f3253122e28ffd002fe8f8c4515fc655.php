@@ -1,10 +1,9 @@
-@extends('layout.mainlayout')
 <!-- El [arroba]extends sirve para que automaticamente ponga la cabecera --> 
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
 <!--la pagina maestra -->
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class= "container">
     <div class="container container-centered">
@@ -14,27 +13,28 @@
 <h1> 
 </div> 
 
-@if(count($errors) > 0)
+<?php if(count($errors) > 0): ?>
 
 <div class="alert alert-danger">
 
     <ul>
 
-        @foreach($errors->all() as $error)
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-        <li>{{ $error }}</li>
+        <li><?php echo e($error); ?></li>
 
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </ul>
 
 </div>
 
-@endif
+<?php endif; ?>
 
-<form action="{{ route('store_reservation') }}" method="POST">
+<form action="<?php echo e(route('store_reservation')); ?>" method="POST">
 
-{{ csrf_field() }}
+<?php echo e(csrf_field()); ?>
+
 
      <div class="form-group"> <!-- email -->
         <label for="email" class="control-label">Email</label>
@@ -83,16 +83,17 @@
               </tr>
             </thead>
               <tbody>
-            @foreach($reservations as $reservation)
+            <?php $__currentLoopData = $reservations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $reservation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
-              <td> {{ $reservation->id }} </td>
-              <td> {{ $reservation->fechaSalida }} </td>
-              <td> {{ $reservation->fechaLlegada }} </td>
-              <td> {{ $reservation->cantidad }} </td>
+              <td> <?php echo e($reservation->id); ?> </td>
+              <td> <?php echo e($reservation->fechaSalida); ?> </td>
+              <td> <?php echo e($reservation->fechaLlegada); ?> </td>
+              <td> <?php echo e($reservation->cantidad); ?> </td>
               </tr>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-            {{ $reservations->links() }}
+            <?php echo e($reservations->links()); ?>
+
             </tbody>
             </table>
 </div>
@@ -103,4 +104,5 @@
       HSPACE = "61" VSPACE="50">
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.mainlayout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

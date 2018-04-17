@@ -38,7 +38,13 @@ Route::name('create_client')->get('/usuarios', 'clientController@create');
 
 Route::name('store_client')->post('/usuarios', 'clientController@store');
 
-Route::get('/usuarios', 'clientController@index');
+Route::name('index_client')->get('/usuarios', 'clientController@index');
+
+Route::name('edit_client')->get('/usuarios/{cliente}/edit', 'clientController@edit');
+
+Route::name('update_client')->put('/usuarios/{cliente}', 'clientController@update');
+
+Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@delete');
 
 
 Route::get('/login', function(){
@@ -53,11 +59,13 @@ Route::name('create_flight')->get('/vuelos', 'flightController@create');
 
 Route::name('store_flight')->post('/vuelos', 'flightController@store');
 
+Route::name('index_flight')->get('/vuelos', 'flightController@index');
 
+Route::name('edit_flight')->get('/vuelos/{vuelo}/edit', 'flightController@edit');
 
-Route::get('/vuelos', 'flightController@index');
+Route::name('update_flight')->put('/vuelos/{vuelo}', 'flightController@update');
 
-
+Route::name('delete_flight')->delete('/vuelos/{flight}', 'flightController@delete');
 
 Route::get('/profile', function(){
     return view('profile');
@@ -73,9 +81,13 @@ Route::name('create_offer')->get('/oferta', 'offerController@create');
 
 Route::name('store_offer')->post('/oferta', 'offerController@store');
 
-Route::get('/oferta', 'offerController@index');
+Route::name('index_offer')->get('/oferta', 'offerController@index');
 
-Route::name('delete_offerta')->delete('/oferta/{id}', 'offerController@delete');
+Route::name('edit_offer')->get('/oferta/{oferta}/edit', 'offerController@edit');
+
+Route::name('update_offer')->put('/oferta/{oferta}', 'offerController@update');
+
+Route::name('delete_offer')->delete('/oferta/{offer}', 'offerController@delete');
 
 
 

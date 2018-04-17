@@ -43,4 +43,31 @@ class clientController extends Controller
 
 
     }
+
+    public function edit(Client $cliente){
+
+        return view('editarClientes')->with(['cliente' => $cliente]);
+    }
+
+    public function update(Client $cliente, Request $request){
+
+        $cliente->dni = $request->get('dni');
+        $cliente->nombre = $request->get('nombre');
+        $cliente->direccion = $request->get('direccion');
+        $cliente->email = $request->get('email');
+        $cliente->telefono = $request->get('telefono');
+        $cliente->contraseña = $request->get('contraseña');
+        $cliente->save();
+
+        return redirect()->route('index_client');
+
+
+    }
+
+
+    public function delete(Client $client){
+
+        $client->delete();
+        return redirect()->route('index_client');
+    }
 }

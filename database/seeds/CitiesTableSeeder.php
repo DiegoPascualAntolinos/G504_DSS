@@ -12,7 +12,6 @@ class CitiesTableSeeder extends Seeder
     public function run()
     {
         DB::table('cities')->insert([
-            'codigoPostal' => '48686',
             'pais' => 'España',
             'provincia' => 'Alicante',
             'ciudad' => 'Alicante'
@@ -20,14 +19,12 @@ class CitiesTableSeeder extends Seeder
         ]);
 
         DB::table('cities')->insert([
-            'codigoPostal' => '48696',
             'pais' => 'España',
             'provincia' => 'Andalucia',
             'ciudad' => 'Sevilla'
         ]);
 
         DB::table('cities')->insert([
-            'codigoPostal' => '48675',
             'pais' => 'España',
             'provincia' => 'Andalucia',
             'ciudad' => 'Granada'

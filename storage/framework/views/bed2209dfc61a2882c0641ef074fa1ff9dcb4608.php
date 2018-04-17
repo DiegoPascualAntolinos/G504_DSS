@@ -1,10 +1,9 @@
-@extends('layout.mainlayout')
 <!-- El [arroba]extends sirve para que automaticamente ponga la cabecera --> 
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
 <!--la pagina maestra -->
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class= "container">
     <div class="container container-centered">
@@ -14,27 +13,28 @@
 <h1> 
 </div> 
 
-@if(count($errors) > 0)
+<?php if(count($errors) > 0): ?>
 
 <div class="alert alert-danger">
 
     <ul>
 
-        @foreach($errors->all() as $error)
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-        <li>{{ $error }}</li>
+        <li><?php echo e($error); ?></li>
 
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </ul>
 
 </div>
 
-@endif
+<?php endif; ?>
 
-<form action="{{ route('store_offer') }}" method="POST">
+<form action="<?php echo e(route('store_offer')); ?>" method="POST">
 
-{{ csrf_field() }}
+<?php echo e(csrf_field()); ?>
+
   
     
 <div class="form-group"> <!-- pais -->
@@ -75,15 +75,16 @@
               </tr>
             </thead>
               <tbody>
-            @foreach($cities as $city)
+            <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
-              <td> {{ $city->id }} </td>
-              <td> {{ $city->pais }} </td>
-              <td> {{ $city->provincia }} </td>
-              <td> {{ $city->ciudad }} </td>
+              <td> <?php echo e($city->id); ?> </td>
+              <td> <?php echo e($city->pais); ?> </td>
+              <td> <?php echo e($city->provincia); ?> </td>
+              <td> <?php echo e($city->ciudad); ?> </td>
               </tr>
-            @endforeach
-            {{ $cities->links() }}
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($cities->links()); ?>
+
             </tbody>
             </table>
 </div>
@@ -94,4 +95,5 @@
     </div>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.mainlayout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

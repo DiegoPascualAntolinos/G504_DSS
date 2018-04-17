@@ -27,7 +27,6 @@ class cityController extends Controller
 
 
         $ciudad = new City;
-        $ciudad->codigoPostal = $request->get('codigoPostal');
         $ciudad->pais = $request->get('pais');
         $ciudad->provincia = $request->get('provincia');
         $ciudad->ciudad = $request->get('ciudad');

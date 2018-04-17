@@ -9,6 +9,8 @@ class Flight extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['precio', 'fechaVuelo', 'plazasDisponibles'];
+
     public function originCity(){
         return $this->belongsTo('App\City');
     }

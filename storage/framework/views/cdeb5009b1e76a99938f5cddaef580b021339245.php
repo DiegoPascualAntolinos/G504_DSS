@@ -1,10 +1,9 @@
-@extends('layout.mainlayout')
 <!-- El [arroba]extends sirve para que automaticamente ponga la cabecera --> 
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
 <!--la pagina maestra -->
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class= "container">
     <div class="container container-centered">
@@ -14,27 +13,28 @@
 <h1> 
 </div> 
 
-@if(count($errors) > 0)
+<?php if(count($errors) > 0): ?>
 
 <div class="alert alert-danger">
 
     <ul>
 
-        @foreach($errors->all() as $error)
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-        <li>{{ $error }}</li>
+        <li><?php echo e($error); ?></li>
 
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </ul>
 
 </div>
 
-@endif
+<?php endif; ?>
 
-<form action="{{ route('store_client') }}" method="POST">
+<form action="<?php echo e(route('store_client')); ?>" method="POST">
 
-{{ csrf_field() }}
+<?php echo e(csrf_field()); ?>
+
 
      <div class="form-group"> <!-- dni -->
         <label for="dni" class="control-label">DNI</label>
@@ -90,23 +90,25 @@
               </tr>
             </thead>
               <tbody>
-            @foreach($clients as $client)
+            <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
-              <td> {{ $client->id }} </td>
-              <td> {{ $client->dni }} </td>
-              <td> {{ $client->nombre }} </td>
-              <td> {{ $client->direccion }} </td>
-              <td> {{ $client->email }} </td>
-              <td> {{ $client->telefono }} </td>
-              <td> {{ $client->contraseña }} </td>
+              <td> <?php echo e($client->id); ?> </td>
+              <td> <?php echo e($client->dni); ?> </td>
+              <td> <?php echo e($client->nombre); ?> </td>
+              <td> <?php echo e($client->direccion); ?> </td>
+              <td> <?php echo e($client->email); ?> </td>
+              <td> <?php echo e($client->telefono); ?> </td>
+              <td> <?php echo e($client->contraseña); ?> </td>
 
               <td>
 
-              <a href="{{ route('edit_client', ['client' => $client->id]) }}" class="btn btn-warning">Modificar</a>
+              <a href="<?php echo e(route('edit_client', ['client' => $client->id])); ?>" class="btn btn-warning">Modificar</a>
               <p>
-              <form action="{{ route('delete_client',['client' => $client->id]) }}"method = "POST">
-                {{ csrf_field() }}
-                {{method_field('DELETE')}}
+              <form action="<?php echo e(route('delete_client',['client' => $client->id])); ?>"method = "POST">
+                <?php echo e(csrf_field()); ?>
+
+                <?php echo e(method_field('DELETE')); ?>
+
                 
                 <button type="submit" class='btn btn-danger'>Delete</button>
 
@@ -115,8 +117,9 @@
                </tr>
               </tr>
 
-            @endforeach
-            {{ $clients->links() }}
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($clients->links()); ?>
+
             </tbody>
             </table>
 </div>
@@ -127,4 +130,6 @@
     </div>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.mainlayout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

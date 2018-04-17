@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    public $timestamps = false; 
+    public $timestamps = false;
+    
+    protected $fillable = ['pais', 'provincia', 'ciudad'];
 
     public function Offer(){
         return $this->belongsToMany('App\Offer');
