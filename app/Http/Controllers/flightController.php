@@ -59,9 +59,9 @@ class flightController extends Controller
         $flight->originCity()->associate($origen->id);
         $flight->destinationCity()->associate($destino->id);
 
-        $flight = Flight::orderBy('id', 'desc')->paginate(5);
+        $flights = Flight::orderBy('id', 'desc')->paginate(5);
 
-        return view('vuelos')->with(['flights' => $flight]);
+        return view('vuelos')->with(['flights' => $flights]);
 
     }
 }

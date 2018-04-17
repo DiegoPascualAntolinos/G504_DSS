@@ -188,8 +188,10 @@
               <td>
 
               
-              <form action="{{url('oferta')}}/{{ $oferta->id}}"method = "POST">
-                {{method_field('DELETE')}}
+              <form action="{{url('oferta')}}/{{ $offer->id}}"method = "POST">
+            {{ csrf_field() }}
+            {{method_field('DELETE')}}
+
 
               <a href="" class="btn btn-warning">Modificar</a>
               <a href="" class="btn btn-danger">Delete</a
