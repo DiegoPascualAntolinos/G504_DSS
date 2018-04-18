@@ -31,40 +31,46 @@
 
 <?php endif; ?>
 
-<form action="<?php echo e(route('store_offer')); ?>" method="POST">
+<form action="<?php echo e(route('store_city')); ?>" method="POST">
 
 <?php echo e(csrf_field()); ?>
 
-
-<div class="form-group"> <!-- codigoPostal -->
-        <label for="codigoPostal" class="control-label">Código postal</label>
-        <input type="double" class="form-control" id="codigoPostal" name="codigo Postal" placeholder="Introduce el código postal">
-    </div>
-              
+  
     
-<div class="form-group"> <!-- codigoPostal -->
-        <label for="provincia" class="control-label">País</label>
-        <input type="double" class="form-control" id="provincia" name="Provincia" placeholder="Introduce el país">
+<div class="form-group"> <!-- pais -->
+        <label for="pais" class="control-label">País</label>
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
     </div>
 
       
 
-<div class="form-group"> <!-- codigoPostal -->
+<div class="form-group"> <!-- provincia -->
         <label for="provincia" class="control-label">Provincia</label>
-        <input type="double" class="form-control" id="provincia" name="Provincia" placeholder="Introduce la provincia">
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="Introduce la provincia">
     </div>
 
       
-<div class="form-group"> <!-- codigoPostal -->
-        <label for="codigoPostal" class="control-label">Ciudad</label>
-        <input type="double" class="form-control" id="codigoPostal" name="codigo Postal" placeholder="Introduce la ciudad">
+<div class="form-group"> <!-- ciudad -->
+        <label for="ciudad" class="control-label">Ciudad</label>
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
     </div>       
 
 
     <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Crear</button>
     </div>     
     
+</form>
+
+<form action="/ciudades" method="GET" role="search">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
 </form>
 
 
@@ -74,7 +80,6 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Código postal</th>
                 <th>País</th>
                 <th>Provincia</th>
                 <th>Ciudad</th>
@@ -84,7 +89,6 @@
             <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
               <td> <?php echo e($city->id); ?> </td>
-              <td> <?php echo e($city->codigoPostal); ?> </td>
               <td> <?php echo e($city->pais); ?> </td>
               <td> <?php echo e($city->provincia); ?> </td>
               <td> <?php echo e($city->ciudad); ?> </td>

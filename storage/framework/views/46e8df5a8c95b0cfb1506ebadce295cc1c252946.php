@@ -75,6 +75,16 @@
     </div>
 </form>
 
+<form action="/vuelos" method="GET" role="search">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
 
 <div class = "container">
     <table id = "example" data-toggle="table" class="table table-hover">
