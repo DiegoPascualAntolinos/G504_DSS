@@ -73,7 +73,7 @@
     </div>
 </form>
 
-
+<p>
 <div class = "container">
     <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
 
