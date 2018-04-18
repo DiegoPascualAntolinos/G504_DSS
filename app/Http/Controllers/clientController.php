@@ -68,6 +68,6 @@ class clientController extends Controller
     public function delete(Client $client){
 
         $client->delete();
-        return redirect()->route('index_client');
+        return view('eliminar');
     }
 }

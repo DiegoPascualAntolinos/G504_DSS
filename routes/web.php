@@ -116,6 +116,9 @@ Route::name('store_city')->post('/ciudades', 'cityController@store');
 
 Route::get('/ciudades', 'cityController@index');
 
+Route::get('/eliminar', function(){
+    return view('eliminar');
+});
 
 
 Route::get('/reservas', function(){
@@ -131,3 +134,5 @@ Route::get('/reservas', 'reservationController@index');
 //Route::get('/usuarios', function(){
 //    return view('usuarios');
 //});
+
+

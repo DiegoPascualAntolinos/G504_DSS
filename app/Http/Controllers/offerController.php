@@ -71,6 +71,6 @@ class offerController extends Controller
     public function delete(Offer $offer){
 
         $offer->delete();
-        return redirect()->route('index_offer');
+        return view('eliminar');
     }
 }

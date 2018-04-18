@@ -71,8 +71,8 @@
 
     <div class="form-group"> <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Crear</button>
-    </div>     
-    
+        
+    </div>
 </form>
 
 
@@ -99,14 +99,18 @@
               </td>
 
               <td>
-              <a href="{{ route('edit_flight', ['flight' => $flight->id]) }}" class="btn btn-warning">Modificar</a>
+              <a href="{{ route('edit_flight', ['flight' => $flight->id]) }}"  class="btn btn-warning">Modificar</a>
               <p>
-              <form action="{{route('delete_flight', ['flight' => $flight->id]) }}"method = "POST">
-
+              <form action="{{route('delete_flight', ['flight' => $flight->id]) }}"  method = "POST">
+            
               {{ csrf_field() }}
               {{ method_field('DELETE') }}
 
               <button type="submit" class='btn btn-danger'>Delete</button>
+    
+
+
+              
 
               </form>
                </td>

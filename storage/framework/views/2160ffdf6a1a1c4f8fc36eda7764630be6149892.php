@@ -152,7 +152,7 @@
     </div>         
     
     <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Crear</button>
     </div>     
     
 </form>
@@ -187,13 +187,18 @@
 
               <td>
 
-              
-              <form action="<?php echo e(url('oferta')); ?>/<?php echo e($oferta->id); ?>"method = "POST">
+
+              <a href="<?php echo e(route('edit_offer', ['offer' => $offer->id])); ?>" class="btn btn-warning">Modificar</a>
+              <p>
+              <form action="<?php echo e(route('delete_offer',['offer' => $offer->id])); ?>"method = "POST">
+                <?php echo e(csrf_field()); ?>
+
                 <?php echo e(method_field('DELETE')); ?>
 
+                
+                <button type="submit" class='btn btn-danger'>Delete</button>
 
-              <a href="" class="btn btn-warning">Modificar</a>
-              <a href="" class="btn btn-danger">Delete</a
+                </form>
                </td>
                </tr>
               </tr>

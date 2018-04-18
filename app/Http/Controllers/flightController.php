@@ -90,6 +90,8 @@ class flightController extends Controller
     public function delete(Flight $flight){
 
         $flight->delete();
-        return redirect()->route('index_flight');
+        return view('eliminar');
     }
+
+   
 }

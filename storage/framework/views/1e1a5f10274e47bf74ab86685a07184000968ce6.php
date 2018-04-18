@@ -69,14 +69,14 @@
     </div>         
     
     <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Crear</button>
     </div>     
     
 </form>
 
 
 <div class = "container">
-    <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
             <thead>
               <tr>
@@ -99,7 +99,24 @@
               <td> <?php echo e($client->email); ?> </td>
               <td> <?php echo e($client->telefono); ?> </td>
               <td> <?php echo e($client->contraseña); ?> </td>
+
+              <td>
+
+              <a href="<?php echo e(route('edit_client', ['client' => $client->id])); ?>" class="btn btn-warning">Modificar</a>
+              <p>
+              <form action="<?php echo e(route('delete_client',['client' => $client->id])); ?>"method = "POST">
+                <?php echo e(csrf_field()); ?>
+
+                <?php echo e(method_field('DELETE')); ?>
+
+                
+                <button type="submit" class='btn btn-danger'>Delete</button>
+
+                </form>
+               </td>
+               </tr>
               </tr>
+
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($clients->links()); ?>
 

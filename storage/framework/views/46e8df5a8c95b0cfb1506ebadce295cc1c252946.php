@@ -70,9 +70,9 @@
     </div>
 
     <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </div>     
-    
+        <button type="submit" class="btn btn-primary">Crear</button>
+        
+    </div>
 </form>
 
 
@@ -83,7 +83,6 @@
               <tr>
                 <th>ID</th>
                 <th>Precio</th>
-                <th>Fecha inicio</th>
                 <th>Fecha vuelo</th>
                 <th>Plazas Disponibles</th>
               </tr>
@@ -100,8 +99,22 @@
               </td>
 
               <td>
-              <a href="" class="btn btn-warning">Modificar</a>
-              <a href="" class="btn btn-danger">Eliminar</a
+              <a href="<?php echo e(route('edit_flight', ['flight' => $flight->id])); ?>"  class="btn btn-warning">Modificar</a>
+              <p>
+              <form action="<?php echo e(route('delete_flight', ['flight' => $flight->id])); ?>"  method = "POST">
+            
+              <?php echo e(csrf_field()); ?>
+
+              <?php echo e(method_field('DELETE')); ?>
+
+
+              <button type="submit" class='btn btn-danger'>Delete</button>
+    
+
+
+              
+
+              </form>
                </td>
                </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
