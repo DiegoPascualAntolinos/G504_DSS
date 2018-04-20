@@ -6,14 +6,14 @@ use App\Flight;
 use App\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Input;
 
 class flightController extends Controller
 {
 
-    public function index(){
+    public function index(Request $request){
 
-        $flight = Flight::orderBy('id', 'desc')->paginate(5);
+        $flight = Flight::search($request->get('q'))->orderBy('id', 'desc')->paginate(5);
 
         return view('vuelos')->with(['flights' => $flight]);
     }

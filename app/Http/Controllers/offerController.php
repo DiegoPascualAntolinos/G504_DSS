@@ -6,15 +6,14 @@ use App\Offer;
 use App\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Input;
 
 class offerController extends Controller
 {
 
-    public function index(){
+    public function index(Request $request){
 
-        $offers = Offer::orderBy('id', 'desc')->paginate(5);
-
+        $offers = Offer::search($request->get('q'))->orderBy('id', 'desc')->paginate(5);
         return view('oferta')->with(['offers' => $offers]);
     }
 

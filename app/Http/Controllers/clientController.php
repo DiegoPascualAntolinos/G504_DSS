@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Client;
+use Illuminate\Support\Facades\Input;
+
 
 class clientController extends Controller
 {
     
-    public function index(){
-        $clients = Client::orderBy('id', 'desc')->paginate(5);
+    public function index(Request $request){
+        $clients = Client::search($request->get('q'))->orderBy('id', 'desc')->paginate(5);
 
         return view('clientes')->with(['clients' => $clients]);
     }
