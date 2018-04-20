@@ -73,4 +73,11 @@ class offerController extends Controller
         $offer->delete();
         return view('eliminar');
     }
+
+    public function search(Request $request){
+
+
+
+    }
+
 }

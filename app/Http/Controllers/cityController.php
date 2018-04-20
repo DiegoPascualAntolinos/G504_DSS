@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use App\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Input;
 
 class cityController extends Controller
 {
 
-    public function index(){
-
-        $cities = City::orderBy('id', 'desc')->paginate(5);
+    public function index(Request $request){
+        
+        $cities = City::search($request->get('q'))->orderBy('id', 'desc')->paginate(5);
 
         return view('ciudades')->with(['cities' => $cities]);
     }
@@ -38,4 +38,5 @@ class cityController extends Controller
         return view('ciudades')->with(['cities' => $ciudad]);
 
     }
+
 }

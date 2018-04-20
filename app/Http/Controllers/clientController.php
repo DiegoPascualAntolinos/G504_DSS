@@ -70,4 +70,11 @@ class clientController extends Controller
         $client->delete();
         return view('eliminar');
     }
+
+    public function search(Request $request){
+
+
+        
+    }
+
 }

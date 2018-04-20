@@ -15,4 +15,14 @@ class Reservation extends Model
     public function flight(){
         return $this->belongsTo('App\Flight');
     }
+
+    public function scopeSearch($query, $nombre){
+        if(trim($nombre) != ""){
+            return $query->where('fechaLlegada', 'like', '%' .$nombre. '%')
+                ->orWhere('fechaSalida', 'like', '%' .$nombre. '%')
+                ->orWhere('cantidad', 'like', '%' .$nombre. '%');
+        }
+    }
+    
 }
+

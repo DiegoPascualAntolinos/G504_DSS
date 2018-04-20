@@ -47,4 +47,11 @@ class reservationController extends Controller
         return view('reservas')->with(['reservations' => $reservations]);
 
     }
+
+    public function search(Request $request){
+
+        
+
+    }
+
 }

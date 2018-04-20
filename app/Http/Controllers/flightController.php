@@ -93,5 +93,11 @@ class flightController extends Controller
         return view('eliminar');
     }
 
+    public function search(Request $request){
+
+
+        
+    }
+
    
 }

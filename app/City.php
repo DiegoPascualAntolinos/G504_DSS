@@ -17,4 +17,12 @@ class City extends Model
     public function flights(){
         return $this->hasMany('App\Flight');
     }
+
+    public function scopeSearch($query, $nombre){
+        if(trim($nombre) != ""){
+            return $query->where('pais', 'like', '%' .$nombre. '%')
+                ->orWhere('provincia', 'like', '%' .$nombre. '%')
+                ->orWhere('ciudad', 'like', '%' .$nombre. '%');
+        }
+    }
 }
