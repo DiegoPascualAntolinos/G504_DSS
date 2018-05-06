@@ -16,6 +16,13 @@ Route::get('/admin', function(){
 });
 
 
+Route::get('/ofertaAdmin', function(){
+    return view('Admin/ofertaAdmin');
+});
+
+
+
+
 Route::get('/hello', 'holaMundo@mostrarContenido');
 
 Route::get('/home', function(){
