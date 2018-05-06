@@ -228,7 +228,7 @@
     color: #00aced;
 }
 
-@media screen and (max-width: 767px) {
+@media  screen and (max-width: 767px) {
     #myFooter {
         text-align: center;
     }

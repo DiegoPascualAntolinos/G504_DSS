@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('faltaPorHacer');
+Route::get('/admin', function(){
+    return view('Admin/admin');
 });
+
 
 Route::get('/hello', 'holaMundo@mostrarContenido');
 
@@ -70,10 +71,6 @@ Route::name('delete_flight')->delete('/vuelos/{flight}', 'flightController@delet
 
 Route::get('/profile', function(){
     return view('profile');
-});
-
-Route::get('/profile/ajustesUsuario', function(){
-    return view('ajustesUsuario');
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

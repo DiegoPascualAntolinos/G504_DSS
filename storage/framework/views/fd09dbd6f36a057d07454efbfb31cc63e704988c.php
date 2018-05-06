@@ -1,5 +1,5 @@
 
-<title>DSStino</title>
+<title>Bootstrap Example</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,6 +30,16 @@
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
         color: #000000;
     }
+
+#contenido{
+    display: flex;
+    flex-direction: column;
+}
+#mySidebar{
+    position: absolute;
+    border-radius: 25px;
+    
+}
 
     /* Add a gray background color and some padding to the footer */
     .profile {
@@ -131,7 +141,7 @@
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #fff;
+  background: #ef6c00;
   min-height: 460px;
 }
     #myFooter {
@@ -228,7 +238,7 @@
     color: #00aced;
 }
 
-@media screen and (max-width: 767px) {
+@media  screen and (max-width: 767px) {
     #myFooter {
         text-align: center;
     }
