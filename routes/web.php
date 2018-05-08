@@ -11,16 +11,46 @@
 |
 */
 
+// -------------------------- ADMIN -------------------------------
+
+
 Route::get('/admin', function(){
     return view('Admin/admin');
 });
 
+// ofertaAdmin
 
 Route::get('/ofertaAdmin', function(){
     return view('Admin/ofertaAdmin');
 });
 
+Route::name('create_offerAdmin')->get('/ofertaAdmin', 'offerController@createAdmin');
 
+Route::name('store_offerAdmin')->post('/ofertaAdmin', 'offerController@storeAdmin');
+
+Route::name('index_offerAdmin')->get('/ofertaAdmin', 'offerController@indexAdmin');
+
+Route::name('edit_offerAdmin')->get('/ofertaAdmin/{oferta}/edit', 'offerController@editAdmin');
+
+Route::name('update_offerAdmin')->put('/ofertaAdmin/{oferta}', 'offerController@updateAdmin');
+
+Route::name('delete_offer')->delete('/ofertaAdmin/{offer}', 'offerController@deleteAdmin');
+
+
+
+
+Route::get('/vueloAdmin', function(){
+    return view('Admin/vueloAdmin');
+});
+
+
+
+Route::get('/hotelAdmin', function(){
+    return view('Admin/hotelAdmin');
+});
+
+
+// -------------------------- FIN ADMIN -------------------------
 
 
 Route::get('/hello', 'holaMundo@mostrarContenido');
