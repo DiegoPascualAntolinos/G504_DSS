@@ -37,6 +37,7 @@ Route::name('update_offerAdmin')->put('/ofertaAdmin/{oferta}', 'offerController@
 Route::name('delete_offer')->delete('/ofertaAdmin/{offer}', 'offerController@deleteAdmin');
 
 
+// vueloAdmin
 
 
 Route::get('/vueloAdmin', function(){
@@ -44,10 +45,29 @@ Route::get('/vueloAdmin', function(){
 });
 
 
+Route::name('create_flightAdmin')->get('/vueloAdmin', 'flightController@createAdmin');
+
+Route::name('store_flightAdmin')->post('/vueloAdmin', 'flightController@storeAdmin');
+
+Route::name('index_flightAdmin')->get('/vueloAdmin', 'flightController@indexAdmin');
+
+Route::name('edit_flightAdmin')->get('/vueloAdmin/{vuelo}/edit', 'flightController@editAdmin');
+
+Route::name('update_flightAdmin')->put('/vueloAdmin/{vuelo}', 'flightController@updateAdmin');
+
+Route::name('delete_flight')->delete('/vueloAdmin/{flight}', 'flightController@deleteAdmin');
+
+
+
+// hotelAdmin
+
 
 Route::get('/hotelAdmin', function(){
     return view('Admin/hotelAdmin');
 });
+
+
+
 
 
 // -------------------------- FIN ADMIN -------------------------
