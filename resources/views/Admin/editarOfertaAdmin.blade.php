@@ -3,6 +3,7 @@
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
 <!--la pagina maestra -->
 
+
 @section('content')
 
 <head>
@@ -10,8 +11,8 @@
         #contenedor { 
             width: 900px; 
             padding: 10px; 
-            background: #efeded ; 
-            border: 2px solid #BBB; 
+            background:  #ffbeb3 ; 
+            border: 3px solid #ff674d; 
             overflow: auto; 
             }
 
@@ -35,7 +36,7 @@
 
 <div class= "container">
     <div class="container container-centered">
-<h1> ¡Las mejores ofertas para nuestros clientes! </h1>
+<h1> Editar oferta </h1>
 <hr>
 
 <h1> 
@@ -59,9 +60,16 @@
 
 @endif
 
-<form action="{{ route('store_offerAdmin') }}" method="POST">
+<form action="{{ route('update_offerAdmin', ['oferta' => $oferta->id]) }}" method="POST">
 
 {{ csrf_field() }}
+
+{{ method_field('PUT') }}
+
+  
+
+<body>
+
 
 <div id="contenedor">
 				<div class="centro"></div>
@@ -75,7 +83,7 @@
 
     <div class="form-group"> <!-- titulo -->
         <label for="titulo" class="control-label">Titulo Viaje</label>
-        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
+        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Introduce un título para el viaje">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->
@@ -105,75 +113,13 @@
         <input type="double" class="form-control" id="precio" name="precio" placeholder="#####">
     </div>
 
-    <div class="form-group"> <!-- precio -->
+    <div class="form-group"> <!-- descripción -->
         <label for="descripcion" class="control-label">Descripción</label>
         <input type="string" class="form-control" id="descripcion" name="descripcion" style="WIDTH: 632px; HEIGHT: 150px" placeholder="Cuéntanos">
-    </div>         
-    
-    <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Crear</button>
-    </div>    
-
-    </div>
     </div> 
-    <hr></hr>
-    
-</form>
-
-<div class = "container">
-    <table id = "example" data-toggle="table" class="table table-hover">
-
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Fecha inicio</th>
-                <th>Fecha fin</th>
-                <th>Origen</th>
-                <th>Destino</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-              </tr>
-            </thead>
-              <tbody>
-            @foreach($offers as $offer)
-              <tr>
-              <td> {{ $offer->id }} </td>
-              <td> {{ $offer->nombre }} </td>
-              <td> {{ $offer->fechaViaje }} </td>
-              <td> {{ $offer->fechaFinOferta }} </td>
-              <td> {{ $offer->origen }} </td>
-              <td> {{ $offer->destino }} </td>
-              <td> {{ $offer->descripcion }} </td>
-              <td> {{ $offer->precio }} </td>
-
-              <td>
-
-
-              <a href="{{ route('edit_offerAdmin', ['offer' => $offer->id]) }}" class="btn btn-warning">Modificar</a>
-              <p>
-              <form action="{{ route('delete_offer',['offer' => $offer->id]) }}"method = "POST">
-                {{ csrf_field() }}
-                {{method_field('DELETE')}}
-                
-                <button type="submit" class='btn btn-danger'>Delete</button>
-
-                </form>
-               </td>
-               </tr>
-              </tr>
-
-            @endforeach
-            {{ $offers->links() }}
-            </tbody>
-            </table>
-</div>
-<p></p>
-
-</body>
-
-
-
+    </div>
+    </div>
+    <hr></hr>        
 
 
 @endsection

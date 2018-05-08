@@ -94,10 +94,12 @@
 			</div>
             <p></p>
 			<div id="opciones">
+            <h1><font color="grey">¿Preparado para añadir ofertas, vuelos y hoteles? </font></h1>
+            <hr></hr>
                 <ul>
-                <button type="enviar" href="/ofertaAdmin" class="btn btn-primary btn-lg">Oferta</button>
-                <button type="enviar" class="btn btn-primary btn-lg">Vuelos</button>
-                <button type="enviar" class="btn btn-primary btn-lg">Hoteles</button>
+                <a class="btn btn-primary btn-lg" href="/ofertaAdmin" role="button">Ofertas</a>
+                <a class="btn btn-primary btn-lg" href="/vueloAdmin" role="button">Vuelos</a>
+                <a class="btn btn-primary btn-lg" href="/hotelAdmin" role="button">Hoteles</a>
                 </ul>
                 <p></p>
             
@@ -107,8 +109,8 @@
 				<div id="contenedor-izq">
     <p></p>
     
-    <h1><font color="grey">Mis datos</font></h1>
-    
+    <h1><font color="grey">Tus datos personales: </font></h1>
+    <p></p>
     <hr></hr>
     <div class="form-group"> <!-- dni -->
         <label for="dni" class="control-label">DNI</label>
