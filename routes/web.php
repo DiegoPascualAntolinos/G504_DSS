@@ -84,6 +84,11 @@ holaMundo nombre del controlador
 mostrarContenido nombre de la funcion a ser llamados
 */
 
+Route::get('/', function(){
+    return view('mainPage');
+});
+
+
 Route::name('mainPage')->get('/main', function () {
     return view('mainPage');
  });
