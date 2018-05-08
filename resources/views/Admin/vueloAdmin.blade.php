@@ -59,7 +59,7 @@
 
 @endif
 
-<form action="{{ route('store_flight') }}" method="POST">
+<form action="{{ route('store_flightAdmin') }}" method="POST">
 
 {{ csrf_field() }}
 
@@ -108,19 +108,51 @@
     <hr></hr>
 </form>
 
-<form action="/vuelos" method="GET" role="search">
-    <div class="input-group col-md-12">
-        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
-        <span class="input-group-btn">
-            <button class="btn btn-info btn-lg" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-            </button>
-        </span>
-    </div>
-    <hr></hr>
 
-</form>
+<div class = "container">
+    <table id = "example" data-toggle="table" class="table table-hover">
 
-</body>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Precio</th>
+                <th>Fecha vuelo</th>
+                <th>Plazas Disponibles</th>
+              </tr>
+
+
+            </thead>
+              <tbody>
+            @foreach($flights as $flight)
+              <tr>
+              <td> {{ $flight->id }} </td>
+              <td> {{ $flight->precio }} </td>
+              <td> {{ $flight->fechaVuelo }} </td>
+              <td> {{ $flight->plazasDisponibles }} </td>
+              </td>
+
+              <td>
+              <a href="{{ route('edit_flightAdmin', ['flight' => $flight->id]) }}"  class="btn btn-warning">Modificar</a>
+              <p>
+              <form action="{{route('delete_flight', ['flight' => $flight->id]) }}"  method = "POST">
+            
+              {{ csrf_field() }}
+              {{ method_field('DELETE') }}
+
+              <button type="submit" class='btn btn-danger'>Delete</button>
+    
+
+
+              
+
+              </form>
+               </td>
+               </tr>
+            @endforeach
+            {{ $flights->links() }}
+            </tbody>
+            </table>
+</div>
+
 
 @endsection
