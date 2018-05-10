@@ -17,7 +17,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Jornet Perales 2',
             'email' => 'laureta91@gmail.com',
             'telefono' => '962901167',
-            'contraseña' => '123abc'
+            'contraseña' => '123abc',
+            'tipo' => 'admin'
             
         ]);
 
@@ -27,7 +28,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Mayor 4',
             'email' => 'pfc21@gmail.com',
             'telefono' => '672901167',
-            'contraseña' => '654abc'
+            'contraseña' => '654abc',
+            'tipo' => 'usuario'
             
         ]);
 
@@ -37,7 +39,8 @@ class ClientsTableSeeder extends Seeder
             'direccion' => 'C/Albacete 5',
             'email' => 'calatayud125@gmail.com',
             'telefono' => '66890762',
-            'contraseña' => 'hola123'
+            'contraseña' => 'hola123',
+            'tipo' => 'usuario'
             
         ]);
     }
