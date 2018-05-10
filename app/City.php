@@ -18,6 +18,10 @@ class City extends Model
         return $this->hasMany('App\Flight');
     }
 
+    public function hotels(){
+        return $this->hasMany('App\Hotel');
+    }
+
     public function scopeSearch($query, $nombre){
         if(trim($nombre) != ""){
         return $query->where('pais', 'like', '%' .$nombre. '%')

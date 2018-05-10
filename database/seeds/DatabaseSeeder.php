@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(FlightsTableSeeder::class);
         $this->call(ReservationsTableSeeder::class);
         $this->call(CitiesOffersTableSeeder::class);
+        $this->call(CommentsTableSeeder::class);
+        $this->call(HotelsTableSeeder::class);
      
     }
 }

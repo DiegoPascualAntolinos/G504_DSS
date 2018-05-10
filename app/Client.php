@@ -18,6 +18,10 @@ class Client extends Model
         return $this->hasMany('App\Reservation');
     }
 
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
     public function scopeSearch($query, $nombre){
         if(trim($nombre) != ""){
             return $query->where('clients', 'like', '%' .$nombre. '%');

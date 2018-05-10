@@ -16,6 +16,7 @@
       <li><a href="/register">¡Registrate!</a></li>
       <li><a href="/login">Loguéate</a></li>
 
+      <li><a href="/admin">Admin</a></li>
       <li><a href="/profile">Mi perfil</a></li>
       <li><a href="#">Desconectar</a></li>
     </ul>
