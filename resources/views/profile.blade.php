@@ -19,15 +19,22 @@
     </div>
 </form>
 
+<!-- @foreach() -->
 <div id="jumbotronWrapper">
 
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="jumbotron jumbotron-fluid" id= "jumb">
+    
+    
+    <div class="row">
+        <div class="col-sm-4"> <h1> Viaje número: {{ 1 }} <h1> </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de salida</div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada</div>
     </div>
+    <!-- @foreach() -->
+    <div class="col-sm-2">Lugar - </div>
+    <!-- @endforeach -->
     </div>
 
 </div>
-
+<!--@endforeach -->
 @endsection

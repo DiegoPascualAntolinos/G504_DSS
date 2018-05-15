@@ -146,9 +146,18 @@
 
 #jumbotronWrapper{
     margin-top: 15px;
-    width: 1644px;
+    width: 1642px;
     height: 530px;
     overflow-y: auto;
+}
+
+#jumb{
+    padding-top: 0px;
+    padding-left: 10px;
+}
+
+#fechas-perfil{
+    padding-top: 50px;
 }
 
 #myFooter {
