@@ -6,7 +6,7 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Marcus Doe
+					<img src="https://secure.gravatar.com/avatar/424c71aa00806df516f058d69065476f?s=100&r=g&d=mm" class="img-circle" alt="Cinque Terre"> 
 					</div>
 					<div class="profile-usertitle-job">
 						Developer
@@ -20,24 +20,19 @@
 						<li class="active">
 							<a href="#">
 							<i class="glyphicon glyphicon-home"></i>
-							Overview </a>
+							Inicio </a>
 						</li>
 						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>
-							Account Settings </a>
+							<i class="glyphicon glyphicon-cog"></i>
+							Ajustes </a>
 						</li>
 						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
+							<i class="glyphicon glyphicon-comment"></i>
+							Comentarios</a>
 						</li>
                         
-                        <li>
-                            <a href = "#">
-                            <i class = "glyphicon glyphicon-log-out"></i>
-                            Log Out </a>
-                        </li>
                        
 					</ul>
 				</div>

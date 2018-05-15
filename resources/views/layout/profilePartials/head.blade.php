@@ -41,7 +41,7 @@
 }
 
 #mySidebar{
-    width: 130px;
+    width: 140px;
     position: fixed;
     z-index: 1;
     top: 65px;
@@ -111,7 +111,7 @@
 }
 
 .profile-usermenu ul li a {
-  color: #d5443f;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 400;
 }
@@ -123,7 +123,7 @@
 
 .profile-usermenu ul li a:hover {
   background-color: #ffe1e0;
-  color: #bb3b36;
+  color: #000000;
 }
 
 .profile-usermenu ul li.active {
