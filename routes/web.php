@@ -104,7 +104,7 @@ Route::name('update_client')->put('/usuarios/{cliente}', 'clientController@updat
 
 Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@delete');
 
-
+//Route::name('list_travel')->get('/profile', '');
 
 Route::get('/login', function(){
     return view('login');

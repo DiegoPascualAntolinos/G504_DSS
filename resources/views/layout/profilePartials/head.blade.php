@@ -31,25 +31,24 @@
         color: #000000;
     }
 
+#perfil{
+    position: top;
+    top: 70px;
+}
+
 #contenido{
-    display: flex;
-    flex-direction: column;
+    margin-left: 0px;
 }
+
 #mySidebar{
-    position: absolute;
-    border-radius: 25px;
-    
-}
-
-    /* Add a gray background color and some padding to the footer */
-    .profile {
-  margin: 20px 0;
-}
-
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #fff;
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 65px;
+    left: 10px;
+    background: #ef6c00;
+    overflow-x: hidden;
+    padding: 8px 0;
 }
 
 .profile-userpic img {
@@ -76,7 +75,7 @@
 
 .profile-usertitle-job {
   text-transform: uppercase;
-  color: #5b9bd1;
+  color: #d5443f;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -112,7 +111,7 @@
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
+  color: #d5443f;
   font-size: 14px;
   font-weight: 400;
 }
@@ -123,8 +122,8 @@
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+  background-color: #ffe1e0;
+  color: #bb3b36;
 }
 
 .profile-usermenu ul li.active {
@@ -132,19 +131,27 @@
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
+  color: #bb3b36;
+  background-color: #ffe1e0;
+  border-left: 2px solid #ff7a75;
   margin-left: -2px;
 }
 
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #ef6c00;
+  background: #fff;
   min-height: 460px;
 }
-    #myFooter {
+
+#jumbotronWrapper{
+    margin-top: 15px;
+    width: 1644px;
+    height: 530px;
+    overflow-y: auto;
+}
+
+#myFooter {
     background-color: #182c39;
     color: white;
     padding-top: 20px;
@@ -251,30 +258,7 @@
         width:640px;
         height:360px;
     }
-    .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ef6c00;
-    overflow-x: hidden;
-    padding-top: 70px;
-    margin-bottom:50px;
-}
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #42a5f5;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
