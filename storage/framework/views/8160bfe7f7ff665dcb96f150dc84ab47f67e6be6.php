@@ -157,7 +157,17 @@
     
 </form>
 
-
+<form action="/oferta" method="GET" role="search">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+<p>
 <div class = "container">
     <table id = "example" data-toggle="table" class="table table-hover">
 
@@ -217,5 +227,4 @@
 
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layout.mainlayout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

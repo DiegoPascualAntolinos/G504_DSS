@@ -54,13 +54,16 @@
                 </div>
             </div>
         </nav>
+<<<<<<< HEAD
 
         
     
+=======
+   
+>>>>>>> c6fbbc0bfc7086e708d5df25640af8713ada590c
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-
+   <!-- <script src="{{ asset('js/app.js') }}"></script> -->
 
      
     </div>
