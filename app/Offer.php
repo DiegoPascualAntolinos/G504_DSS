@@ -11,8 +11,8 @@ class Offer extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
-    public function Client(){
-        return $this->belongsToMany('App\Client');
+    public function User(){
+        return $this->belongsToMany('App\User');
     }
 
     public function City(){

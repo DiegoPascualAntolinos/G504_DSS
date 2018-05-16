@@ -8,8 +8,8 @@ class Reservation extends Model
 {
     public $timestamps = false;
 
-    public function client(){
-        return $this->belongsTo('App\Client');
+    public function User(){
+        return $this->belongsTo('App\User');
     }
 
     public function flight(){

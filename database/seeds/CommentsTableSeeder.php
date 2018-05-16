@@ -12,7 +12,8 @@ class CommentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('comments')->insert([
-            'text' => 'Viaje perfecto y todo gracias a la maravillosa organización de Dsstinos.'
+            'text' => 'Viaje perfecto y todo gracias a la maravillosa organización de Dsstinos.',
+            'id_users' => '2'
         ]);
     }
 }

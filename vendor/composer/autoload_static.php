@@ -312,7 +312,6 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
 
     public static $classMap = array (
         'App\\City' => __DIR__ . '/../..' . '/app/City.php',
-        'App\\Client' => __DIR__ . '/../..' . '/app/Client.php',
         'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -353,8 +352,6 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'CitiesOffersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CitiesOffersTableSeeder.php',
         'CitiesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CitiesTableSeeder.php',
-        'ClientsOffersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientsOffersTableSeeder.php',
-        'ClientsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientsTableSeeder.php',
         'CommentsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CommentsTableSeeder.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
@@ -1967,6 +1964,7 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
         'OffersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/OffersTableSeeder.php',
+        'OffersUsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/OffersUsersTableSeeder.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
@@ -3564,6 +3562,7 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
