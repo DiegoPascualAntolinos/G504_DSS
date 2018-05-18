@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Offer;
-use App\Client;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -42,7 +42,7 @@ class offerController extends Controller
             'email' => 'required|email'
         ]);
 
-        $cliente = DB::table('clients')->where('email', '=', $request->get('email'))->first();
+        $cliente = DB::table('users')->where('email', '=', $request->get('email'))->first();
         $oferta = new Offer;
         $oferta->nombre = $request->get('titulo');
         $oferta->fechaViaje = $request->get('fechaViaje');
@@ -53,7 +53,7 @@ class offerController extends Controller
         $oferta->descripcion = $request->get('descripcion');
         $oferta->save();
 
-        //$oferta->Client()->attach($cliente->id);
+        $oferta->User()->attach($cliente->id);
 
         $offers = Offer::orderBy('id', 'desc')->paginate(5);
 
@@ -68,7 +68,7 @@ class offerController extends Controller
             'email' => 'required|email'
         ]);
 
-        $cliente = DB::table('clients')->where('email', '=', $request->get('email'))->first();
+        $cliente = DB::table('users')->where('email', '=', $request->get('email'))->first();
         $oferta = new Offer;
         $oferta->nombre = $request->get('titulo');
         $oferta->fechaViaje = $request->get('fechaViaje');
@@ -79,7 +79,7 @@ class offerController extends Controller
         $oferta->descripcion = $request->get('descripcion');
         $oferta->save();
 
-       // $oferta->Client()->attach($cliente->id);
+        $oferta->User()->attach($cliente->id);
 
         $offers = Offer::orderBy('id', 'desc')->paginate(5);
 

@@ -109,7 +109,27 @@ Route::name('update_client')->put('/usuarios/{cliente}', 'clientController@updat
 
 Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@delete');
 
+// --------------------- Perfil usuario --------------------
+
 //Route::name('list_travel')->get('/profile', '');
+
+Route::get('/profile', function(){
+    return view('profile');
+});
+
+//Route::name('settings')->get('/profileSettings', '');
+
+Route::get('/profileSettings', function(){
+    return view('profileSettings');
+});
+
+//Route::name('settings')->get('/profileComments', '');
+
+Route::get('/profileComments', function(){
+    return view('profileComments');
+});
+
+// ------------------- Fin Perfil usuario ------------------
 
 Route::get('/login', function(){
     return view('login');
@@ -131,9 +151,7 @@ Route::name('update_flight')->put('/vuelos/{vuelo}', 'flightController@update');
 
 Route::name('delete_flight')->delete('/vuelos/{flight}', 'flightController@delete');
 
-Route::get('/profile', function(){
-    return view('profile');
-});
+
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 

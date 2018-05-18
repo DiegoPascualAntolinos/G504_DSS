@@ -5,9 +5,6 @@
 
 
 @section('content')
-
-
-
 <form action="/profile" method="GET" role="search">
     <div class="input-group col-md-12">
         <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
@@ -19,9 +16,10 @@
     </div>
 </form>
 
-<!-- @foreach() -->
-<div id="jumbotronWrapper">
 
+
+<div id="jumbotronWrapper">
+foreach
     <div class="jumbotron jumbotron-fluid" id= "jumb">
     
     
@@ -30,11 +28,12 @@
         <div class="col-sm-3" id="fechas-perfil">La fecha de salida</div>
         <div class="col-sm-3" id="fechas-perfil">La fecha de llegada</div>
     </div>
-    <!-- @foreach() -->
+    foreach
     <div class="col-sm-2">Lugar - </div>
-    <!-- @endforeach -->
+    endforeach 
     </div>
-
+    endforeach
 </div>
-<!--@endforeach -->
+
+
 @endsection

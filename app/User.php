@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'dni', 'nombre', 'direccion', 'email', 'telefono', 'password',
     ];
 
     /**
@@ -27,16 +27,21 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function offer(){
+        return $this->belongsToMany('App\Offer');
+    }
+
+    public function reservations(){
+        return $this->hasMany('App\Reservation');
+    }
+
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
     public function scopeSearch($query, $nombre){
         if(trim($nombre) != ""){
-            return $query->where('name', 'like', '%' .$nombre. '%')
-                ->orWhere('email', 'like', '%' .$nombre. '%')
-                ->orWhere('password', 'like', '%' .$nombre. '%')
-                ->orWhere('dni', 'like', '%' .$nombre. '%')
-                ->orWhere('direccion', 'like', '%' .$nombre. '%')
-                ->orWhere('telefono', 'like', '%' .$nombre. '%');
+            return $query->where('users', 'like', '%' .$nombre. '%');
         }
-
-        
     }
 }

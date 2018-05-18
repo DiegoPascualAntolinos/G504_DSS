@@ -19,8 +19,8 @@ class CreateReservationsTable extends Migration
             $table->date('fechaSalida');
             $table->string('cantidad');
 
-            $table->integer('id_clients')->unsigned()->default(0);
-            $table->foreign('id_clients')->references('id')->on('clients');
+            $table->integer('id_users')->unsigned()->default(0);
+            $table->foreign('id_users')->references('id')->on('users');
             
             $table->integer('id_flight')->unsigned()->default(0);
             $table->foreign('id_flight')->references('id')->on('flights');
