@@ -32,7 +32,7 @@
 
 @endif
 
-<form action="{{ route('update_client', ['cliente' => $cliente->id]) }}" method="POST">
+<form action="{{ route('update_user', ['usuario' => $usuario->id]) }}" method="POST">
 
 {{ csrf_field() }}
 

@@ -3,17 +3,17 @@
 <!--el footer y todos los estilos en las paginas. Es como cargar -->
 <!--la pagina maestra -->
 
+
 @section('content')
 
-
-
 <head>
+
     <style>
         #contenedor { 
             width: 900px; 
             padding: 10px; 
-            background: #efeded ; 
-            border: 2px solid #BBB; 
+            background:  #ffbeb3 ; 
+            border: 3px solid #ff674d; 
             overflow: auto; 
             }
 
@@ -29,17 +29,19 @@
             float: right; 
             }
 
-</style>
+    </style>
+
 </head>
 
 <body>
 
+
+
 <div class= "container">
     <div class="container container-centered">
-<h1> Crear listado de hoteles </h1>
+<h1> Editar vuelo </h1>
 <hr>
 
-<h1> 
 </div> 
 
 @if(count($errors) > 0)
@@ -60,10 +62,13 @@
 
 @endif
 
-<form action="{{ route('store_hotelAdmin') }}" method="POST">
+<form action="{{ route('update_hotelAdmin', ['hotel' => $hotel->id]) }}" method="POST">
 
 {{ csrf_field() }}
 
+{{ method_field('PUT') }}
+
+  
 <div id="contenedor">
 				<div class="centro"></div>
 				<div id="contenedor-izq">
@@ -90,59 +95,17 @@
         <input type="double" class="form-control" id="plazasDisponibles" name="plazasDisponibles" placeholder="Introduce las plazas disponibles">
     </div>
 
+
+
     <div class="form-group"> <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Crear</button>
-        
+        <button type="submit" class="btn btn-primary">Editar</button>
+    </div>  
     </div>
     </div>
-    </div>
-    <hr></hr>
+    <hr></hr>   
+    
 </form>
 
-<div class = "container">
-    <table id = "example" data-toggle="table" class="table table-hover">
-
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Plazas disponibles</th>
-              </tr>
-            </thead>
-              <tbody>
-            @foreach($hotels as $hotel)
-              <tr>
-              <td> {{ $hotel->id }} </td>
-              <td> {{ $hotel->nombre }} </td>
-              <td> {{ $hotel->direccion }} </td>
-              <td> {{ $hotel->telefono }} </td>
-              <td> {{ $hotel->plazasDisponibles }} </td>
-              <td>
-
-
-              <a href="{{ route('edit_hotelAdmin', ['hotel' => $hotel->id]) }}" class="btn btn-warning">Modificar</a>
-              <p>
-              <form action="{{ route('delete_hotelAdmin',['hotel' => $hotel->id]) }}"method = "POST">
-                {{ csrf_field() }}
-                {{method_field('DELETE')}}
-                
-                <button type="submit" class='btn btn-danger'>Delete</button>
-
-                </form>
-               </td>
-               </tr>
-              </tr>
-
-            @endforeach
-            {{ $hotels->links() }}
-            </tbody>
-            </table>
-</div>
-
 </body>
-
-
 
 @endsection

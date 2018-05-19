@@ -36,14 +36,7 @@ Route::name('update_offerAdmin')->put('/ofertaAdmin/{oferta}', 'offerController@
 
 Route::name('delete_offer')->delete('/ofertaAdmin/{offer}', 'offerController@deleteAdmin');
 
-
 // vueloAdmin
-
-
-Route::get('/vueloAdmin', function(){
-    return view('Admin/vueloAdmin');
-});
-
 
 Route::name('create_flightAdmin')->get('/vueloAdmin', 'flightController@createAdmin');
 
@@ -58,6 +51,10 @@ Route::name('update_flightAdmin')->put('/vueloAdmin/{vuelo}', 'flightController@
 Route::name('delete_flight')->delete('/vueloAdmin/{flight}', 'flightController@deleteAdmin');
 
 
+Route::get('/vueloAdmin', function(){
+    return view('Admin/vueloAdmin');
+});
+
 
 // hotelAdmin
 
@@ -65,6 +62,20 @@ Route::name('delete_flight')->delete('/vueloAdmin/{flight}', 'flightController@d
 Route::get('/hotelAdmin', function(){
     return view('Admin/hotelAdmin');
 });
+
+Route::name('create_hotelAdmin')->get('/hotelAdmin', 'hotelController@createAdmin');
+
+Route::name('store_hotelAdmin')->post('/hotelAdmin', 'hotelController@storeAdmin');
+
+Route::name('index_hotelAdmin')->get('/hotelAdmin', 'hotelController@indexAdmin');
+
+Route::name('edit_hotelAdmin')->get('/hotelAdmin/{hotel}/edit', 'hotelController@editAdmin');
+
+Route::name('update_hotelAdmin')->put('/hotelAdmin/{hotel}', 'hotelController@updateAdmin');
+
+Route::name('delete_hotelAdmin')->delete('/hotelAdmin/{hotel}', 'hotelController@deleteAdmin');
+
+
 
 
 
@@ -97,23 +108,33 @@ Route::get('/register', function(){
     return view('register');
 });
 
-Route::name('create_client')->get('/usuarios', 'clientController@create');
 
-Route::name('store_client')->post('/usuarios', 'clientController@store');
+// ------------------------------ USUARIOS ------------------------------------
 
-Route::name('index_client')->get('/usuarios', 'clientController@index');
+Route::get('/usuarios', function(){
+    return view('usuarios');
+ });
+ 
+Route::name('create_user')->get('/usuarios', 'userController@create');
 
-Route::name('edit_client')->get('/usuarios/{cliente}/edit', 'clientController@edit');
+Route::name('store_user')->post('/usuarios', 'userController@store');
 
-Route::name('update_client')->put('/usuarios/{cliente}', 'clientController@update');
+Route::name('index_user')->get('/usuarios', 'userController@index');
 
-Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@delete');
+Route::name('edit_user')->get('/usuarios/{usuario}/edit', 'userController@edit');
+
+Route::name('update_user')->put('/usuarios/{usuario}', 'userController@update');
+
+Route::name('delete_user')->delete('/usuarios/{user}', 'userController@delete');
 
 
 
 Route::get('/login', function(){
     return view('login');
 });
+
+// ---------------------------------- Vuelos -----------------------------------
+
 
 Route::get('/vuelos', function(){
     return view('vuelos');
@@ -131,11 +152,16 @@ Route::name('update_flight')->put('/vuelos/{vuelo}', 'flightController@update');
 
 Route::name('delete_flight')->delete('/vuelos/{flight}', 'flightController@delete');
 
+// ------
+
 Route::get('/profile', function(){
     return view('profile');
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+// ---------------------------- OFERTA -------------------------------
 
 Route::name('create_offer')->get('/oferta', 'offerController@create');
 
@@ -150,21 +176,18 @@ Route::name('update_offer')->put('/oferta/{oferta}', 'offerController@update');
 Route::name('delete_offer')->delete('/oferta/{offer}', 'offerController@delete');
 
 
-
-
-
-
 Route::delete('/oferta/{id}', function($id){
 
     Offer::findOrFail($id)->delete();
     return redirect('/oferta');
 });
 
-
-
 Route::get('/contacto', function(){
     return view('contacto');
 });
+
+
+// -------------------------------- CIUDADES ---------------------------------
 
 Route::get('/ciudades', function(){
     return view('ciudades');
@@ -176,10 +199,14 @@ Route::name('store_city')->post('/ciudades', 'cityController@store');
 
 Route::get('/ciudades', 'cityController@index');
 
+// ----
+
 Route::get('/eliminar', function(){
     return view('eliminar');
 });
 
+
+// ------------------------------- RESERVAS ----------------------------------
 
 Route::get('/reservas', function(){
     return view('reservas');
@@ -191,12 +218,31 @@ Route::name('store_reservation')->post('/reservas', 'reservationController@store
 
 Route::get('/reservas', 'reservationController@index');
 
-//Route::get('/usuarios', function(){
-//    return view('usuarios');
-//});
-
-
+// ------
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// -------------------------------- HOTELES ---------------------------------
+
+Route::get('/hoteles', function(){
+    return view('hoteles');
+});
+
+
+Route::name('create_hotel')->get('/hoteles', 'hotelController@create');
+
+Route::name('store_hotel')->post('/hoteles', 'hotelController@store');
+
+Route::name('index_hotel')->get('/hoteles', 'hotelController@index');
+
+
+
+Route::get('/imagenes', function(){
+    return view('imagenes');
+});
+
+
+

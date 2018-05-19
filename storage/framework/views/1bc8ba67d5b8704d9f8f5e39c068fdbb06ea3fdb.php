@@ -12,7 +12,7 @@
       border-radius: 0;
     }
     .navbar-default {
-        background-color: #ef6c00;
+        background-color: #E9967A;
         border-color: #ef6c00;
     }
     body { /*Cambiamos los margenes del navbar y el footer. SI no se solapan*/
