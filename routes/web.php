@@ -113,19 +113,19 @@ Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@del
 
 //Route::name('list_travel')->get('/profile', '');
 
-Route::get('/profile', function(){
+Route::get('/profile/{id}', function(){
     return view('profile');
 });
 
 //Route::name('settings')->get('/profileSettings', '');
 
-Route::get('/profileSettings', function(){
+Route::get('/profileSettings/{id}', function(){
     return view('profileSettings');
 });
 
 //Route::name('settings')->get('/profileComments', '');
 
-Route::get('/profileComments', function(){
+Route::get('/profileComments/{id}', function(){
     return view('profileComments');
 });
 

@@ -107,7 +107,7 @@
 
 .profile-usertitle-job {
   text-transform: uppercase;
-  color: #d5443f;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
