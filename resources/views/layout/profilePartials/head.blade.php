@@ -36,6 +36,14 @@
     top: 70px;
 }
 
+.col-lg-8{
+    padding-top: 10px;
+}
+
+.col-md-8{
+    padding-top: 10px;
+}
+
 #contenido{
     margin-left: 0px;
 }
