@@ -10,6 +10,20 @@
     
 <form class="form-horizontal" role="form">
           <div class="form-group">
+            <label for="first_name" class="col-lg-4 control-label">Foto de perfil:</label>
+            <div class="col-lg-8">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <span class="btn btn-default btn-file">
+                          Browse… <input type="file" id="imgInp">
+                      </span>
+                      </span>
+                      <input type="text" class="form-control" readonly>
+                    </div>
+                    <img id='img-upload'/>
+                  </div>
+          </div>
+          <div class="form-group">
             <label for="first_name" class="col-lg-4 control-label">Nombre:</label>
             <div class="col-lg-8">
               <input  id="first_name" class="form-control" type="text" placeholder="Nuevo nombre">
