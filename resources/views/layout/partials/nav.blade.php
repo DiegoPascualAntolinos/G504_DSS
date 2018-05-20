@@ -8,8 +8,7 @@
       <li class="active"><a href="/vuelos">Vuelos</a></li>
       <li class="active"><a href="/oferta">Ofertas</a></li>
       <li class="active"><a href="/hoteles">Hoteles</a></li>
-      <li class="active"><a href="/ciudades">Ciudades</a></li>
-      <li><a href="/imagenes">Galería</a></li>
+      <li class="active"><a href="/imagenes">Galería</a></li>
       
       </ul>
       <ul class= "nav navbar-nav navbar-right">
