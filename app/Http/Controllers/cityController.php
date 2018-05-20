@@ -31,12 +31,16 @@ class cityController extends Controller
         $ciudad->ciudad = $request->get('ciudad');
         $ciudad->save();
 
-       
-
-      
+     
 
         return view('ciudades')->with(['cities' => $ciudad]);
 
+    }
+
+    public function search(Request $request){
+
+
+        
     }
 
 }

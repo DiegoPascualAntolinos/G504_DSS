@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             'direccion' => 'C/Jornet Perales 2',
             'email' => 'laureta91@gmail.com',
             'telefono' => '962901167',
-            'password' => '123abc'
+            'password' => bcrypt('123abc'),
             
         ]);
 
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             'direccion' => 'C/Mayor 4',
             'email' => 'pfc21@gmail.com',
             'telefono' => '672901167',
-            'password' => '654abc'
+            'password' => bcrypt('654abc'),
             
         ]);
 
@@ -37,7 +37,7 @@ class UsersTableSeeder extends Seeder
             'direccion' => 'C/Albacete 5',
             'email' => 'calatayud125@gmail.com',
             'telefono' => '66890762',
-            'password' => 'hola123'
+            'password' => bcrypt('hola123'),
             
         ]);
     }

@@ -31,7 +31,7 @@
 
 <?php endif; ?>
 
-<form action="<?php echo e(route('store_offer')); ?>" method="POST">
+<form action="<?php echo e(route('store_city')); ?>" method="POST">
 
 <?php echo e(csrf_field()); ?>
 
@@ -39,20 +39,20 @@
     
 <div class="form-group"> <!-- pais -->
         <label for="pais" class="control-label">País</label>
-        <input type="double" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
+        <input type="string" class="form-control" id="pais" name="pais" placeholder="Introduce el país">
     </div>
 
       
 
 <div class="form-group"> <!-- provincia -->
         <label for="provincia" class="control-label">Provincia</label>
-        <input type="double" class="form-control" id="provincia" name="Provincia" placeholder="Introduce la provincia">
+        <input type="string" class="form-control" id="provincia" name="provincia" placeholder="Introduce la provincia">
     </div>
 
       
 <div class="form-group"> <!-- ciudad -->
         <label for="ciudad" class="control-label">Ciudad</label>
-        <input type="double" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
+        <input type="string" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce la ciudad">
     </div>       
 
 
@@ -62,7 +62,18 @@
     
 </form>
 
+<form action="/ciudades" method="GET" role="search">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
 
+<p>
 <div class = "container">
     <table id = "example" data-toggle="table" class="table table-striped table-bordered tablesorter">
 
