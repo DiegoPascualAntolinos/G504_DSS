@@ -7,8 +7,9 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="/vuelos">Vuelos</a></li>
       <li class="active"><a href="/oferta">Ofertas</a></li>
-      <li class="active"><a href="/hoteles">Hoteles</a></li>
-      <li class="active"><a href="/imagenes">Galería</a></li>
+      <li class="active"><a href="/usuarios">Usuarios</a></li>
+      <li class="active"><a href="/reservas">Reservas</a></li>
+      <li class="active"><a href="/ciudades">Ciudades</a></li>
       
       </ul>
       <ul class= "nav navbar-nav navbar-right">
@@ -41,7 +42,7 @@
                                                         document.getElementById('logout-form').submit();">Logout</a>
                                             <a href="/admin">Admin</a> 
                                             
-                                            <a href="{{route('list_travel')}}">Mi perfil</a>
+                                            <a href="{{ route('profile_index') }}">Mi perfil</a>
                                             
                                         
 
@@ -63,7 +64,7 @@
                                                 onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">Logout</a>
                                             
-                                            <a href="/profile/{id}">Mi perfil</a>
+                                            <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
                                             
                                         
 

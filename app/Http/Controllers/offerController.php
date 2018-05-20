@@ -25,9 +25,11 @@ class offerController extends Controller
        
     }
 
-    public function indexProfile(Request $request){
+    public function indexProfile(Request $request, $id){
+        $ofertas = DB::table('reservations')->where('id_users', $id)->get();
 
-        return view('profile');
+        return view('/profile')->with(['offers' => $ofertas]);
+        
     }
 
 

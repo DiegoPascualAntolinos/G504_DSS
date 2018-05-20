@@ -110,9 +110,18 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
 });
 
-// --------------------- Perfil usuario --------------------
+// -------------------------- FIN ADMIN -------------------------
 
-//Route::name('list_travel')->get('/profile/{id}', 'offerController@indexProfile');
+
+
+
+
+// ------ AUTH SOLES (USUARI) -----------------------
+
+Route::group(['middleware' => 'auth'], function () {
+
+
+// --------------------- Perfil usuario --------------------
 
 Route::get('/profile/{id}', 'offerController@indexProfile');
 
@@ -129,19 +138,6 @@ Route::get('/profileComments/{id}', function(){
 });
 
 // ------------------- Fin Perfil usuario ------------------
-
-// -------------------------- FIN ADMIN -------------------------
-
-
-
-
-
-// ------ AUTH SOLES (USUARI) -----------------------
-
-Route::group(['middleware' => 'auth'], function () {
-
-
-
 
 
 //--- ver, crear ofertas ---
