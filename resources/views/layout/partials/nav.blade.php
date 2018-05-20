@@ -42,7 +42,7 @@
                                                         document.getElementById('logout-form').submit();">Logout</a>
                                             <a href="/admin">Admin</a> 
                                             
-                                            <a href="/profile">Mi perfil</a>
+                                            <a href="{{route('list_travel')}}">Mi perfil</a>
                                             
                                         
 
@@ -64,7 +64,7 @@
                                                 onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">Logout</a>
                                             
-                                            <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
+                                            <a href="/profile/{id}">Mi perfil</a>
                                             
                                         
 

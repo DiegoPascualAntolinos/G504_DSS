@@ -111,11 +111,9 @@ Route::name('delete_client')->delete('/usuarios/{client}', 'clientController@del
 
 // --------------------- Perfil usuario --------------------
 
-//Route::name('list_travel')->get('/profile', '');
+//Route::name('list_travel')->get('/profile/{id}', 'offerController@indexProfile');
 
-Route::get('/profile/{id}', function(){
-    return view('profile');
-});
+Route::get('/profile/{id}', 'offerController@indexProfile');
 
 //Route::name('settings')->get('/profileSettings', '');
 

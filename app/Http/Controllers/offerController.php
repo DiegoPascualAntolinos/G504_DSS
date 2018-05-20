@@ -25,6 +25,11 @@ class offerController extends Controller
        
     }
 
+    public function indexProfile(Request $request){
+
+        return view('profile');
+    }
+
 
     public function create(){
         return view('oferta');

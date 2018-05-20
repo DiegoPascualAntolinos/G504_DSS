@@ -19,17 +19,17 @@
 
 
 <div id="jumbotronWrapper">
-foreach
+foreach($offers as $offer)
     <div class="jumbotron jumbotron-fluid" id= "jumb">
     
     
     <div class="row">
-        <div class="col-sm-4"> <h1> Viaje número: {{ 1 }} <h1> </div>
-        <div class="col-sm-3" id="fechas-perfil">La fecha de salida</div>
-        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada</div>
+        <div class="col-sm-4"> <h1> Viaje número: $offer->id }} <h1> </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de salida:  $offer->fechaViaje }} </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada: $offer->fechaFinOferta }} </div>
     </div>
     foreach
-    <div class="col-sm-2">Lugar - </div>
+    <div class="col-sm-2"> $offer->origen }} -  $offer->destino }}</div>
     endforeach 
     </div>
     endforeach
