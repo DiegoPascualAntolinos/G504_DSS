@@ -73,9 +73,17 @@ class userController extends Controller
         return view('eliminar');
     }
 
-    public function search(Request $request){
+    public function updateProfileSettings(Request $request){
+        
+        $user->dni = $request->get('dni');
+        $user->nombre = $request->get('nombre');
+        $user->direccion = $request->get('direccion');
+        $user->email = $request->get('email');
+        $user->telefono = $request->get('telefono');
+        $user->password = $request->get('password');
+        $user->save();
 
-
+        return redirect()->route('/profile/{id}');
         
     }
 

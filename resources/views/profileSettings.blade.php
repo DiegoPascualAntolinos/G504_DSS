@@ -30,13 +30,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="last_name" class="col-lg-4 control-label">Apellido:</label>
+            <label for="last_name" class="col-lg-4 control-label">DNI:</label>
             <div class="col-lg-8">
-              <input  id="last_name" class="form-control" type="text" placeholder="Nuevo apellido">
+              <input  id="last_name" class="form-control" type="text" placeholder="Nuevo DNI">
             </div>
           </div>
           <div class="form-group">
-            <label for="company" class="col-lg-4 control-label">Lugar de nacimiento?:</label>
+            <label for="company" class="col-lg-4 control-label">Dirección:</label>
             <div class="col-lg-8">
               <input id="company" class="form-control" type="text" placeholder="Nuevo lugar">
             </div>
@@ -48,18 +48,17 @@
             </div>
           </div>
           
-          
+          <div class="form-group">
+            <label for="pass_repet" class="col-md-4 control-label">Telefono:</label>
+            <div class="col-md-8">
+              <input  id="pass_repet" class="form-control" type="text" placeholder="telefono">
+            </div>
+          </div>
           
           <div class="form-group">
             <label for="pass" class="col-md-4 control-label">Contraseña:</label>
             <div class="col-md-8">
               <input id="pass" class="form-control" type="password" placeholder="Nueva contraseña">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="pass_repet" class="col-md-4 control-label">Contraseña:</label>
-            <div class="col-md-8">
-              <input  id="pass_repet" class="form-control" type="password" placeholder="Confirmación de la nueva contraseña">
             </div>
           </div>
           <div class="form-group">
