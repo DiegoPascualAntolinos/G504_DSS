@@ -6,7 +6,7 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-					<img src="https://secure.gravatar.com/avatar/424c71aa00806df516f058d69065476f?s=100&r=g&d=mm" class="img-circle" alt="Cinque Terre"> 
+					<img src="/img/avatar/{{Auth::user()->avatar}}" width="120px" height="120px" class="img-circle" alt="Cinque Terre"> 
 					</div>
 					<div class="profile-usertitle-job">
 					{{Auth::user()->nombre}}
@@ -32,7 +32,11 @@
 							<i class="glyphicon glyphicon-comment"></i>
 							Comentarios</a>
 						</li>
-                        
+                        <li>
+							<a href="/profileOffer/{{Auth::user()['id']}}">
+							<i class="glyphicon glyphicon-plus"></i>
+							Oferta</a>
+						</li>
                        
 					</ul>
 				</div>

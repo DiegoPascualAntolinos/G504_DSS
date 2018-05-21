@@ -127,17 +127,18 @@ Route::name('index_profile')->get('/profile/{id}', 'offerController@indexProfile
 
 Route::name('update_settings')->post('/profileSettings/{id}', 'userController@updateProfileSettings');
 
-//http://blog.medhicham.com/en/blog-en/10-steps-to-get-you-on-image-profile-upload-for-laravel-5.html
-//Queda poner el nombre a todos los recuadritos
 Route::get('/profileSettings/{id}', function(){
     return view('profileSettings');
 });
 
 Route::name('index_comments_profile')->get('/profileComments/{id}', 'userController@indexCommentsProfile');
 
-/*Route::get('/profileComments/{id}', function(){
-    return view('profileComments');
-});*/
+Route::name('add_offer')->get('/profileOffer/{id}', 'offerController@store');
+
+Route::get('/profileOffer/{id}', function(){
+    
+    return view('profileOffer');
+});
 
 // ------------------- Fin Perfil usuario ------------------
 

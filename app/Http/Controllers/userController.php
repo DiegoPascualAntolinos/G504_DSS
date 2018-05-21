@@ -84,7 +84,6 @@ class userController extends Controller
 
         if($request->input('nombre') != NULL){
             $user->nombre = $request->input('nombre');
-            
         }
        
         if($request->input('direccion') != NULL){
@@ -102,6 +101,23 @@ class userController extends Controller
         if($request->input('password') != NULL){
             $user->password = $request->input('password');
         }
+
+        if($request->has('avatar')){
+            /*$image      = $request->file('avatar');
+            $fileName   = time() . '.' . $image->getClientOriginalExtension();
+
+            $img = Image::make($image->getRealPath());
+            $img->resize(120, 120, function ($constraint) {
+                $constraint->aspectRatio();                 
+            });
+
+            $img->stream(); // <-- Key point
+
+            //dd();
+            Storage::disk('local')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
+            */
+        }
+        
 
         $user->save();
 
