@@ -60,25 +60,15 @@
               <h2>Laura, Ivan y Diego</h2>
               <p>"Una manera de viajar única. El hotel era ideal, un 4 estrellas y en el centro de la ciudad. Lo recomiendo 100%. Me ha gustado mucho. </p>
               
-              <div class="item">
-      <img class="item" src="" alt="New York" HSPACE ="0" VSPACE="15">
-              </div>
-              
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        
             </div><!--/.col-xs-6.col-lg-4-->
             <div class="col-xs-6 col-lg-4">
               <h2>Eduardo y Sara</h2>
               <p>Experiencia inolvidable como relago de cumpleaños. Trato muy cercano, serio y muy profesional. Repetiremos seguro. </p>
-              <div class="item">
-      <img class="img-responsive" src="" alt="New York"  HSPACE ="0" VSPACE="15">
-      </div>
-      
+   
+             </div>
             
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-
-
-
+          
 
             <div class="col-xs-6 col-lg-4">
             <h2>Raquel y Marina</h2>
@@ -88,11 +78,8 @@
       <img class="img-responsive" src="http://www.mexicoenfotos.com/MX12182452247429.jpg" alt="New York" HSPACE = "0" VSPACE="15">
 
 
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+             
             </div><!--/.col-xs-6.col-lg-4-->
-
-
-
 
 
             </div>
@@ -107,34 +94,10 @@
     </div>
 
 
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+              
             </div><!--/.col-xs-6.col-lg-4-->
 
-            <div class="col-xs-6 col-lg-4">
-            <h2>Joaquin, Alba, Laia y Roberto</h2>
-              <p>¡Con ganas de cargar las tarjetas de crédito para hacer otro! </p>
-
-              <div class="item">
-      <img class="img-responsive" src="http://www.almuerzodenegocios.com/wp-content/uploads/2015/09/Turistas-Jovenes.jpg" alt="New York" HSPACE = "0" VSPACE="15">
-    </div>
-
-
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-        
-          
-
-            <div class="col-xs-6 col-lg-4">
-            <h2>Ángela y Javi</h2>
-              <p>¡Una experiencia única y romántica! Sin duda una luna de miel indescriptible. </p>
-
-              <div class="item">
-      <img class="img-responsive" src="https://img.culturacolectiva.com/featured/2017/12/20/1513824874527/viajes-portada-medium.png" alt="New York" HSPACE = "0" VSPACE="15">
-
-
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-        
+            
           
 
   </div>
