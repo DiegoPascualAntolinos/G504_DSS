@@ -73,18 +73,63 @@ class userController extends Controller
         return view('eliminar');
     }
 
-    public function updateProfileSettings(Request $request){
+    public function updateProfileSettings(User $user, Request $request){
         
-        $user->dni = $request->get('dni');
-        $user->nombre = $request->get('nombre');
-        $user->direccion = $request->get('direccion');
-        $user->email = $request->get('email');
-        $user->telefono = $request->get('telefono');
-        $user->password = $request->get('password');
+        if($request->get('dni') != NULL){
+            $user->dni = $request->get('dni');
+        }
+        else{
+            $user->dni = Auth::user()->dni;
+        }
+
+        if($request->get('nombre') != NULL){
+            $user->nombre = $request->get('nombre');
+        }
+        else{
+            $user->nombre = Auth::user()->nombre;
+        }
+
+        if($request->get('direccion') != NULL){
+            $user->direccion = $request->get('direccion');
+        }
+        else{
+            $user->direccion = Auth::user()->direccion;
+        }
+
+        if($request->get('email') != NULL){
+            $user->email = $request->get('email');
+        }
+        else{
+            $user->email = Auth::user()->email;
+        }
+
+        if($request->get('telefono') != NULL){
+            $user->telefono = $request->get('telefono');
+        }
+        else{
+            $user->telefono = Auth::user()->telefono;
+        }
+
+        if($request->get('password') != NULL){
+            $user->password = $request->get('password');
+        }
+        else{
+            $user->password = Auth::user()->password;
+        }
+
         $user->save();
 
-        return redirect()->route('/profile/{id}');
+        return redirect()->route('/profileSettings/{id}');
         
+    }
+
+    private static function setNullWhenEmpty($model)
+    {
+        foreach ($model->toArray() as $name => $value) {
+            if (empty($value)) {
+            $model->{$name} = null;
+            }
+        }
     }
 
 }

@@ -8,7 +8,10 @@
 
 <div class="container" id="contenido">
     
-<form class="form-horizontal" role="form">
+<form class="form-horizontal"  method="POST" role="form">
+
+{{ csrf_field() }}
+
           <div class="form-group">
             <label for="first_name" class="col-lg-4 control-label">Foto de perfil:</label>
             <div class="col-lg-8">
@@ -23,48 +26,53 @@
                     <img id='img-upload'/>
                   </div>
           </div>
+
           <div class="form-group">
             <label for="first_name" class="col-lg-4 control-label">Nombre:</label>
             <div class="col-lg-8">
-              <input  id="first_name" class="form-control" type="text" placeholder="Nuevo nombre">
+              <input name="name" id="first_name" class="form-control" type="text" placeholder="Nuevo nombre">
             </div>
           </div>
+
           <div class="form-group">
             <label for="last_name" class="col-lg-4 control-label">DNI:</label>
             <div class="col-lg-8">
-              <input  id="last_name" class="form-control" type="text" placeholder="Nuevo DNI">
+              <input name="dni" id="last_name" class="form-control" type="text" placeholder="Nuevo DNI">
             </div>
           </div>
+
           <div class="form-group">
             <label for="company" class="col-lg-4 control-label">Dirección:</label>
             <div class="col-lg-8">
-              <input id="company" class="form-control" type="text" placeholder="Nuevo lugar">
+              <input name="direccion" id="company" class="form-control" type="text" placeholder="Nuevo lugar">
             </div>
           </div>
+
           <div class="form-group">
             <label for="user_email" class="col-lg-4 control-label">Email:</label>
             <div class="col-lg-8">
-              <input id="user_email" class="form-control" type="text" placeholder="Nuevo email">
+              <input name="email" id="user_email" class="form-control" type="text" placeholder="Nuevo email">
             </div>
           </div>
           
           <div class="form-group">
             <label for="pass_repet" class="col-md-4 control-label">Telefono:</label>
             <div class="col-md-8">
-              <input  id="pass_repet" class="form-control" type="text" placeholder="telefono">
+              <input name="telefono" id="pass_repet" class="form-control" type="text" placeholder="telefono">
             </div>
           </div>
           
           <div class="form-group">
             <label for="pass" class="col-md-4 control-label">Contraseña:</label>
             <div class="col-md-8">
-              <input id="pass" class="form-control" type="password" placeholder="Nueva contraseña">
+              <input name="password" id="pass" class="form-control" type="password" placeholder="Nueva contraseña">
             </div>
           </div>
+          
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
-              <input type="button" class="btn btn-primary" value="Guardar cambios">
+              <input type="submit" class="btn btn-primary" value="Guardar cambios">
           </div>
         </form>
     

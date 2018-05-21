@@ -18,17 +18,17 @@
 				<div class="profile-usermenu">
 					<ul class="nav">
 						<li class="active">
-							<a href="/profile/{id}">
+							<a href="/profile/{{Auth::user()['id']}}">
 							<i class="glyphicon glyphicon-home"></i>
 							Inicio </a>
 						</li>
 						<li>
-							<a href="/profileSettings/{id}">
+							<a href="/profileSettings/{{Auth::user()['id']}}">
 							<i class="glyphicon glyphicon-cog"></i>
 							Ajustes </a>
 						</li>
 						<li>
-							<a href="/profileComments/{id}">
+							<a href="/profileComments/{{Auth::user()['id']}}">
 							<i class="glyphicon glyphicon-comment"></i>
 							Comentarios</a>
 						</li>

@@ -125,9 +125,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/profile/{id}', 'offerController@indexProfile');
 
-Route::name('settings')->put('/profileSettings/{id}', 'userController@updateProfileSettings');
-
-Route::post('/profileSettings/{id}', 'userControl@profileUpdate');
+Route::name('update_settings')->post('/profileSettings/{id}', 'userController@updateProfileSettings');
 
 //http://blog.medhicham.com/en/blog-en/10-steps-to-get-you-on-image-profile-upload-for-laravel-5.html
 //Queda poner el nombre a todos los recuadritos
