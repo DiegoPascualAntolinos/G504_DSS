@@ -123,7 +123,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 // --------------------- Perfil usuario --------------------
 
-Route::get('/profile/{id}', 'offerController@indexProfile');
+Route::name('index_profile')->get('/profile/{id}', 'offerController@indexProfile');
 
 Route::name('update_settings')->post('/profileSettings/{id}', 'userController@updateProfileSettings');
 
@@ -133,11 +133,11 @@ Route::get('/profileSettings/{id}', function(){
     return view('profileSettings');
 });
 
-//Route::name('settings')->get('/profileComments', '');
+Route::name('index_comments_profile')->get('/profileComments/{id}', 'userController@indexCommentsProfile');
 
-Route::get('/profileComments/{id}', function(){
+/*Route::get('/profileComments/{id}', function(){
     return view('profileComments');
-});
+});*/
 
 // ------------------- Fin Perfil usuario ------------------
 

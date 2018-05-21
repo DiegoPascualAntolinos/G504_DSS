@@ -18,9 +18,19 @@
 </form>
 
 
+@if($comments->count() == 0)
 
 <div id="jumbotronWrapper">
-foreach
+    <div class="jumbotron jumbotron-fluid" id= "jumb">
+    <div class="row">
+        <div class="col-sm-10"> <h1> ¡No tienes aún ningún comentario! <h1> </div>
+    </div>
+</div>
+
+@else
+
+<div id="jumbotronWrapper">
+@foreach($comments as $comment)
     <div class="jumbotron jumbotron-fluid" id= "jumb">
     
     
@@ -30,10 +40,10 @@ foreach
         
     </div>
     
-    <div class="col-sm-10">El comentario escrito </div>
+    <div class="col-sm-10">$comment->text </div>
     
     </div>
-    endforeach
+    @endforeach
 </div>
-
+@endif
 @endsection

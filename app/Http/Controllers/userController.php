@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Input;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class userController extends Controller
 {
@@ -73,63 +74,47 @@ class userController extends Controller
         return view('eliminar');
     }
 
-    public function updateProfileSettings(User $user, Request $request){
+    public function updateProfileSettings(Request $request){
         
-        if($request->get('dni') != NULL){
-            $user->dni = $request->get('dni');
-        }
-        else{
-            $user->dni = Auth::user()->dni;
+        $user = Auth::user();
+
+        if($request->input('dni') != NULL){
+            $user->dni = $request->input('dni');
         }
 
-        if($request->get('nombre') != NULL){
-            $user->nombre = $request->get('nombre');
+        if($request->input('nombre') != NULL){
+            $user->nombre = $request->input('nombre');
+            
         }
-        else{
-            $user->nombre = Auth::user()->nombre;
+       
+        if($request->input('direccion') != NULL){
+            $user->direccion = $request->input('direccion');
         }
-
-        if($request->get('direccion') != NULL){
-            $user->direccion = $request->get('direccion');
-        }
-        else{
-            $user->direccion = Auth::user()->direccion;
-        }
-
-        if($request->get('email') != NULL){
-            $user->email = $request->get('email');
-        }
-        else{
-            $user->email = Auth::user()->email;
+        
+        if($request->input('email') != NULL){
+            $user->email = $request->input('email');
         }
 
-        if($request->get('telefono') != NULL){
-            $user->telefono = $request->get('telefono');
-        }
-        else{
-            $user->telefono = Auth::user()->telefono;
+        if($request->input('telefono') != NULL){
+            $user->telefono = $request->input('telefono');
         }
 
-        if($request->get('password') != NULL){
-            $user->password = $request->get('password');
-        }
-        else{
-            $user->password = Auth::user()->password;
+        if($request->input('password') != NULL){
+            $user->password = $request->input('password');
         }
 
         $user->save();
 
-        return redirect()->route('/profileSettings/{id}');
+        
+
+        return redirect()->route('index_profile', Auth::user()->id);
         
     }
 
-    private static function setNullWhenEmpty($model)
-    {
-        foreach ($model->toArray() as $name => $value) {
-            if (empty($value)) {
-            $model->{$name} = null;
-            }
-        }
+
+    public function indexCommentsProfile(Request $id){
+        $comentarios = DB::table('comments')->where('id_users', $id)->get();
+        return view('/profileComments')->with(['comments' => $comentarios]);
     }
 
 }
