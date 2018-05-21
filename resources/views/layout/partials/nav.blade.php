@@ -7,82 +7,80 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="/vuelos">Vuelos</a></li>
       <li class="active"><a href="/oferta">Ofertas</a></li>
-      <li class="active"><a href="/usuarios">Usuarios</a></li>
-      <li class="active"><a href="/reservas">Reservas</a></li>
+      <li class="active"><a href="/hoteles">Hoteles</a></li>
       <li class="active"><a href="/ciudades">Ciudades</a></li>
+      <li class="active"><a href="/reservas">¡Reserva!</a></li>
+      <li><a href="/imagenes">Galería</a></li>
       
       </ul>
       <ul class= "nav navbar-nav navbar-right">
      
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+     <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                   <!-- Left Side Of Navbar -->
+                   <ul class="nav navbar-nav">
+                       &nbsp;
+                   </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                            &nbsp; &nbsp;
-                        @else
+                   <!-- Right Side Of Navbar -->
+                   <ul class="nav navbar-nav navbar-right">
+                       <!-- Authentication Links -->
+                       @guest
+                           <li><a href="{{ route('login') }}">Login</a></li>
+                           <li><a href="{{ route('register') }}">Register</a></li>
+                           &nbsp; &nbsp;
+                       @else
 
-                            @if(Auth::user()['id'] == 1)                        
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                        {{ Auth::user()->nombre }} <span class="caret"></span>
-                                    </a>
+                           @if(Auth::user()['id'] == 1)                        
+                               <li class="dropdown">
+                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                       {{ Auth::user()->nombre }} <span class="caret"></span>
+                                   </a>
 
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">Logout</a>
-                                            <a href="/admin">Admin</a> 
-                                            
-                                            <a href="{{ route('profile_index') }}">Mi perfil</a>
-                                            
+                                   <ul class="dropdown-menu">
+                                       <li>
+                                           <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">Logout</a>
+                                           <a href="/admin">Admin</a> 
+                                           
                                         
+                                           
+                                       
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            @else
-                            <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                        {{ Auth::user()->nombre }} <span class="caret"></span>
-                                    </a>
+                                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                               {{ csrf_field() }}
+                                           </form>
+                                       </li>
+                                   </ul>
+                               </li>
+                           @else
+                           <li class="dropdown">
+                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                       {{ Auth::user()->nombre }} <span class="caret"></span>
+                                   </a>
 
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">Logout</a>
-                                            
-                                            <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
-                                            
-                                        
+                                   <ul class="dropdown-menu">
+                                       <li>
+                                           <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">Logout</a>
+                                           
+                                           <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
+                                           
+                                       
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            @endif
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        
-    
+                                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                               {{ csrf_field() }}
+                                           </form>
+                                       </li>
+                                   </ul>
+                               </li>
+                           @endif
+                       @endguest
+                   </ul>
+               </div>
+           </div>
+</nav>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

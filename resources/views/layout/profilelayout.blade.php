@@ -27,11 +27,6 @@
     </div>
 
   </div>
-
-  @include('layout.profilePartials.footer')
- 
-  @include('layout.profilePartials.footer-scripts')
- 
  </body>
  
 </html>
