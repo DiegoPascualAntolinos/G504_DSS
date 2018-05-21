@@ -190,7 +190,13 @@ Route::name('index_offer')->get('/oferta', 'offerController@index');
 Route::name('index_hotel')->get('/hoteles', 'hotelController@index');
 
 
+//comentarios
 
+Route::get('/comentarios', 'commentController@index');
+
+Route::post('/comentarios','commentController@comentar');
+
+Route::get('/comentarios/{id}', 'commentController@delete');
 
 //galeria
 Route::get('/imagenes', function(){
