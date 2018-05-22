@@ -105,10 +105,25 @@ class hotelController extends Controller
 
     public function updateAdmin(Hotel $hotel, Request $request){
 
-        $hotel->nombre = $request->get('nombre');
-        $hotel->direccion = $request->get('direccion');
-        $hotel->telefono = $request->get('telefono');
-        $hotel->plazasDisponibles = $request->get('plazasDisponibles');
+        
+
+        if($request->input('nombre') != NULL){
+            $hotel->nombre = $request->input('nombre');
+        }
+
+        if($request->input('direccion') != NULL){
+            $hotel->direccion = $request->input('direccion');
+        }
+
+        if($request->input('telefono') != NULL){
+            $hotel->telefono = $request->input('telefono');
+        }
+        
+        if($request->input('plazasDisponibles') != NULL){
+            $hotel->plazasDisponibles = $request->input('plazasDisponibles');
+        }
+        
+        
         $hotel->save();
 
         return redirect()->route('index_hotelAdmin');
