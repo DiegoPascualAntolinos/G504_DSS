@@ -15,7 +15,7 @@ class CreateHotelsTable extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('photo'); // estension: jpg, png
+            $table->string('photo')->default(''); // estension: jpg, png
             $table->string('nombre');
             $table->string('direccion');
             $table->string('telefono');

@@ -47,6 +47,7 @@
               <td> {{ $hotel->direccion }} </td>
               <td> {{ $hotel->telefono }} </td>
               <td> {{ $hotel->plazasDisponibles }} </td>
+              <td> <img src="{{ $hotel->photo }}" style = "height:125px"> </td>
 
               <td>
                 </form>
