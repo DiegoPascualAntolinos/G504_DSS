@@ -34,7 +34,7 @@
     
     
     <div class="row">
-        <div class="col-sm-3"> <h2> Oferta número:{{ $offer->id }} <h2> </div>
+        <div class="col-sm-3" id="fechas-perfil"> <h2> Oferta número: {{ $offer->id }} <h2> </div>
         <div class="col-sm-3" id="fechas-perfil">La fecha de salida:  {{$offer->fechaSalida}} </div>
         <div class="col-sm-3" id="fechas-perfil">La fecha de llegada: {{$offer->fechaLlegada}} </div>
     </div>
