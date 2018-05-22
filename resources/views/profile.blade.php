@@ -35,11 +35,11 @@
     
     <div class="row">
         <div class="col-sm-4"> <h1> Viaje número:{{ $offer->id }} <h1> </div>
-        <div class="col-sm-3" id="fechas-perfil">La fecha de salida:  {{ $offer->fechaViaje }} </div>
-        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada: {{ $offer->fechaFinOferta }} </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de salida:  {{$offer->fechaSalida}} </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada: {{$offer->fechaLlegada}} </div>
     </div>
     
-    <div class="col-sm-2"> {{ $offer->origen }} -  {{ $offer->destino }}</div>
+    <div class="col-sm-2">  </div>
      
     </div>
    @endforeach
