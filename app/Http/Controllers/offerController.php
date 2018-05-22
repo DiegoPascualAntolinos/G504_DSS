@@ -129,12 +129,30 @@ class offerController extends Controller
 
     public function update(Offer $oferta, Request $request){
 
-        $oferta->precio = $request->get('precio');
-        $oferta->nombre = $request->get('nombre');
-        $oferta->fechaViaje = $request->get('fechaViaje');
-        $oferta->origen = $request->get('origen');
-        $oferta->destino = $request->get('destino');
-        $oferta->descripcion = $request->get('descripcion');
+        if($request->input('precio') != NULL){
+            $oferta->precio = $request->input('precio');
+        }
+
+        if($request->input('nombre') != NULL){
+            $oferta->nombre = $request->input('nombre');
+        }
+
+        if($request->input('fechaViaje') != NULL){
+            $oferta->fechaViaje = $request->input('fechaViaje');
+        }
+
+        if($request->input('origen') != NULL){
+            $oferta->origen = $request->input('origen');
+        }
+
+        if($request->input('destino') != NULL){
+            $oferta->destino = $request->input('destino');
+        }
+
+        if($request->input('descripcion') != NULL){
+            $oferta->descripcion = $request->input('descripcion');
+        }
+
         $oferta->save();
 
         return redirect()->route('index_offer');
@@ -144,12 +162,30 @@ class offerController extends Controller
 
     public function updateAdmin(Offer $oferta, Request $request){
 
-        $oferta->precio = $request->get('precio');
-        $oferta->nombre = $request->get('nombre');
-        $oferta->fechaViaje = $request->get('fechaViaje');
-        $oferta->origen = $request->get('origen');
-        $oferta->destino = $request->get('destino');
-        $oferta->descripcion = $request->get('descripcion');
+        if($request->input('precio') != NULL){
+            $oferta->precio = $request->input('precio');
+        }
+
+        if($request->input('nombre') != NULL){
+            $oferta->nombre = $request->input('nombre');
+        }
+
+        if($request->input('fechaViaje') != NULL){
+            $oferta->fechaViaje = $request->input('fechaViaje');
+        }
+
+        if($request->input('origen') != NULL){
+            $oferta->origen = $request->input('origen');
+        }
+
+        if($request->input('destino') != NULL){
+            $oferta->destino = $request->input('destino');
+        }
+
+        if($request->input('descripcion') != NULL){
+            $oferta->descripcion = $request->input('descripcion');
+        }
+        
         $oferta->save();
 
         return redirect()->route('index_offerAdmin');

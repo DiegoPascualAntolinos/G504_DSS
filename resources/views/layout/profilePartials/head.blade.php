@@ -188,12 +188,6 @@
     padding-left: 10px;
 }
 
-#jumbComment{
-    padding-top: 0px;
-    padding-left: 10px;
-    background-color: #3F729B: 
-}
-
 
 #fechas-perfil{
     padding-top: 50px;
