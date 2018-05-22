@@ -130,14 +130,23 @@ class flightController extends Controller
 
     public function update(Flight $vuelo, Request $request){
 
-        /*$vuelo->precio = $request->get('precio');
-        $vuelo->fechaVuelo = $request->get('fechaVuelo');
-        $vuelo->plazasDisponibles = $request->get('plazasDisponibles');
-        $vuelo->save();*/
+        if($request->input('precio') != NULL){
+            $vuelo->precio = $request->input('precio');
+        }
 
-        $vuelo->update(
+        if($request->input('fechaVuelo') != NULL){
+            $vuelo->fechaVuelo = $request->input('fechaVuelo');
+        }
+        
+        if($request->input('plazasDisponibles') != NULL){
+            $vuelo->plazasDisponibles = $request->input('plazasDisponibles');
+        }
+
+        $vuelo->save();
+
+        /*$vuelo->update(
             $request->only('precio', 'fechaVuelo', 'plazasDisponibles')
-        );
+        );*/
 
         return redirect()->route('index_flight');
 
@@ -151,14 +160,18 @@ class flightController extends Controller
 
     public function updateAdmin(Flight $vuelo, Request $request){
 
-        $vuelo->precio = $request->get('precio');
-        $vuelo->fechaVuelo = $request->get('fechaVuelo');
-        $vuelo->plazasDisponibles = $request->get('plazasDisponibles');
-        $vuelo->save();
+        if($request->input('precio') != NULL){
+            $vuelo->precio = $request->input('precio');
+        }
 
-        $vuelo->update(
-            $request->only('precio', 'fechaVuelo', 'plazasDisponibles')
-        );
+        if($request->input('fechaVuelo') != NULL){
+            $vuelo->fechaVuelo = $request->input('fechaVuelo');
+        }
+        
+        if($request->input('plazasDisponibles') != NULL){
+            $vuelo->plazasDisponibles = $request->input('plazasDisponibles');
+        }
+        $vuelo->save();
 
         return redirect()->route('index_flightAdmin');
 
