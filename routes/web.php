@@ -146,12 +146,6 @@ Route::name('store_reservation')->post('/reservas', 'reservationController@store
 
 Route::get('/reservas', 'reservationController@index');
 
-
-//--- validar borrado ---
-Route::get('/eliminar', function(){
-    return view('eliminar');
-});
-
 });
 
 //-------------------------- FIN USUARIO -----------------------------------------------

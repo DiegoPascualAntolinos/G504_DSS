@@ -17,8 +17,8 @@ class CreateOffersUsersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('offer_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('offer_id')->references('id')->on('offers');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
             $table->timestamps();
             
            
