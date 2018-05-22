@@ -52,11 +52,6 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
     // hotelAdmin
 
-
-    Route::get('/hotelAdmin', function(){
-        return view('Admin/hotelAdmin');
-    });
-
     Route::name('create_hotelAdmin')->get('/hotelAdmin', 'hotelController@createAdmin');
 
     Route::name('store_hotelAdmin')->post('/hotelAdmin', 'hotelController@storeAdmin');
@@ -73,10 +68,7 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
     // --------------------- listar, añadir, editar, borrar usuarios -------------------------
 
-    Route::get('/usuarios', function(){
-        return view('usuarios');
-    });
-    
+       
     Route::name('create_user')->get('/usuarios', 'userController@create');
 
     Route::name('store_user')->post('/usuarios', 'userController@store');

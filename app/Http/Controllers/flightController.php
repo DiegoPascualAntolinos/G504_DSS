@@ -175,7 +175,7 @@ class flightController extends Controller
     public function deleteAdmin(Flight $flight){
 
         $flight->delete();
-        return view('eliminar');
+        return redirect()->route('index_flightAdmin');
     }
 
 

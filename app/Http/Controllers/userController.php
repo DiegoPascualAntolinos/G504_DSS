@@ -71,7 +71,7 @@ class userController extends Controller
     public function delete(User $user){
 
         $user->delete();
-        return view('eliminar');
+        return redirect()->route('index_user');
     }
 
     public function updateProfileSettings(Request $request){

@@ -118,7 +118,7 @@ class hotelController extends Controller
     public function deleteAdmin(Hotel $hotel){
 
         $hotel->delete();
-        return view('eliminar');
+        return redirect()->route('index_hotelAdmin');
     }
 
     public function search(Request $request){

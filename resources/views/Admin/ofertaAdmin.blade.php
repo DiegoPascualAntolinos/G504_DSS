@@ -152,13 +152,45 @@
 
               <a href="{{ route('edit_offerAdmin', ['offer' => $offer->id]) }}" class="btn btn-warning">Modificar</a>
               <p>
-              <form action="{{ route('delete_offer',['offer' => $offer->id]) }}"method = "POST">
-                {{ csrf_field() }}
-                {{method_field('DELETE')}}
-                
-                <button type="submit" class='btn btn-danger'>Delete</button>
 
-                </form>
+              <div class="container">
+  
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                    Delete
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title">¿Estás seguro que deseas eliminar?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                        <form action="{{ route('delete_offer',['offer' => $offer->id]) }}"method = "POST">
+                        {{ csrf_field() }}
+                        {{method_field('DELETE')}}
+                        
+                        <button type="submit" class='btn btn-danger'>Sí</button>
+
+                        </form>
+                        <p>
+                        </p>
+                        <button type="button" class="btn btn-secundary" data-dismiss="modal">No</button>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+  
+            </div>
+
                </td>
                </tr>
               </tr>

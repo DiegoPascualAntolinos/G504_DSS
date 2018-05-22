@@ -197,13 +197,13 @@ class offerController extends Controller
     public function delete(Offer $offer){
 
         $offer->delete();
-        return view('eliminar');
+        return redirect()->route('index_offerAdmin');
     }
 
     public function deleteAdmin(Offer $offer){
 
         $offer->delete();
-        return view('eliminar');
+        return redirect()->route('index_offerAdmin');
     }
 
 
