@@ -8,8 +8,10 @@
       <li class="active"><a href="/vuelos">Vuelos</a></li>
       <li class="active"><a href="/oferta">Ofertas</a></li>
       <li class="active"><a href="/hoteles">Hoteles</a></li>
-      <li class="active"><a href="/ciudades">Ciudades</a></li>
-      <li class="active"><a href="/reservas">¡Reserva!</a></li>
+      <li class="active"><a href="/comentarios">Comentarios</a></li>
+      @if(Auth::user()['id'] >= 2)
+        <li class="active"><a href="/reservas">¡Reserva!</a></li>
+      @endif
       <li><a href="/imagenes">Galería</a></li>
       
       </ul>
@@ -42,7 +44,7 @@
                                                onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">Logout</a>
                                            <a href="/admin">Admin</a> 
-                                           
+                                           <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
                                         
                                            
                                        

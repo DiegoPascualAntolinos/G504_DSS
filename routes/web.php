@@ -23,21 +23,17 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
     // ofertaAdmin
 
-    Route::get('/ofertaAdmin', function(){
-        return view('Admin/ofertaAdmin');
-    });
-
     Route::name('create_offerAdmin')->get('/ofertaAdmin', 'offerController@createAdmin');
 
     Route::name('store_offerAdmin')->post('/ofertaAdmin', 'offerController@storeAdmin');
-
-    Route::name('index_offerAdmin')->get('/ofertaAdmin', 'offerController@indexAdmin');
 
     Route::name('edit_offerAdmin')->get('/ofertaAdmin/{oferta}/edit', 'offerController@editAdmin');
 
     Route::name('update_offerAdmin')->put('/ofertaAdmin/{oferta}', 'offerController@updateAdmin');
 
     Route::name('delete_offer')->delete('/ofertaAdmin/{offer}', 'offerController@deleteAdmin');
+
+    Route::name('index_offerAdmin')->get('/ofertaAdmin', 'offerController@indexAdmin');
 
     // vueloAdmin
 
@@ -152,15 +148,11 @@ Route::name('store_offer')->post('/oferta', 'offerController@store');
 
 //--- ver, hacer mis reservas ---
 
-Route::get('/reservas', 'reservationController@index');
-
-Route::get('/reservas', function(){
-    return view('reservas');
-});
-
 Route::name('create_reservation')->get('/reservas', 'reservationController@create');
 
 Route::name('store_reservation')->post('/reservas', 'reservationController@store');
+
+Route::get('/reservas', 'reservationController@index');
 
 
 //--- validar borrado ---
@@ -205,7 +197,13 @@ Route::name('index_offer')->get('/oferta', 'offerController@index');
 Route::name('index_hotel')->get('/hoteles', 'hotelController@index');
 
 
+//comentarios
 
+Route::get('/comentarios', 'commentController@index');
+
+Route::post('/comentarios','commentController@comentar');
+
+Route::get('/comentarios/{id}', 'commentController@delete');
 
 //galeria
 Route::get('/imagenes', function(){

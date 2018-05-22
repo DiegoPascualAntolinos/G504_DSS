@@ -167,7 +167,7 @@ class offerController extends Controller
     public function deleteAdmin(Offer $offer){
 
         $offer->delete();
-        return view('Admin/ofertaAdmin');
+        return view('eliminar');
     }
 
 
