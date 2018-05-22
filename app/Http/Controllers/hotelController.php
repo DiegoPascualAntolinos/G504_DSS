@@ -82,6 +82,12 @@ class hotelController extends Controller
 
     public function storeAdmin(Request $request){
        
+        $this->validate($request, [
+            'nombre' => 'required',
+            'direccion' => 'required',
+            'telefono' => 'required',
+            'plazasDisponibles' => 'required'
+        ]);
        // $city = DB::table('cities')->where('id_city', '=', $request->get('id_city'))->first();
         $hotele = new Hotel;
         $hotele->nombre = $request->get('nombre');

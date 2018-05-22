@@ -80,6 +80,19 @@ class flightController extends Controller
 
     public function storeAdmin(Request $request){
 
+        $this->validate($request, [
+            'precio' => 'required',
+            'fechaVuelo' => 'required',
+            'plazasDisponibles' => 'required',
+            'pais' => 'required',
+            'provincia' => 'required',
+            'ciudad' => 'required'
+
+            
+        ]);
+
+
+
         $flight = new Flight;
         $flight->precio = $request->get('precio');
         $flight->fechaVuelo = $request->get('fechaVuelo');

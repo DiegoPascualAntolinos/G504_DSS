@@ -6,6 +6,26 @@
 
 @section('content')
 
+<h5>
+@if(count($errors) > 0)
+
+<div class="alert alert-danger">
+
+    <ul>
+
+        @foreach($errors->all() as $error)
+
+        <li>{{ $error }}</li>
+
+        @endforeach
+
+    </ul>
+
+</div>
+
+@endif
+</h5>
+
 <div class="container" id="contenido">
     
 <form class="form-horizontal"  method="POST" role="form">

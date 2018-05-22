@@ -72,6 +72,16 @@ class offerController extends Controller
 
     public function storeProfile(Request $request){
 
+        $this->validate($request, [
+            'email' => 'required|email',
+            'nombre' => 'required',
+            'fechaViaje' => 'required',
+            'fechaFinOferta' => 'required',
+            'origen' => 'required',
+            'destino' => 'required',
+            'precio' => 'required',
+            'descripcion' => 'required'
+        ]);
         
 
         $cliente = DB::table('users')->where('email', '=', Auth::user()->email)->first();
@@ -92,7 +102,14 @@ class offerController extends Controller
     public function storeAdmin(Request $request){
 
         $this->validate($request, [
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'nombre' => 'required',
+            'fechaViaje' => 'required',
+            'fechaFinOferta' => 'required',
+            'origen' => 'required',
+            'destino' => 'required',
+            'precio' => 'required',
+            'descripcion' => 'required'
         ]);
 
         $cliente = DB::table('users')->where('email', '=', $request->get('email'))->first();
