@@ -129,7 +129,7 @@ class userController extends Controller
 
 
     public function indexCommentsProfile(Request $id){
-        $comentarios = DB::table('comments')->where('id_users', $id)->get();
+        $comentarios = DB::table('comments')->where('id_users', Auth::user()->id)->get();
         return view('/profileComments')->with(['comments' => $comentarios]);
     }
 

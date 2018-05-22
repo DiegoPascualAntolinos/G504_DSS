@@ -133,7 +133,7 @@ Route::get('/profileSettings/{id}', function(){
 
 Route::name('index_comments_profile')->get('/profileComments/{id}', 'userController@indexCommentsProfile');
 
-Route::name('add_offer')->get('/profileOffer/{id}', 'offerController@store');
+Route::name('add_offer')->post('/profileOffer/{id}', 'offerController@storeProfile');
 
 Route::get('/profileOffer/{id}', function(){
     

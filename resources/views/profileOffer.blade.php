@@ -53,12 +53,21 @@
               <input name="fechaFinOferta" id="pass" class="form-control" type="date" placeholder="Fin Oferta">
             </div>
           </div>
-          
+        
+          <div class="form-group">
+            <label for="pass" class="col-md-4 control-label">Descripcion</label>
+            <div class="col-md-8">
+              <textarea name="descripcion" class="form-control" rows="5" placeholder="¡Describe tu viaje!"></textarea>
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
               <input type="submit" class="btn btn-primary" value="Enviar oferta">
           </div>
+         
+
         </form>
     
 

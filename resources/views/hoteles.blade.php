@@ -60,7 +60,10 @@
             </table>
 </div>
 
-
+<div class="item">
+      <img class="img-responsive" src="http://www.cosasdecoches.com/wp-content/uploads/2016/07/Viajar-por-Europa.jpg" alt="New York"
+      HSPACE = "61" VSPACE="50">
+    </div>
 
 
 @endsection
