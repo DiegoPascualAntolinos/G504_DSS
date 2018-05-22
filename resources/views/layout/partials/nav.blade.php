@@ -43,9 +43,7 @@
                                            <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">Logout</a>
-                                           <a href="/admin">Admin</a> 
-                                           <a href="/profile/{{Auth::user()['id']}}">Mi perfil</a>
-                                        
+                                           <a href="/admin">Admin</a>                                  
                                            
                                        
 

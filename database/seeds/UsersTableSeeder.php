@@ -13,9 +13,9 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'dni' => '1234568X',
-            'nombre' => 'Laura Martinez Soler',
+            'nombre' => 'administrador',
             'direccion' => 'C/Jornet Perales 2',
-            'email' => 'laureta91@gmail.com',
+            'email' => 'administrador@administrador.com',
             'telefono' => '962901167',
             'password' => bcrypt('123abc'),
             
