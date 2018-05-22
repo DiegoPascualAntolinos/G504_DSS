@@ -15,7 +15,7 @@ class ReservationsTableSeeder extends Seeder
             'fechaLlegada' => '10/03/2018',
             'fechaSalida' => '20/03/2018',
             'cantidad' => '100',
-            'id_users' => '2',
+            'user_id' => '2',
             'id_flight' => '1'
         ]);
 
@@ -23,7 +23,7 @@ class ReservationsTableSeeder extends Seeder
             'fechaLlegada' => '10/03/2018',
             'fechaSalida' => '30/03/2018',
             'cantidad' => '30',
-            'id_users' => '1',
+            'user_id' => '1',
             'id_flight' => '2'
         ]);
 
@@ -31,7 +31,7 @@ class ReservationsTableSeeder extends Seeder
             'fechaLlegada' => '05/02/2018',
             'fechaSalida' => '20/02/2018',
             'cantidad' => '55',
-            'id_users' => '3',
+            'user_id' => '3',
             'id_flight' => '3'
         ]);
     }

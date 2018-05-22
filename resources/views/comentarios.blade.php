@@ -1,11 +1,43 @@
 @extends('layout.mainlayout')
 @section('content')
+
+<head>
+<style>
+
+#contenedor { 
+            width: 900px; 
+            padding: 10px; 
+            background:  #E6E6FA ; 
+            overflow: auto; 
+            }
+
+        #contenedor-izq { 
+            width: 400px; 
+            float: left; 
+            }
+
+        #contenedor-der-top { 
+            width: 400px; 
+            padding-left: 20px; 
+            padding-top: 10px; 
+            float: right; 
+            }
+
+
+</style>
+</head>
+
+
+
+
+<body>
+
 <div class="container">
     <h1>Opiniones</h1>
     <div class="col-md-8 col-md-offset-2">
         @foreach ($comentarios as $comentario)
         <div class="forum-post" style="margin-top:2%">
-            <div class="post box">
+            <div id="contenedor">
             <div class="media">
                 @foreach ($usuarios as $usuario)
                     @if($usuario->id == $comentario->user_id)
@@ -53,4 +85,8 @@
             @endif
     </div>
 </div>
+
+</body>
+
+
 @endsection

@@ -27,7 +27,11 @@ class reservationController extends Controller
     public function store(Request $request){
 
         $this->validate($request, [
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'id_flight' => 'required',
+            'fechaLlegada' => 'required',
+            'fechaSalida' => 'required',
+            'cantidad' => 'required'
         ]);
 
         $cliente = DB::table('users')->where('email', '=', $request->get('email'))->first();
@@ -38,7 +42,7 @@ class reservationController extends Controller
         $reserva->cantidad = $request->get('cantidad');
         $reserva->save();
 
-        $reserva->User()->associate($cliente);
+        $reserva->User()->associate($cliente->id);
         $reserva->flight()->associate($vuelo);
 
         $reservations = Reservation::orderBy('id', 'desc')->paginate(5);
