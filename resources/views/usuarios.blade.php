@@ -76,8 +76,6 @@
 
               <td>
 
-              <a href="{{ route('edit_user', ['usesr' => $user->id]) }}" class="btn btn-warning">Modificar</a>
-              <p>
               <form action="{{ route('delete_user',['user' => $user->id]) }}"method = "POST">
                 {{ csrf_field() }}
                 {{method_field('DELETE')}}

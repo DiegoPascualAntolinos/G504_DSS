@@ -76,8 +76,6 @@
 
               <td>
 
-              <a href="<?php echo e(route('edit_user', ['usesr' => $user->id])); ?>" class="btn btn-warning">Modificar</a>
-              <p>
               <form action="<?php echo e(route('delete_user',['user' => $user->id])); ?>"method = "POST">
                 <?php echo e(csrf_field()); ?>
 
