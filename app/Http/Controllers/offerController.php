@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 class offerController extends Controller
 {
@@ -23,6 +24,13 @@ class offerController extends Controller
         $offers = Offer::search($request->get('q'))->orderBy('id', 'desc')->paginate(5);
         return view('Admin/ofertaAdmin')->with(['offers' => $offers]);
        
+    }
+
+    public function indexProfile(Request $request, $id){
+        $ofertas = DB::table('reservations')->where('id_users', $id)->get();
+
+        return view('/profile')->with(['offers' => $ofertas]);
+        
     }
 
 
@@ -59,6 +67,25 @@ class offerController extends Controller
 
         return view('oferta')->with(['offers' => $offers]);
       
+
+    }
+
+    public function storeProfile(Request $request){
+
+        
+
+        $cliente = DB::table('users')->where('email', '=', Auth::user()->email)->first();
+        $oferta = new Offer;
+        $oferta->nombre = $request->get('nombre');
+        $oferta->fechaViaje = $request->get('fechaViaje');
+        $oferta->fechaFinOferta = $request->get('fechaFinOferta');
+        $oferta->origen = $request->get('origen');
+        $oferta->destino = $request->get('destino');
+        $oferta->precio = $request->get('precio');
+        $oferta->descripcion = $request->get('descripcion');
+        $oferta->save();
+
+        return redirect()->route('index_profile', Auth::user()->id);
 
     }
 
@@ -140,7 +167,7 @@ class offerController extends Controller
     public function deleteAdmin(Offer $offer){
 
         $offer->delete();
-        return view('Admin/ofertaAdmin');
+        return view('eliminar');
     }
 
 

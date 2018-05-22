@@ -10,18 +10,23 @@
  
  <body>
  
-<?php echo $__env->make('layout.profilePartials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
- 
-<?php echo $__env->make('layout.profilePartials.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <?php echo $__env->make('layout.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-<div class="main" id="contenido">
-<?php echo $__env->yieldContent('content'); ?>
-</div>
+  <div class="main" id="perfil">
 
-<?php echo $__env->make('layout.profilePartials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
- 
-<?php echo $__env->make('layout.profilePartials.footer-scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
- 
+    <div class="sidenav" id="mySidebar">
+
+      <?php echo $__env->make('layout.profilePartials.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+    </div>
+
+    <div class="main" id="contenido">
+
+      <?php echo $__env->yieldContent('content'); ?>
+      
+    </div>
+
+  </div>
  </body>
  
 </html>

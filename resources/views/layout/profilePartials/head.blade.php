@@ -31,25 +31,56 @@
         color: #000000;
     }
 
-#contenido{
-    display: flex;
-    flex-direction: column;
+#perfil{
+    position: top;
+    top: 70px;
 }
-#mySidebar{
+
+.col-lg-8{
+    padding-top: 10px;
+}
+
+.col-md-8{
+    padding-top: 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
     position: absolute;
-    border-radius: 25px;
-    
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
 }
 
-    /* Add a gray background color and some padding to the footer */
-    .profile {
-  margin: 20px 0;
+#img-upload{
+    width: 100%;
 }
 
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #fff;
+#contenido{
+    margin-left: 0px;
+}
+
+#mySidebar{
+    width: 140px;
+    position: fixed;
+    z-index: 1;
+    top: 65px;
+    left: 10px;
+    background: #ef6c00;
+    overflow-x: hidden;
+    padding: 8px 0;
 }
 
 .profile-userpic img {
@@ -76,7 +107,7 @@
 
 .profile-usertitle-job {
   text-transform: uppercase;
-  color: #5b9bd1;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -112,7 +143,7 @@
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 400;
 }
@@ -123,8 +154,8 @@
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+  background-color: #ffe1e0;
+  color: #000000;
 }
 
 .profile-usermenu ul li.active {
@@ -132,19 +163,36 @@
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
+  color: #bb3b36;
+  background-color: #ffe1e0;
+  border-left: 2px solid #ff7a75;
   margin-left: -2px;
 }
 
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #ef6c00;
+  background: #fff;
   min-height: 460px;
 }
-    #myFooter {
+
+#jumbotronWrapper{
+    margin-top: 15px;
+    width: 1642px;
+    height: 530px;
+    overflow-y: auto;
+}
+
+#jumb{
+    padding-top: 0px;
+    padding-left: 10px;
+}
+
+#fechas-perfil{
+    padding-top: 50px;
+}
+
+#myFooter {
     background-color: #182c39;
     color: white;
     padding-top: 20px;
@@ -251,30 +299,7 @@
         width:640px;
         height:360px;
     }
-    .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ef6c00;
-    overflow-x: hidden;
-    padding-top: 70px;
-    margin-bottom:50px;
-}
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #42a5f5;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */

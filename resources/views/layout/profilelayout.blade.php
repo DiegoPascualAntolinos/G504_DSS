@@ -10,18 +10,23 @@
  
  <body>
  
-@include('layout.profilePartials.nav')
- 
-@include('layout.profilePartials.sidenav')
+  @include('layout.partials.nav')
 
-<div class="main" id="contenido">
-@yield('content')
-</div>
+  <div class="main" id="perfil">
 
-@include('layout.profilePartials.footer')
- 
-@include('layout.profilePartials.footer-scripts')
- 
+    <div class="sidenav" id="mySidebar">
+
+      @include('layout.profilePartials.sidenav')
+
+    </div>
+
+    <div class="main" id="contenido">
+
+      @yield('content')
+      
+    </div>
+
+  </div>
  </body>
  
 </html>

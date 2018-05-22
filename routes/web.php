@@ -23,21 +23,17 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
     // ofertaAdmin
 
-    Route::get('/ofertaAdmin', function(){
-        return view('Admin/ofertaAdmin');
-    });
-
     Route::name('create_offerAdmin')->get('/ofertaAdmin', 'offerController@createAdmin');
 
     Route::name('store_offerAdmin')->post('/ofertaAdmin', 'offerController@storeAdmin');
-
-    Route::name('index_offerAdmin')->get('/ofertaAdmin', 'offerController@indexAdmin');
 
     Route::name('edit_offerAdmin')->get('/ofertaAdmin/{oferta}/edit', 'offerController@editAdmin');
 
     Route::name('update_offerAdmin')->put('/ofertaAdmin/{oferta}', 'offerController@updateAdmin');
 
     Route::name('delete_offer')->delete('/ofertaAdmin/{offer}', 'offerController@deleteAdmin');
+
+    Route::name('index_offerAdmin')->get('/ofertaAdmin', 'offerController@indexAdmin');
 
     // vueloAdmin
 
@@ -110,8 +106,6 @@ Route::group(['middleware' => 'isAdmin'], function () {
 
 });
 
-
-
 // -------------------------- FIN ADMIN -------------------------
 
 
@@ -123,9 +117,26 @@ Route::group(['middleware' => 'isAdmin'], function () {
 Route::group(['middleware' => 'auth'], function () {
 
 
-Route::get('/profile', function(){
-    return view('profile');
+// --------------------- Perfil usuario --------------------
+
+Route::name('index_profile')->get('/profile/{id}', 'offerController@indexProfile');
+
+Route::name('update_settings')->post('/profileSettings/{id}', 'userController@updateProfileSettings');
+
+Route::get('/profileSettings/{id}', function(){
+    return view('profileSettings');
 });
+
+Route::name('index_comments_profile')->get('/profileComments/{id}', 'userController@indexCommentsProfile');
+
+Route::name('add_offer')->post('/profileOffer/{id}', 'offerController@storeProfile');
+
+Route::get('/profileOffer/{id}', function(){
+    
+    return view('profileOffer');
+});
+
+// ------------------- Fin Perfil usuario ------------------
 
 
 //--- ver, crear ofertas ---
@@ -137,15 +148,11 @@ Route::name('store_offer')->post('/oferta', 'offerController@store');
 
 //--- ver, hacer mis reservas ---
 
-Route::get('/reservas', 'reservationController@index');
-
-Route::get('/reservas', function(){
-    return view('reservas');
-});
-
 Route::name('create_reservation')->get('/reservas', 'reservationController@create');
 
 Route::name('store_reservation')->post('/reservas', 'reservationController@store');
+
+Route::get('/reservas', 'reservationController@index');
 
 
 //--- validar borrado ---

@@ -5,66 +5,45 @@
 
 
 @section('content')
-<div class="jumbotron text-center">
-  <h1>¡Tus viajes!</h1>
-  <p>Aqui ejemplificar como se dispone la informacion de los viajes</p>
-</div>
-<p class="bg-primary text-white"> 
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span> 
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
-    <span class="glyphicon glyphicon-download"></span>
- </p>
+<form action="/profile" method="GET" role="search">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Buscar" name="q">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
+
+@if($offers->count() == 0)
+
+<div id="jumbotronWrapper">
+    <div class="jumbotron jumbotron-fluid" id= "jumb">
+    <div class="row">
+        <div class="col-sm-10"> <h1> ¡No tienes aún ningún viaje reservado! <h1> </div>
+    </div>
 </div>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
+@else
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
+<div id="jumbotronWrapper">
+@foreach($offers as $offer)
+    <div class="jumbotron jumbotron-fluid" id= "jumb">
+    
+    
+    <div class="row">
+        <div class="col-sm-4"> <h1> Viaje número:{{ $offer->id }} <h1> </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de salida:  {{ $offer->fechaViaje }} </div>
+        <div class="col-sm-3" id="fechas-perfil">La fecha de llegada: {{ $offer->fechaFinOferta }} </div>
+    </div>
+    
+    <div class="col-sm-2"> {{ $offer->origen }} -  {{ $offer->destino }}</div>
+     
+    </div>
+   @endforeach
 </div>
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
+@endif
 
 @endsection
