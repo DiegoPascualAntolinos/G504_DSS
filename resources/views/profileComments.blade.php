@@ -35,12 +35,11 @@
     
     
     <div class="row">
-        <div class="col-sm-11"> <h1> Viaje a: {{}} TU casa <h1> </div>
-        <div class="col-sm-1" id="fechas-perfil"><a href = "#"> <span class="glyphicon glyphicon-eye-open"> </span> </a></div>
+        <div class="col-sm-11"> <h1> Número de comentario: {{$comment->id}} <h1> </div>
         
     </div>
     
-    <div class="col-sm-10">$comment->text </div>
+    <div class="col-sm-10">{{$comment->text}} </div>
     
     </div>
     @endforeach
