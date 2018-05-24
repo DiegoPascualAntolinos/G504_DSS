@@ -12,7 +12,7 @@
 
 {{ csrf_field() }}
 
-          <div class="form-group">
+          <!--<div class="form-group">
             <label for="first_name" class="col-lg-4 control-label">Foto de perfil:</label>
             <div class="col-lg-8">
                   <div class="input-group">
@@ -25,7 +25,7 @@
                     </div>
                     <img id='img-upload'/>
                   </div>
-          </div>
+          </div>-->
 
           <div class="form-group">
             <label for="first_name" class="col-lg-4 control-label">Nombre:</label>
