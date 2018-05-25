@@ -8,8 +8,10 @@
       <li class="active"><a href="/vuelos">Vuelos</a></li>
       <li class="active"><a href="/oferta">Ofertas</a></li>
       <li class="active"><a href="/hoteles">Hoteles</a></li>
-      <li class="active"><a href="/ciudades">Ciudades</a></li>
-      <li class="active"><a href="/reservas">¡Reserva!</a></li>
+      <li class="active"><a href="/comentarios">Comentarios</a></li>
+      <?php if(Auth::user()['id'] >= 2): ?>
+        <li class="active"><a href="/reservas">¡Reserva!</a></li>
+      <?php endif; ?>
       <li><a href="/imagenes">Galería</a></li>
       
       </ul>
@@ -41,9 +43,7 @@
                                            <a href="<?php echo e(route('logout')); ?>"
                                                onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">Logout</a>
-                                           <a href="/admin">Admin</a> 
-                                           
-                                        
+                                           <a href="/admin">Admin</a>                                  
                                            
                                        
 

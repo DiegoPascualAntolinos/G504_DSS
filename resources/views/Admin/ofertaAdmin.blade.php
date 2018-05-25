@@ -74,8 +74,8 @@
 
 
     <div class="form-group"> <!-- titulo -->
-        <label for="titulo" class="control-label">Titulo Viaje</label>
-        <input type="string" class="form-control" id="full_name_id" name="titulo" placeholder="Una experiencia inolvidable">
+        <label for="nombre" class="control-label">Titulo Viaje</label>
+        <input type="string" class="form-control" id="full_name_id" name="nombre" placeholder="Una experiencia inolvidable">
     </div>    
 
     <div class="form-group"> <!-- fecha inicio -->

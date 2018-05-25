@@ -42,7 +42,7 @@ class reservationController extends Controller
         $reserva->cantidad = $request->get('cantidad');
         $reserva->save();
 
-        $reserva->User()->associate($cliente->id);
+       // $reserva->User()->associate($cliente->id);
         $reserva->flight()->associate($vuelo);
 
         $reservations = Reservation::orderBy('id', 'desc')->paginate(5);

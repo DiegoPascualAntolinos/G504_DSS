@@ -344,6 +344,7 @@ class ComposerStaticInit53665b318a00a3db33867ace44074ed1
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\cityController' => __DIR__ . '/../..' . '/app/Http/Controllers/cityController.php',
+        'App\\Http\\Controllers\\commentController' => __DIR__ . '/../..' . '/app/Http/Controllers/commentController.php',
         'App\\Http\\Controllers\\flightController' => __DIR__ . '/../..' . '/app/Http/Controllers/flightController.php',
         'App\\Http\\Controllers\\hotelController' => __DIR__ . '/../..' . '/app/Http/Controllers/hotelController.php',
         'App\\Http\\Controllers\\offerController' => __DIR__ . '/../..' . '/app/Http/Controllers/offerController.php',

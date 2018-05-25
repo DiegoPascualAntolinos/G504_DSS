@@ -73,7 +73,6 @@ class offerController extends Controller
     public function storeProfile(Request $request){
 
         $this->validate($request, [
-            'email' => 'required|email',
             'nombre' => 'required',
             'fechaViaje' => 'required',
             'fechaFinOferta' => 'required',
@@ -81,6 +80,7 @@ class offerController extends Controller
             'destino' => 'required',
             'precio' => 'required',
             'descripcion' => 'required'
+           
         ]);
         
 
@@ -95,6 +95,7 @@ class offerController extends Controller
         $oferta->descripcion = $request->get('descripcion');
         $oferta->save();
 
+  
         return redirect()->route('index_profile', Auth::user()->id);
 
     }
@@ -103,18 +104,12 @@ class offerController extends Controller
 
         $this->validate($request, [
             'email' => 'required|email',
-            'nombre' => 'required',
-            'fechaViaje' => 'required',
-            'fechaFinOferta' => 'required',
-            'origen' => 'required',
-            'destino' => 'required',
-            'precio' => 'required',
-            'descripcion' => 'required'
+            
         ]);
 
         $cliente = DB::table('users')->where('email', '=', $request->get('email'))->first();
         $oferta = new Offer;
-        $oferta->nombre = $request->get('titulo');
+        $oferta->nombre = $request->get('nombre');
         $oferta->fechaViaje = $request->get('fechaViaje');
         $oferta->fechaFinOferta = $request->get('fechaFinOferta');
         $oferta->origen = $request->get('origen');
@@ -123,12 +118,12 @@ class offerController extends Controller
         $oferta->descripcion = $request->get('descripcion');
         $oferta->save();
 
-        $oferta->User()->attach($cliente->id);
+       // $oferta->User()->attach($cliente->id);
 
-        $offers = Offer::orderBy('id', 'desc')->paginate(5);
+        //$offers = Offer::orderBy('id', 'desc')->paginate(5);
 
-        return view('Admin/ofertaAdmin')->with(['offers' => $offers]);
-      
+        //return view('Admin/ofertaAdmin')->with(['offers' => $offers]);
+       return redirect()->route('index_offerAdmin', Auth::user()->id);
 
     }
 

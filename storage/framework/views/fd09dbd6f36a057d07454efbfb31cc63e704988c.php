@@ -188,6 +188,7 @@
     padding-left: 10px;
 }
 
+
 #fechas-perfil{
     padding-top: 50px;
 }
